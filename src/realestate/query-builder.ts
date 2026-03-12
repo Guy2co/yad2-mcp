@@ -1,5 +1,6 @@
 import type { SearchParams } from './types.js';
 import propertyTypes from './property-types.json';
+import { lookupCityArea } from './formatters.js';
 
 function toYad2PropertyId(id: string): string {
   return propertyTypes.find((t) => t.id === id)?.yad2Id ?? id;
@@ -37,12 +38,19 @@ function applyFeatureFilters(params: SearchParams, q: Record<string, string>): v
   applyFeatureFiltersB(params, q);
 }
 
+function applyCityAndArea(params: SearchParams, q: Record<string, string>): void {
+  if (params.city === undefined) return;
+  q.city = params.city;
+  const area = lookupCityArea(params.city);
+  if (area !== undefined) q.area = area;
+}
+
 function applyOptionalParams(
   params: SearchParams,
   q: Record<string, string>,
   type: 'rent' | 'forsale',
 ): void {
-  if (params.city !== undefined) q.city = params.city;
+  applyCityAndArea(params, q);
   if (params.rooms !== undefined) q.rooms = params.rooms;
   if (params.floor !== undefined) q.floor = params.floor;
   if (params.propertyType !== undefined) q.property = toYad2PropertyId(params.propertyType);
