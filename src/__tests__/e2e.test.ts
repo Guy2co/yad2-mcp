@@ -75,6 +75,9 @@ async function assertToolNames(proc: SpawnedProc): Promise<void> {
   expect(names).toContain('search_for_sale');
   expect(names).toContain('get_listing');
   expect(names).toContain('list_city_codes');
+  expect(names).toContain('search_cars');
+  expect(names).toContain('list_manufacturers');
+  expect(names).toContain('which_tool');
 }
 
 async function assertCityCodes(proc: SpawnedProc): Promise<void> {
@@ -85,8 +88,24 @@ async function assertCityCodes(proc: SpawnedProc): Promise<void> {
   expect(content[0].text).toContain('5000');
 }
 
+async function assertManufacturers(proc: SpawnedProc): Promise<void> {
+  const resp = await callTool(proc, 'list_manufacturers', {});
+  const result = resp['result'] as Record<string, unknown>;
+  const content = result['content'] as Array<{ type: string; text: string }>;
+  expect(content[0].text).toContain('Toyota');
+  expect(content[0].text).toMatch(/\d+/);
+}
+
+async function assertWhichTool(proc: SpawnedProc): Promise<void> {
+  const resp = await callTool(proc, 'which_tool', {});
+  const result = resp['result'] as Record<string, unknown>;
+  const content = result['content'] as Array<{ type: string; text: string }>;
+  expect(content[0].text).toContain('search_cars');
+  expect(content[0].text).toContain('search_rentals');
+}
+
 describe('E2E: tools/list', { timeout: 15000 }, () => {
-  it('lists all 4 tools', async () => {
+  it('lists all 7 tools', async () => {
     const proc = spawn('node', [SERVER_PATH], { stdio: ['pipe', 'pipe', 'pipe'] });
     try {
       await initServer(proc);
@@ -103,6 +122,30 @@ describe('E2E: list_city_codes', { timeout: 15000 }, () => {
     try {
       await initServer(proc);
       await assertCityCodes(proc);
+    } finally {
+      proc.kill();
+    }
+  });
+});
+
+describe('E2E: list_manufacturers', { timeout: 15000 }, () => {
+  it('returns Toyota with an ID', async () => {
+    const proc = spawn('node', [SERVER_PATH], { stdio: ['pipe', 'pipe', 'pipe'] });
+    try {
+      await initServer(proc);
+      await assertManufacturers(proc);
+    } finally {
+      proc.kill();
+    }
+  });
+});
+
+describe('E2E: which_tool', { timeout: 15000 }, () => {
+  it('mentions search_cars and search_rentals', async () => {
+    const proc = spawn('node', [SERVER_PATH], { stdio: ['pipe', 'pipe', 'pipe'] });
+    try {
+      await initServer(proc);
+      await assertWhichTool(proc);
     } finally {
       proc.kill();
     }

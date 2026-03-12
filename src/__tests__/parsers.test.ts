@@ -1,13 +1,15 @@
 import { describe, it, expect, vi } from 'vitest';
-import type { SearchResult } from '../types.js';
+import type { SearchResult } from '../realestate/types.js';
 
-vi.mock('../browser.js', () => ({
+vi.mock('../infra/browser.js', () => ({
   launchPage: vi.fn().mockResolvedValue({
     page: {},
     close: vi.fn().mockResolvedValue(undefined),
   }),
   navigateTo: vi.fn().mockResolvedValue(undefined),
   extractNextData: vi.fn(),
+  extractNextDataByMatcher: vi.fn(),
+  withPage: vi.fn().mockImplementation(async (fn: (page: unknown) => unknown) => fn({})),
 }));
 
 const FAKE_ITEM = {
@@ -43,10 +45,10 @@ const FAKE_ITEM_DATA = {
 };
 
 async function mockFeed(): Promise<SearchResult> {
-  const { extractNextData } = await import('../browser.js');
+  const { extractNextData } = await import('../infra/browser.js');
   (extractNextData as ReturnType<typeof vi.fn>).mockResolvedValue(FAKE_FEED_DATA);
-  const { Yad2Client } = await import('../yad2-client.js');
-  return new Yad2Client().search('rent', { page: 1 });
+  const { Yad2RealEstateClient } = await import('../realestate/yad2-realestate-client.js');
+  return new Yad2RealEstateClient().search('rent', { page: 1 });
 }
 
 describe('parseResponse() - filtering', () => {
@@ -77,12 +79,12 @@ describe('parseResponse() - field parsing', () => {
   });
 });
 
-describe('parseItem() via Yad2Client.getListing()', () => {
+describe('parseItem() via Yad2RealEstateClient.getListing()', () => {
   it('parses item fields correctly', async () => {
-    const { extractNextData } = await import('../browser.js');
+    const { extractNextData } = await import('../infra/browser.js');
     (extractNextData as ReturnType<typeof vi.fn>).mockResolvedValue(FAKE_ITEM_DATA);
-    const { Yad2Client } = await import('../yad2-client.js');
-    const listing = await new Yad2Client().getListing('xyz789');
+    const { Yad2RealEstateClient } = await import('../realestate/yad2-realestate-client.js');
+    const listing = await new Yad2RealEstateClient().getListing('xyz789');
     expect(listing.token).toBe('xyz789');
     expect(listing.price).toBe(2500000);
     expect(listing.rooms).toBe(4);

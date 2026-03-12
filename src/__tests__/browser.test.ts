@@ -20,36 +20,37 @@ beforeEach(() => {
 });
 
 async function getContextOpt(key: string): Promise<unknown> {
-  const { launchPage } = await import('../browser.js');
+  const { launchPage } = await import('../infra/browser.js');
   await launchPage();
   return (mockNewContext.mock.calls[0][0] as Record<string, unknown>)[key];
 }
 
 async function getPage(): Promise<unknown> {
-  const { launchPage } = await import('../browser.js');
+  const { launchPage } = await import('../infra/browser.js');
   return (await launchPage()).page;
 }
 
-function makeNextData(queryKey: string, data: unknown): string {
-  const queries = [{ queryKey: [queryKey], state: { data } }];
+function makeNextData(queryKey: string | string[], data: unknown): string {
+  const key = Array.isArray(queryKey) ? queryKey : [queryKey];
+  const queries = [{ queryKey: key, state: { data } }];
   return JSON.stringify({ props: { pageProps: { dehydratedState: { queries } } } });
 }
 
 async function getInitScript(): Promise<() => void> {
-  const { launchPage } = await import('../browser.js');
+  const { launchPage } = await import('../infra/browser.js');
   await launchPage();
   return mockAddInitScript.mock.calls[0][0] as () => void;
 }
 
 describe('launchPage() — launch options', () => {
   it('launches headless chromium', async () => {
-    const { launchPage } = await import('../browser.js');
+    const { launchPage } = await import('../infra/browser.js');
     await launchPage();
     expect(mockLaunch).toHaveBeenCalledWith({ headless: true });
   });
 
   it('returns a close function that closes the browser', async () => {
-    const { launchPage } = await import('../browser.js');
+    const { launchPage } = await import('../infra/browser.js');
     const { close } = await launchPage();
     await close();
     expect(mockClose).toHaveBeenCalledOnce();
@@ -83,7 +84,7 @@ describe('launchPage() — context headers/UA', () => {
 
 describe('launchPage() — addInitScript called', () => {
   it('calls addInitScript once', async () => {
-    const { launchPage } = await import('../browser.js');
+    const { launchPage } = await import('../infra/browser.js');
     await launchPage();
     expect(mockAddInitScript).toHaveBeenCalledOnce();
   });
@@ -107,7 +108,7 @@ describe('launchPage() — webdriver patch', () => {
 
 describe('navigateTo() — wait strategy', () => {
   it('uses waitUntil: load', async () => {
-    const { navigateTo } = await import('../browser.js');
+    const { navigateTo } = await import('../infra/browser.js');
     await navigateTo((await getPage()) as never, 'https://example.com');
     expect(mockGoto).toHaveBeenCalledWith(
       'https://example.com',
@@ -118,7 +119,7 @@ describe('navigateTo() — wait strategy', () => {
 
 describe('navigateTo() — timeout', () => {
   it('uses a timeout >= 15000ms', async () => {
-    const { navigateTo } = await import('../browser.js');
+    const { navigateTo } = await import('../infra/browser.js');
     await navigateTo((await getPage()) as never, 'https://example.com');
     const { timeout } = mockGoto.mock.calls[0][1] as { timeout: number };
     expect(timeout).toBeGreaterThanOrEqual(15000);
@@ -127,7 +128,7 @@ describe('navigateTo() — timeout', () => {
 
 describe('extractNextData() — happy path', () => {
   it('returns data for a matching query key', async () => {
-    const { extractNextData } = await import('../browser.js');
+    const { extractNextData } = await import('../infra/browser.js');
     mockEvaluate.mockResolvedValue(makeNextData('my-feed', { total: 42 }));
     expect(await extractNextData((await getPage()) as never, 'my-feed')).toEqual({ total: 42 });
   });
@@ -135,7 +136,7 @@ describe('extractNextData() — happy path', () => {
 
 describe('extractNextData() — error cases', () => {
   it('throws when query key is not found', async () => {
-    const { extractNextData } = await import('../browser.js');
+    const { extractNextData } = await import('../infra/browser.js');
     mockEvaluate.mockResolvedValue(makeNextData('other-feed', {}));
     await expect(extractNextData((await getPage()) as never, 'missing-key')).rejects.toThrow(
       'Query "missing-key" not found in __NEXT_DATA__',
@@ -143,8 +144,31 @@ describe('extractNextData() — error cases', () => {
   });
 
   it('throws when __NEXT_DATA__ element is missing', async () => {
-    const { extractNextData } = await import('../browser.js');
+    const { extractNextData } = await import('../infra/browser.js');
     mockEvaluate.mockResolvedValue(null);
     await expect(extractNextData((await getPage()) as never, 'any-key')).rejects.toThrow();
+  });
+});
+
+describe('extractNextDataByMatcher() — happy path', () => {
+  it('returns data when matcher matches array key', async () => {
+    const { extractNextDataByMatcher } = await import('../infra/browser.js');
+    mockEvaluate.mockResolvedValue(makeNextData(['feed', 'vehicles', 'cars'], { total: 10 }));
+    const matcher = (k: unknown[]): boolean =>
+      k[0] === 'feed' && k[1] === 'vehicles' && k[2] === 'cars';
+    expect(
+      await extractNextDataByMatcher((await getPage()) as never, matcher, 'feed/vehicles/cars'),
+    ).toEqual({ total: 10 });
+  });
+});
+
+describe('extractNextDataByMatcher() — error cases', () => {
+  it('throws with description string when no match', async () => {
+    const { extractNextDataByMatcher } = await import('../infra/browser.js');
+    mockEvaluate.mockResolvedValue(makeNextData(['other', 'key'], {}));
+    const matcher = (k: unknown[]): boolean => k[0] === 'feed';
+    await expect(
+      extractNextDataByMatcher((await getPage()) as never, matcher, 'feed/vehicles/cars'),
+    ).rejects.toThrow('feed/vehicles/cars');
   });
 });

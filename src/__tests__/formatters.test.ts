@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type { Listing, SearchResult } from '../types.js';
+import type { Listing, SearchResult } from '../realestate/types.js';
 import {
   formatPrice,
   formatListingDetails,
@@ -8,7 +8,7 @@ import {
   formatListing,
   extractSearchParams,
   filterCities,
-} from '../formatters.js';
+} from '../realestate/formatters.js';
 
 const BASE_LISTING: Listing = {
   id: 'tok1',
