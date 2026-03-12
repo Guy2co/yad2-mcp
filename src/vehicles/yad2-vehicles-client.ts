@@ -1,10 +1,5 @@
 import type { Page } from 'playwright';
-import {
-  navigateTo,
-  extractNextData,
-  extractNextDataByMatcher,
-  withPage,
-} from '../infra/browser.js';
+import { navigateTo, extractNextDataByMatcher, withPage } from '../infra/browser.js';
 import { parseVehicleItem, parseVehicleResponse } from './parser.js';
 import { buildVehicleQuery } from './query-builder.js';
 import type {
@@ -18,6 +13,10 @@ const BASE_URL = 'https://www.yad2.co.il/vehicles';
 
 function vehiclesMatcher(k: unknown[]): boolean {
   return k[0] === 'feed' && k[1] === 'vehicles' && k[2] === 'cars';
+}
+
+function vehicleItemMatcher(k: unknown[]): boolean {
+  return k[0] === 'vehicles' && k[1] === 'item';
 }
 
 export class Yad2VehiclesClient {
@@ -41,7 +40,7 @@ export class Yad2VehiclesClient {
 
   private async _doGetCarListing(page: Page, token: string): Promise<VehicleListing> {
     await navigateTo(page, `${BASE_URL}/item/${token}`);
-    const data = await extractNextData(page, 'item');
+    const data = await extractNextDataByMatcher(page, vehicleItemMatcher, 'vehicles/item');
     return parseVehicleItem(data as Yad2VehicleApiItem);
   }
 }

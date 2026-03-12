@@ -7,7 +7,6 @@ vi.mock('../infra/browser.js', () => ({
     close: vi.fn().mockResolvedValue(undefined),
   }),
   navigateTo: vi.fn().mockResolvedValue(undefined),
-  extractNextData: vi.fn(),
   extractNextDataByMatcher: vi.fn(),
   withPage: vi.fn().mockImplementation(async (fn: (page: unknown) => unknown) => fn({})),
 }));
@@ -79,8 +78,8 @@ describe('parseVehicleResponse() - result structure', () => {
 
 describe('Yad2VehiclesClient.getCarListing()', () => {
   it('parses single car listing correctly', async () => {
-    const { extractNextData } = await import('../infra/browser.js');
-    (extractNextData as ReturnType<typeof vi.fn>).mockResolvedValue(FAKE_VEHICLE_ITEM);
+    const { extractNextDataByMatcher } = await import('../infra/browser.js');
+    (extractNextDataByMatcher as ReturnType<typeof vi.fn>).mockResolvedValue(FAKE_VEHICLE_ITEM);
     const { Yad2VehiclesClient } = await import('../vehicles/yad2-vehicles-client.js');
     const listing = await new Yad2VehiclesClient().getCarListing('car123');
     expect(listing.token).toBe('car123');
