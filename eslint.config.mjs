@@ -7,7 +7,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 export default [
   {
     // Global ignores
-    ignores: ['dist/**', 'node_modules/**', '*.js', '*.mjs', '*.cjs'],
+    ignores: ['dist/**', 'node_modules/**'],
   },
   {
     // TypeScript source files
@@ -65,10 +65,4 @@ export default [
   // Spread prettier's config-override last so it disables any
   // ESLint formatting rules that conflict with Prettier.
   prettierConfig,
-  {
-    // index.ts intentionally uses the low-level Server API (not McpServer)
-    // because we use raw JSON Schema tool definitions, not Zod schemas.
-    files: ['src/index.ts'],
-    rules: { '@typescript-eslint/no-deprecated': 'off' },
-  },
 ];

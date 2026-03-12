@@ -1,18 +1,18 @@
-export const SEARCH_PROPERTIES = {
-  city: {
-    type: 'string',
-    description: 'City code (e.g. "5000" for Tel Aviv, "3000" for Haifa, "70" for Jerusalem)',
-  },
-  rooms: { type: 'string', description: 'Room range e.g. "2-4", "3", "1.5-3"' },
-  priceMin: { type: 'number', description: 'Minimum price in ILS' },
-  priceMax: { type: 'number', description: 'Maximum price in ILS' },
-  sizeMin: { type: 'number', description: 'Minimum size in sqm' },
-  sizeMax: { type: 'number', description: 'Maximum size in sqm' },
-  floor: { type: 'string', description: 'Floor range e.g. "1-5", "0" for ground floor' },
-  propertyType: {
-    type: 'string',
-    description: 'Property type',
-    enum: [
+import { z } from 'zod';
+
+export const SearchSchema = z.object({
+  city: z
+    .string()
+    .optional()
+    .describe('City code (e.g. "5000" for Tel Aviv, "3000" for Haifa, "70" for Jerusalem)'),
+  rooms: z.string().optional().describe('Room range e.g. "2-4", "3", "1.5-3"'),
+  priceMin: z.number().optional().describe('Minimum price in ILS'),
+  priceMax: z.number().optional().describe('Maximum price in ILS'),
+  sizeMin: z.number().optional().describe('Minimum size in sqm'),
+  sizeMax: z.number().optional().describe('Maximum size in sqm'),
+  floor: z.string().optional().describe('Floor range e.g. "1-5", "0" for ground floor'),
+  propertyType: z
+    .enum([
       'apartment',
       'garden_apartment',
       'penthouse',
@@ -21,40 +21,17 @@ export const SEARCH_PROPERTIES = {
       'unit',
       'storage',
       'parking',
-    ],
-  },
-  page: { type: 'number', description: 'Page number (default: 1)' },
-  pageSize: { type: 'number', description: 'Results per page (default: 20, max: 40)' },
-};
+    ])
+    .optional()
+    .describe('Property type'),
+  page: z.number().optional().describe('Page number (default: 1)'),
+  pageSize: z.number().optional().describe('Results per page (default: 20, max: 40)'),
+});
 
-export const TOOLS = [
-  {
-    name: 'search_rentals',
-    description: 'Search rental property listings on yad2.co.il',
-    inputSchema: { type: 'object', properties: SEARCH_PROPERTIES },
-  },
-  {
-    name: 'search_for_sale',
-    description: 'Search properties for sale on yad2.co.il',
-    inputSchema: { type: 'object', properties: SEARCH_PROPERTIES },
-  },
-  {
-    name: 'get_listing',
-    description: 'Get full details of a specific yad2 listing by its token/ID',
-    inputSchema: {
-      type: 'object',
-      properties: { token: { type: 'string', description: 'The listing token or ID' } },
-      required: ['token'],
-    },
-  },
-  {
-    name: 'list_city_codes',
-    description: 'List common Israeli city codes for use in searches',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        filter: { type: 'string', description: 'Optional filter string to search city names' },
-      },
-    },
-  },
-];
+export const GetListingSchema = z.object({
+  token: z.string().describe('The listing token or ID'),
+});
+
+export const ListCityCodesSchema = z.object({
+  filter: z.string().optional().describe('Optional filter string to search city names'),
+});
