@@ -42,6 +42,7 @@ export default [
         { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
       ],
       '@typescript-eslint/no-non-null-assertion': 'error',
+      '@typescript-eslint/no-deprecated': 'error',
       '@typescript-eslint/strict-boolean-expressions': 'error',
 
       // ── Function length ───────────────────────────────────────────────────
@@ -64,4 +65,10 @@ export default [
   // Spread prettier's config-override last so it disables any
   // ESLint formatting rules that conflict with Prettier.
   prettierConfig,
+  {
+    // index.ts intentionally uses the low-level Server API (not McpServer)
+    // because we use raw JSON Schema tool definitions, not Zod schemas.
+    files: ['src/index.ts'],
+    rules: { '@typescript-eslint/no-deprecated': 'off' },
+  },
 ];
