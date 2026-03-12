@@ -4,7 +4,7 @@ An MCP (Model Context Protocol) server that lets AI assistants search real estat
 
 ## How it works
 
-Yad2 uses bot protection (PerimeterX/ShieldSquare). This server uses a headless Chromium browser via [Playwright](https://playwright.dev) to bypass it and intercept the underlying API responses.
+Yad2 uses bot protection (PerimeterX/ShieldSquare). This server uses a headless Chromium browser via [Playwright](https://playwright.dev) to load the page and extract listing data from the Next.js SSR payload (`__NEXT_DATA__`) embedded in the HTML.
 
 ## Tools
 
@@ -161,7 +161,7 @@ npm run test:e2e       # run e2e tests (spawns the server subprocess)
 npm run test:coverage  # run unit tests with coverage report
 ```
 
-A pre-commit hook runs `eslint --fix` and `prettier --write` automatically on staged files.
+A pre-commit hook runs `eslint --fix`, `prettier --write`, and `npm test` automatically on staged files.
 
 ### Code style
 
@@ -170,6 +170,7 @@ This project enforces strict standards suitable for open-source:
 - **Max 15 lines per function** — keeps logic composable and readable
 - **Explicit return types** on all functions
 - **No `any`** — everything is explicitly typed
+- **No deprecated APIs** — `@typescript-eslint/no-deprecated` catches stale SDK usage
 - **`import type`** for type-only imports
 - **`===` always** — no loose equality
 - **Prettier** for consistent formatting (single quotes, 100-char width, trailing commas)
@@ -180,18 +181,23 @@ This project enforces strict standards suitable for open-source:
 
 ```
 src/
-├── index.ts        MCP server — registers tools, routes requests
-├── formatters.ts   Pure functions for formatting results as markdown
-├── yad2-client.ts  Playwright-based client for yad2.co.il
-└── types.ts        Shared TypeScript interfaces
+├── index.ts          MCP server entry point — wires McpServer to tools and transport
+├── tools.ts          Zod schemas defining the MCP API surface (tool inputs)
+├── handlers.ts       Tool handler functions (search, get listing, list cities)
+├── yad2-client.ts    Playwright-based client for yad2.co.il
+├── browser.ts        Headless browser helpers (launch, navigate, extract __NEXT_DATA__)
+├── parser.ts         Pure functions for parsing yad2 feed/item data into Listing objects
+├── query-builder.ts  Pure functions for building yad2 URL query parameters
+├── formatters.ts     Pure functions for formatting results as markdown
+└── types.ts          Shared TypeScript interfaces
 ```
 
 The client:
-1. Launches a headless Chromium browser
-2. Navigates to the relevant yad2 page (which sets the necessary cookies/JS state)
-3. Intercepts the API response via Playwright's response listener
-4. Falls back to `fetch()` within the page context if interception misses it
-5. Parses and returns the structured data
+1. Launches a headless Chromium browser with a realistic user agent
+2. Navigates to the relevant yad2 page
+3. Waits for the `__NEXT_DATA__` script tag (Next.js SSR payload) to be attached to the DOM
+4. Extracts and parses the dehydrated React Query state containing the listing feed
+5. Returns structured `Listing` objects
 
 ---
 
