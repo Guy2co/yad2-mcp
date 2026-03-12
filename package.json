@@ -22,6 +22,7 @@
     "test:watch": "vitest --exclude src/__tests__/e2e.test.ts",
     "test:coverage": "vitest run --coverage --exclude src/__tests__/e2e.test.ts",
     "test:e2e": "vitest run src/__tests__/e2e.test.ts",
+    "knip": "knip",
     "prepare": "husky"
   },
   "dependencies": {
@@ -38,6 +39,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "husky": "^9.1.7",
+    "knip": "^5.86.0",
     "lint-staged": "^16.3.3",
     "prettier": "^3.8.1",
     "ts-node": "^10.9.0",

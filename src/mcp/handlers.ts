@@ -21,7 +21,7 @@ import type {
   ListManufacturersSchema,
 } from './tools.js';
 
-export type ToolResponse = { content: Array<{ type: 'text'; text: string }>; isError?: boolean };
+type ToolResponse = { content: Array<{ type: 'text'; text: string }>; isError?: boolean };
 
 type SearchParams_ = z.infer<typeof SearchSchema>;
 type GetListingParams = z.infer<typeof GetListingSchema>;

@@ -68,7 +68,7 @@ export async function withPage<T>(fn: (page: Page) => Promise<T>): Promise<T> {
   }
 }
 
-export type QueryKeyMatcher = (queryKey: unknown[]) => boolean;
+type QueryKeyMatcher = (queryKey: unknown[]) => boolean;
 
 function findQueryDataByMatcher(
   queries: Array<Record<string, unknown>>,

@@ -1,6 +1,6 @@
 import type { Listing, SearchParams, SearchResult } from './types.js';
 
-export const CITY_CODES = [
+const CITY_CODES = [
   { code: '5000', name: 'תל אביב-יפו', nameEn: 'Tel Aviv-Yafo' },
   { code: '3000', name: 'חיפה', nameEn: 'Haifa' },
   { code: '70', name: 'ירושלים', nameEn: 'Jerusalem' },
@@ -26,7 +26,7 @@ export const CITY_CODES = [
   { code: '7200', name: 'מודיעין', nameEn: "Modi'in" },
 ];
 
-export function extractSearchParamsStrings(
+function extractSearchParamsStrings(
   params: Record<string, unknown>,
 ): Pick<SearchParams, 'city' | 'rooms' | 'floor' | 'propertyType'> {
   return {
@@ -37,7 +37,7 @@ export function extractSearchParamsStrings(
   };
 }
 
-export function extractSearchParamsNumbers(
+function extractSearchParamsNumbers(
   params: Record<string, unknown>,
 ): Pick<SearchParams, 'priceMin' | 'priceMax' | 'sizeMin' | 'sizeMax' | 'page' | 'pageSize'> {
   return {

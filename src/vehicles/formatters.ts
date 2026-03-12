@@ -1,14 +1,14 @@
 import type { VehicleListing, VehicleSearchResult } from './types.js';
 import manufacturersData from './manufacturers.json';
 
-export interface ManufacturerEntry {
+interface ManufacturerEntry {
   id: string;
   name: string;
   nameEn: string;
   models: Array<{ id: number; name: string }>;
 }
 
-export const MANUFACTURERS: ManufacturerEntry[] = manufacturersData as ManufacturerEntry[];
+const MANUFACTURERS: ManufacturerEntry[] = manufacturersData as ManufacturerEntry[];
 
 export function filterManufacturers(filter: string | undefined): ManufacturerEntry[] {
   if (filter === undefined) return MANUFACTURERS;
