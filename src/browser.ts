@@ -1,13 +1,23 @@
 import type { Page } from 'playwright';
 
 const USER_AGENT =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
+
+function hideWebdriver(): void {
+  Object.defineProperty(navigator, 'webdriver', { get: (): boolean => false });
+}
 
 export async function launchPage(): Promise<{ page: Page; close: () => Promise<void> }> {
   const { chromium } = await import('playwright');
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({ userAgent: USER_AGENT, locale: 'he-IL' });
+  const context = await browser.newContext({
+    userAgent: USER_AGENT,
+    locale: 'he-IL',
+    viewport: { width: 1280, height: 800 },
+    extraHTTPHeaders: { 'Accept-Language': 'he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7' },
+  });
   const page = await context.newPage();
+  await page.addInitScript(hideWebdriver);
   return { page, close: (): Promise<void> => browser.close() };
 }
 
@@ -37,7 +47,6 @@ export async function extractNextData(
   page: Page,
   queryKey: string,
 ): Promise<Record<string, unknown>> {
-  await page.waitForSelector('#__NEXT_DATA__', { timeout: 15000, state: 'attached' });
   const html = await page.evaluate(
     (): string | null => document.getElementById('__NEXT_DATA__')?.textContent ?? null,
   );
@@ -47,5 +56,5 @@ export async function extractNextData(
 }
 
 export async function navigateTo(page: Page, url: string): Promise<void> {
-  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await page.goto(url, { waitUntil: 'load', timeout: 20000 });
 }

@@ -45,11 +45,12 @@ export default [
       '@typescript-eslint/no-deprecated': 'error',
       '@typescript-eslint/strict-boolean-expressions': 'error',
 
-      // ── Function length ───────────────────────────────────────────────────
+      // ── Function length & complexity ─────────────────────────────────────
       'max-lines-per-function': [
         'error',
         { max: 15, skipBlankLines: true, skipComments: true },
       ],
+      complexity: ['error', { max: 10 }],
 
       // ── General best practices ────────────────────────────────────────────
       eqeqeq: ['error', 'always'],
