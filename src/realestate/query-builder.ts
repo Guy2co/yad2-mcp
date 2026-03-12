@@ -32,23 +32,30 @@ function applyFeatureFilters(params: SearchParams, q: Record<string, string>): v
   applyFeatureFiltersB(params, q);
 }
 
-function applyOptionalParams(params: SearchParams, q: Record<string, string>): void {
+function applyOptionalParams(
+  params: SearchParams,
+  q: Record<string, string>,
+  type: 'rent' | 'forsale',
+): void {
   if (params.city !== undefined) q.city = params.city;
   if (params.rooms !== undefined) q.rooms = params.rooms;
   if (params.floor !== undefined) q.floor = params.floor;
   if (params.propertyType !== undefined) q.property = params.propertyType;
   const price = buildPriceParam(params);
-  if (price !== undefined) q.priceOnly = price;
+  if (price !== undefined) q[type === 'forsale' ? 'price' : 'priceOnly'] = price;
   const size = buildSizeParam(params);
   if (size !== undefined) q.squaremeter = size;
   applyFeatureFilters(params, q);
 }
 
-export function buildQuery(params: SearchParams): Record<string, string> {
+export function buildQuery(
+  params: SearchParams,
+  type: 'rent' | 'forsale' = 'rent',
+): Record<string, string> {
   const q: Record<string, string> = {
     page: String(params.page ?? 1),
     pageSize: String(params.pageSize ?? 20),
   };
-  applyOptionalParams(params, q);
+  applyOptionalParams(params, q, type);
   return q;
 }

@@ -3,12 +3,12 @@ import type { Page } from 'playwright';
 const USER_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 
-function hideWebdriver(): void {
-  Object.defineProperty(navigator, 'webdriver', { get: (): boolean => false });
-}
-
 export async function launchPage(): Promise<{ page: Page; close: () => Promise<void> }> {
-  const { chromium } = await import('playwright');
+  const { chromium } = await import('playwright-extra');
+
+  const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+
+  chromium.use(StealthPlugin() as Parameters<typeof chromium.use>[0]);
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
     userAgent: USER_AGENT,
@@ -17,7 +17,6 @@ export async function launchPage(): Promise<{ page: Page; close: () => Promise<v
     extraHTTPHeaders: { 'Accept-Language': 'he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7' },
   });
   const page = await context.newPage();
-  await page.addInitScript(hideWebdriver);
   return { page, close: (): Promise<void> => browser.close() };
 }
 

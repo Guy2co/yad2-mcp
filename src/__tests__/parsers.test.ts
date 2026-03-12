@@ -60,13 +60,25 @@ describe('buildQuery - feature filters', () => {
   });
 
   it('omits shelter key when false', () => {
-    const q = buildQuery({ shelter: false });
-    expect(q).not.toHaveProperty('shelter');
+    expect(buildQuery({ shelter: false })).not.toHaveProperty('shelter');
   });
 
   it('sets property=cottage for propertyType cottage', () => {
-    const q = buildQuery({ propertyType: 'cottage' });
-    expect(q['property']).toBe('cottage');
+    expect(buildQuery({ propertyType: 'cottage' })['property']).toBe('cottage');
+  });
+});
+
+describe('buildQuery - price param by type', () => {
+  it('uses priceOnly for rent', () => {
+    const q = buildQuery({ priceMax: 5000 }, 'rent');
+    expect(q['priceOnly']).toBe('0-5000');
+    expect(q).not.toHaveProperty('price');
+  });
+
+  it('uses price for forsale', () => {
+    const q = buildQuery({ priceMax: 6000000 }, 'forsale');
+    expect(q['price']).toBe('0-6000000');
+    expect(q).not.toHaveProperty('priceOnly');
   });
 });
 

@@ -1,6 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
-const mockAddInitScript = vi.fn().mockResolvedValue(undefined);
 const mockNewPage = vi.fn();
 const mockNewContext = vi.fn();
 const mockLaunch = vi.fn();
@@ -8,12 +7,15 @@ const mockClose = vi.fn().mockResolvedValue(undefined);
 const mockGoto = vi.fn().mockResolvedValue(undefined);
 const mockEvaluate = vi.fn();
 
-vi.mock('playwright', () => ({ chromium: { launch: mockLaunch } }));
+vi.mock('playwright-extra', () => ({
+  chromium: { launch: mockLaunch, use: vi.fn() },
+}));
+vi.mock('puppeteer-extra-plugin-stealth', () => vi.fn(() => ({})));
 
 beforeEach(() => {
   vi.resetModules();
   vi.clearAllMocks();
-  const page = { goto: mockGoto, evaluate: mockEvaluate, addInitScript: mockAddInitScript };
+  const page = { goto: mockGoto, evaluate: mockEvaluate };
   mockNewPage.mockResolvedValue(page);
   mockNewContext.mockResolvedValue({ newPage: mockNewPage });
   mockLaunch.mockResolvedValue({ newContext: mockNewContext, close: mockClose });
@@ -34,12 +36,6 @@ function makeNextData(queryKey: string | string[], data: unknown): string {
   const key = Array.isArray(queryKey) ? queryKey : [queryKey];
   const queries = [{ queryKey: key, state: { data } }];
   return JSON.stringify({ props: { pageProps: { dehydratedState: { queries } } } });
-}
-
-async function getInitScript(): Promise<() => void> {
-  const { launchPage } = await import('../infra/browser.js');
-  await launchPage();
-  return mockAddInitScript.mock.calls[0][0] as () => void;
 }
 
 describe('launchPage() — launch options', () => {
@@ -82,27 +78,13 @@ describe('launchPage() — context headers/UA', () => {
   });
 });
 
-describe('launchPage() — addInitScript called', () => {
-  it('calls addInitScript once', async () => {
+describe('launchPage() — stealth plugin', () => {
+  it('uses playwright-extra with stealth plugin', async () => {
+    const { chromium } = await import('playwright-extra');
     const { launchPage } = await import('../infra/browser.js');
     await launchPage();
-    expect(mockAddInitScript).toHaveBeenCalledOnce();
-  });
-});
-
-async function runHideWebdriver(): Promise<Record<string, unknown>> {
-  const script = await getInitScript();
-  const nav: Record<string, unknown> = {};
-  const origNav = globalThis.navigator;
-  Object.defineProperty(globalThis, 'navigator', { value: nav, configurable: true });
-  script();
-  Object.defineProperty(globalThis, 'navigator', { value: origNav, configurable: true });
-  return nav;
-}
-
-describe('launchPage() — webdriver patch', () => {
-  it('injected script sets webdriver to false', async () => {
-    expect((await runHideWebdriver())['webdriver']).toBe(false);
+    expect(chromium.use).toHaveBeenCalledOnce();
+    expect(mockLaunch).toHaveBeenCalledWith({ headless: true });
   });
 });
 
