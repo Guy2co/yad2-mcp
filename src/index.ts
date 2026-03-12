@@ -17,8 +17,9 @@ import {
   handleListManufacturers,
   handleWhichTool,
 } from './mcp/handlers.js';
+import { version } from '../package.json';
 
-const server = new McpServer({ name: 'yad2-mcp', version: '1.0.0' });
+const server = new McpServer({ name: 'yad2-mcp', version });
 
 server.registerTool(
   'search_rentals',
