@@ -1,4 +1,9 @@
 import type { SearchParams } from './types.js';
+import propertyTypes from './property-types.json';
+
+function toYad2PropertyId(id: string): string {
+  return propertyTypes.find((t) => t.id === id)?.yad2Id ?? id;
+}
 
 function buildPriceParam(params: SearchParams): string | undefined {
   if (params.priceMin === undefined && params.priceMax === undefined) return undefined;
@@ -40,7 +45,7 @@ function applyOptionalParams(
   if (params.city !== undefined) q.city = params.city;
   if (params.rooms !== undefined) q.rooms = params.rooms;
   if (params.floor !== undefined) q.floor = params.floor;
-  if (params.propertyType !== undefined) q.property = params.propertyType;
+  if (params.propertyType !== undefined) q.property = toYad2PropertyId(params.propertyType);
   const price = buildPriceParam(params);
   if (price !== undefined) q[type === 'forsale' ? 'price' : 'priceOnly'] = price;
   const size = buildSizeParam(params);

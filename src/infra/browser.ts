@@ -55,7 +55,7 @@ export async function extractNextData(
 }
 
 export async function navigateTo(page: Page, url: string): Promise<void> {
-  await page.goto(url, { waitUntil: 'load', timeout: 20000 });
+  await page.goto(url, { waitUntil: 'load', timeout: 40000 });
 }
 
 export async function withPage<T>(fn: (page: Page) => Promise<T>): Promise<T> {
