@@ -35,18 +35,10 @@ function makeNextData(queryKey: string, data: unknown): string {
   return JSON.stringify({ props: { pageProps: { dehydratedState: { queries } } } });
 }
 
-async function runWebdriverScript(): Promise<Record<string, unknown>> {
+async function getInitScript(): Promise<() => void> {
   const { launchPage } = await import('../browser.js');
   await launchPage();
-  const script = mockAddInitScript.mock.calls[0][0] as () => void;
-  const nav: Record<string, unknown> = {};
-  const spy = vi.spyOn(Object, 'defineProperty').mockImplementationOnce((obj, prop, desc) => {
-    Object.defineProperty(nav, prop, desc);
-    return obj;
-  });
-  script();
-  spy.mockRestore();
-  return nav;
+  return mockAddInitScript.mock.calls[0][0] as () => void;
 }
 
 describe('launchPage() — launch options', () => {
@@ -89,15 +81,27 @@ describe('launchPage() — context headers/UA', () => {
   });
 });
 
-describe('launchPage() — webdriver patch', () => {
-  it('calls addInitScript to patch navigator.webdriver', async () => {
+describe('launchPage() — addInitScript called', () => {
+  it('calls addInitScript once', async () => {
     const { launchPage } = await import('../browser.js');
     await launchPage();
     expect(mockAddInitScript).toHaveBeenCalledOnce();
   });
+});
 
+async function runHideWebdriver(): Promise<Record<string, unknown>> {
+  const script = await getInitScript();
+  const nav: Record<string, unknown> = {};
+  const origNav = globalThis.navigator;
+  Object.defineProperty(globalThis, 'navigator', { value: nav, configurable: true });
+  script();
+  Object.defineProperty(globalThis, 'navigator', { value: origNav, configurable: true });
+  return nav;
+}
+
+describe('launchPage() — webdriver patch', () => {
   it('injected script sets webdriver to false', async () => {
-    expect((await runWebdriverScript())['webdriver']).toBe(false);
+    expect((await runHideWebdriver())['webdriver']).toBe(false);
   });
 });
 
