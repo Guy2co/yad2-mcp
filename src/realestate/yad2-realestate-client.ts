@@ -20,7 +20,7 @@ export class Yad2RealEstateClient {
     type: 'rent' | 'forsale',
     params: SearchParams,
   ): Promise<SearchResult> {
-    const query = new URLSearchParams(buildQuery(params)).toString();
+    const query = new URLSearchParams(buildQuery(params, type)).toString();
     const cityQuery = params.city !== undefined ? `?city=${params.city}` : '';
     await navigateTo(page, `${BASE_URL}/${type}${cityQuery}&${query}`);
     const data = await extractNextData(page, feedQueryKey(type));
