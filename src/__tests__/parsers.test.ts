@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import type { SearchResult } from '../realestate/types.js';
+import { buildQuery } from '../realestate/query-builder.js';
 
 vi.mock('../infra/browser.js', () => ({
   launchPage: vi.fn().mockResolvedValue({
@@ -50,6 +51,24 @@ async function mockFeed(): Promise<SearchResult> {
   const { Yad2RealEstateClient } = await import('../realestate/yad2-realestate-client.js');
   return new Yad2RealEstateClient().search('rent', { page: 1 });
 }
+
+describe('buildQuery - feature filters', () => {
+  it('sets shelter=1 and elevator=1 when true', () => {
+    const q = buildQuery({ shelter: true, elevator: true });
+    expect(q['shelter']).toBe('1');
+    expect(q['elevator']).toBe('1');
+  });
+
+  it('omits shelter key when false', () => {
+    const q = buildQuery({ shelter: false });
+    expect(q).not.toHaveProperty('shelter');
+  });
+
+  it('sets property=cottage for propertyType cottage', () => {
+    const q = buildQuery({ propertyType: 'cottage' });
+    expect(q['property']).toBe('cottage');
+  });
+});
 
 describe('parseResponse() - filtering', () => {
   it('returns only private items, not platinum', async () => {

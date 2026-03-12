@@ -7,7 +7,18 @@ export interface SearchParams {
   sizeMin?: number; // sqm
   sizeMax?: number;
   floor?: string; // e.g. "1-5", "0" for ground
-  propertyType?: string; // apartment, garden, penthouse, etc.
+  propertyType?: string; // apartment, garden_apartment, penthouse, duplex, roof_apartment, unit, storage, parking, cottage, townhouse, building, land, agricultural, commercial_space
+  shelter?: boolean;
+  elevator?: boolean;
+  parking?: boolean;
+  balcony?: boolean;
+  ac?: boolean;
+  storage?: boolean;
+  accessibility?: boolean;
+  pets?: boolean;
+  furnished?: boolean;
+  boiler?: boolean;
+  doorman?: boolean;
   page?: number;
   pageSize?: number;
 }

@@ -3,6 +3,7 @@ import { Yad2VehiclesClient } from '../vehicles/yad2-vehicles-client.js';
 import {
   extractSearchParams,
   filterCities,
+  filterPropertyTypes,
   formatListing,
   formatSearchResults,
 } from '../realestate/formatters.js';
@@ -19,6 +20,7 @@ import type {
   ListCityCodesSchema,
   SearchCarsSchema,
   ListManufacturersSchema,
+  ListPropertyTypesSchema,
 } from './tools.js';
 
 type ToolResponse = { content: Array<{ type: 'text'; text: string }>; isError?: boolean };
@@ -28,6 +30,7 @@ type GetListingParams = z.infer<typeof GetListingSchema>;
 type ListCityCodesParams = z.infer<typeof ListCityCodesSchema>;
 type SearchCarsParams = z.infer<typeof SearchCarsSchema>;
 type ListManufacturersParams = z.infer<typeof ListManufacturersSchema>;
+type ListPropertyTypesParams = z.infer<typeof ListPropertyTypesSchema>;
 
 const realEstateClient = new Yad2RealEstateClient();
 const vehiclesClient = new Yad2VehiclesClient();
@@ -69,6 +72,16 @@ export function handleListManufacturers(params: ListManufacturersParams): ToolRe
   return { content: [{ type: 'text', text: `Car manufacturers:\n\n${lines.join('\n\n')}` }] };
 }
 
+export function handleListPropertyTypes(params: ListPropertyTypesParams): ToolResponse {
+  const filter = params.filter?.toLowerCase();
+  const lines = filterPropertyTypes(filter).map(
+    (t) => `- **${t.nameEn}** (${t.name}): \`${t.id}\``,
+  );
+  return {
+    content: [{ type: 'text', text: `## Property Types\n\n${lines.join('\n')}` }],
+  };
+}
+
 const WHICH_TOOL_TEXT = `# Which Yad2 Tool to Use
 
 ## Real Estate Tools
@@ -76,7 +89,8 @@ const WHICH_TOOL_TEXT = `# Which Yad2 Tool to Use
 ### \`search_rentals\`
 Search for rental properties. Use when the user wants to **rent** an apartment, house, or other property.
 - Params: city, rooms, priceMin/Max, sizeMin/Max, floor, propertyType, page, pageSize
-- Use \`list_city_codes\` to find city codes.
+- Feature filters: shelter, elevator, parking, balcony, ac, storage, accessibility, pets, furnished, boiler, doorman (all boolean)
+- Use \`list_city_codes\` to find city codes, \`list_property_types\` to find property type IDs.
 
 ### \`search_for_sale\`
 Search for properties for sale. Use when the user wants to **buy** real estate.
@@ -84,6 +98,9 @@ Search for properties for sale. Use when the user wants to **buy** real estate.
 
 ### \`list_city_codes\`
 Returns a list of Israeli city codes and names. Use before \`search_rentals\` or \`search_for_sale\` when you need a city code.
+
+### \`list_property_types\`
+Returns a list of property type IDs and names (Hebrew/English). Use before \`search_rentals\` or \`search_for_sale\` when you need a property type ID.
 
 ## Vehicle Tools
 

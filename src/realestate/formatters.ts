@@ -1,4 +1,5 @@
 import type { Listing, SearchParams, SearchResult } from './types.js';
+import propertyTypes from './property-types.json';
 
 const CITY_CODES = [
   { code: '5000', name: 'תל אביב-יפו', nameEn: 'Tel Aviv-Yafo' },
@@ -50,8 +51,38 @@ function extractSearchParamsNumbers(
   };
 }
 
+function extractFeatureFiltersA(
+  params: Record<string, unknown>,
+): Pick<SearchParams, 'shelter' | 'elevator' | 'parking' | 'balcony' | 'ac' | 'storage'> {
+  return {
+    shelter: params['shelter'] as boolean | undefined,
+    elevator: params['elevator'] as boolean | undefined,
+    parking: params['parking'] as boolean | undefined,
+    balcony: params['balcony'] as boolean | undefined,
+    ac: params['ac'] as boolean | undefined,
+    storage: params['storage'] as boolean | undefined,
+  };
+}
+
+function extractFeatureFiltersB(
+  params: Record<string, unknown>,
+): Pick<SearchParams, 'accessibility' | 'pets' | 'furnished' | 'boiler' | 'doorman'> {
+  return {
+    accessibility: params['accessibility'] as boolean | undefined,
+    pets: params['pets'] as boolean | undefined,
+    furnished: params['furnished'] as boolean | undefined,
+    boiler: params['boiler'] as boolean | undefined,
+    doorman: params['doorman'] as boolean | undefined,
+  };
+}
+
 export function extractSearchParams(params: Record<string, unknown>): SearchParams {
-  return { ...extractSearchParamsStrings(params), ...extractSearchParamsNumbers(params) };
+  return {
+    ...extractSearchParamsStrings(params),
+    ...extractSearchParamsNumbers(params),
+    ...extractFeatureFiltersA(params),
+    ...extractFeatureFiltersB(params),
+  };
 }
 
 export function filterCities(
@@ -60,6 +91,18 @@ export function filterCities(
   if (filter === undefined) return CITY_CODES;
   return CITY_CODES.filter(
     (c) => c.name.toLowerCase().includes(filter) || c.nameEn.toLowerCase().includes(filter),
+  );
+}
+
+export function filterPropertyTypes(
+  filter: string | undefined,
+): Array<{ id: string; name: string; nameEn: string }> {
+  if (filter === undefined) return propertyTypes;
+  return propertyTypes.filter(
+    (t) =>
+      t.name.toLowerCase().includes(filter) ||
+      t.nameEn.toLowerCase().includes(filter) ||
+      t.id.toLowerCase().includes(filter),
   );
 }
 

@@ -77,6 +77,7 @@ async function assertToolNames(proc: SpawnedProc): Promise<void> {
   expect(names).toContain('list_city_codes');
   expect(names).toContain('search_cars');
   expect(names).toContain('list_manufacturers');
+  expect(names).toContain('list_property_types');
   expect(names).toContain('which_tool');
 }
 
@@ -105,7 +106,7 @@ async function assertWhichTool(proc: SpawnedProc): Promise<void> {
 }
 
 describe('E2E: tools/list', { timeout: 15000 }, () => {
-  it('lists all 7 tools', async () => {
+  it('lists all 8 tools', async () => {
     const proc = spawn('node', [SERVER_PATH], { stdio: ['pipe', 'pipe', 'pipe'] });
     try {
       await initServer(proc);

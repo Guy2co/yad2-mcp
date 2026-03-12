@@ -8,6 +8,7 @@ import {
   formatListing,
   extractSearchParams,
   filterCities,
+  filterPropertyTypes,
 } from '../realestate/formatters.js';
 
 const BASE_LISTING: Listing = {
@@ -134,6 +135,34 @@ describe('extractSearchParams - passthrough', () => {
     expect(r.city).toBe('5000');
     expect(r.rooms).toBe('2-4');
     expect(r.floor).toBe('1-3');
+  });
+});
+
+describe('extractSearchParams - feature filters', () => {
+  it('passes through shelter and elevator when true', () => {
+    const r = extractSearchParams({ shelter: true, elevator: true });
+    expect(r.shelter).toBe(true);
+    expect(r.elevator).toBe(true);
+  });
+
+  it('shelter is undefined when not provided', () => {
+    expect(extractSearchParams({}).shelter).toBeUndefined();
+  });
+});
+
+describe('filterPropertyTypes', () => {
+  it('returns all 14 types when filter is undefined', () => {
+    expect(filterPropertyTypes(undefined)).toHaveLength(14);
+  });
+
+  it('returns cottage entry when filtering by "villa"', () => {
+    const results = filterPropertyTypes('villa');
+    expect(results.some((t) => t.id === 'cottage')).toBe(true);
+  });
+
+  it('returns apartment entry when filtering by Hebrew "דירה"', () => {
+    const results = filterPropertyTypes('דירה');
+    expect(results.some((t) => t.id === 'apartment')).toBe(true);
   });
 });
 

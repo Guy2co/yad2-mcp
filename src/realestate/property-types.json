@@ -1,0 +1,16 @@
+[
+  { "id": "apartment",        "name": "דירה",        "nameEn": "Apartment" },
+  { "id": "garden_apartment", "name": "דירת גן",     "nameEn": "Garden Apartment" },
+  { "id": "penthouse",        "name": "פנטהאוז",     "nameEn": "Penthouse" },
+  { "id": "duplex",           "name": "דופלקס",      "nameEn": "Duplex" },
+  { "id": "roof_apartment",   "name": "דירת גג",     "nameEn": "Roof Apartment" },
+  { "id": "unit",             "name": "יחידת דיור",  "nameEn": "Unit" },
+  { "id": "storage",          "name": "מחסן",        "nameEn": "Storage" },
+  { "id": "parking",          "name": "חניה",        "nameEn": "Parking" },
+  { "id": "cottage",          "name": "קוטג'",       "nameEn": "Cottage/Villa" },
+  { "id": "townhouse",        "name": "בית עירוני",  "nameEn": "Townhouse" },
+  { "id": "building",         "name": "בניין",       "nameEn": "Building" },
+  { "id": "land",             "name": "מגרש/קרקע",  "nameEn": "Land/Plot" },
+  { "id": "agricultural",     "name": "חקלאי",       "nameEn": "Agricultural" },
+  { "id": "commercial_space", "name": "שטח מסחרי",   "nameEn": "Commercial Space" }
+]

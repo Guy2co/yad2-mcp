@@ -10,6 +10,28 @@ function buildSizeParam(params: SearchParams): string | undefined {
   return `${params.sizeMin ?? 0}-${params.sizeMax ?? 99999}`;
 }
 
+function applyFeatureFiltersA(params: SearchParams, q: Record<string, string>): void {
+  if (params.shelter === true) q.shelter = '1';
+  if (params.elevator === true) q.elevator = '1';
+  if (params.parking === true) q.parking = '1';
+  if (params.balcony === true) q.balcony = '1';
+  if (params.ac === true) q.ac = '1';
+  if (params.storage === true) q.storage = '1';
+}
+
+function applyFeatureFiltersB(params: SearchParams, q: Record<string, string>): void {
+  if (params.accessibility === true) q.accessibility = '1';
+  if (params.pets === true) q.pets = '1';
+  if (params.furnished === true) q.furnished = '1';
+  if (params.boiler === true) q.boiler = '1';
+  if (params.doorman === true) q.doorman = '1';
+}
+
+function applyFeatureFilters(params: SearchParams, q: Record<string, string>): void {
+  applyFeatureFiltersA(params, q);
+  applyFeatureFiltersB(params, q);
+}
+
 function applyOptionalParams(params: SearchParams, q: Record<string, string>): void {
   if (params.city !== undefined) q.city = params.city;
   if (params.rooms !== undefined) q.rooms = params.rooms;
@@ -19,6 +41,7 @@ function applyOptionalParams(params: SearchParams, q: Record<string, string>): v
   if (price !== undefined) q.priceOnly = price;
   const size = buildSizeParam(params);
   if (size !== undefined) q.squaremeter = size;
+  applyFeatureFilters(params, q);
 }
 
 export function buildQuery(params: SearchParams): Record<string, string> {

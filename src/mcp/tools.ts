@@ -21,9 +21,26 @@ export const SearchSchema = z.object({
       'unit',
       'storage',
       'parking',
+      'cottage',
+      'townhouse',
+      'building',
+      'land',
+      'agricultural',
+      'commercial_space',
     ])
     .optional()
-    .describe('Property type'),
+    .describe('Property type (use list_property_types to see all options)'),
+  shelter: z.boolean().optional().describe('Has shelter/safe room (ממ"ד)'),
+  elevator: z.boolean().optional().describe('Has elevator'),
+  parking: z.boolean().optional().describe('Has parking space'),
+  balcony: z.boolean().optional().describe('Has balcony'),
+  ac: z.boolean().optional().describe('Has air conditioning'),
+  storage: z.boolean().optional().describe('Has storage room'),
+  accessibility: z.boolean().optional().describe('Wheelchair accessible'),
+  pets: z.boolean().optional().describe('Pets allowed'),
+  furnished: z.boolean().optional().describe('Furnished'),
+  boiler: z.boolean().optional().describe('Has solar boiler'),
+  doorman: z.boolean().optional().describe('Has doorman/concierge'),
   page: z.number().optional().describe('Page number (default: 1)'),
   pageSize: z.number().optional().describe('Results per page (default: 20, max: 40)'),
 });
@@ -62,6 +79,10 @@ export const SearchCarsSchema = z.object({
 
 export const ListManufacturersSchema = z.object({
   filter: z.string().optional().describe('Optional filter string to search manufacturer names'),
+});
+
+export const ListPropertyTypesSchema = z.object({
+  filter: z.string().optional().describe('Optional filter string to search type names'),
 });
 
 export const WhichToolSchema = z.object({});

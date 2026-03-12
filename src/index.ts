@@ -7,6 +7,7 @@ import {
   ListCityCodesSchema,
   SearchCarsSchema,
   ListManufacturersSchema,
+  ListPropertyTypesSchema,
   WhichToolSchema,
 } from './mcp/tools.js';
 import {
@@ -15,6 +16,7 @@ import {
   handleListCityCodes,
   handleSearchCars,
   handleListManufacturers,
+  handleListPropertyTypes,
   handleWhichTool,
 } from './mcp/handlers.js';
 import { version } from '../package.json';
@@ -68,6 +70,15 @@ server.registerTool(
     inputSchema: ListManufacturersSchema,
   },
   (params) => handleListManufacturers(params),
+);
+
+server.registerTool(
+  'list_property_types',
+  {
+    description: 'List property type IDs and names for use in real estate searches',
+    inputSchema: ListPropertyTypesSchema,
+  },
+  (params) => handleListPropertyTypes(params),
 );
 
 server.registerTool(
