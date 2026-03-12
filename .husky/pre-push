@@ -1,0 +1,1 @@
+npm version patch -m "chore: bump version to %s"
