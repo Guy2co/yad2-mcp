@@ -96,11 +96,7 @@ function collectFeedItems(feed: Yad2FeedData): Yad2ApiItem[] {
   return [
     ...toItems(feed.private),
     ...toItems(feed.agency),
-    ...toItems(feed.platinum),
     ...toItems(feed.yad1),
-    ...toItems(feed.kingOfTheHar),
-    ...toItems(feed.trio),
-    ...toItems(feed.booster),
     ...toItems(feed.leadingBroker),
   ];
 }
