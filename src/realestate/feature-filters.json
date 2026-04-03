@@ -1,0 +1,13 @@
+[
+  { "id": "shelter",       "name": "ממ\"ד",           "nameEn": "Shelter/Safe Room" },
+  { "id": "elevator",      "name": "מעלית",           "nameEn": "Elevator" },
+  { "id": "parking",       "name": "חנייה",           "nameEn": "Parking" },
+  { "id": "balcony",       "name": "מרפסת",           "nameEn": "Balcony" },
+  { "id": "ac",            "name": "מיזוג",           "nameEn": "Air Conditioning" },
+  { "id": "storage",       "name": "מחסן",            "nameEn": "Storage Room" },
+  { "id": "accessibility", "name": "נגישות",          "nameEn": "Wheelchair Accessible" },
+  { "id": "pets",          "name": "חיות מחמד",       "nameEn": "Pets Allowed" },
+  { "id": "furnished",     "name": "מרוהט",           "nameEn": "Furnished" },
+  { "id": "boiler",        "name": "דוד שמש",         "nameEn": "Solar Boiler" },
+  { "id": "doorman",       "name": "שומר/קונסיירז'",  "nameEn": "Doorman/Concierge" }
+]

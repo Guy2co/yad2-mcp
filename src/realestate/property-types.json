@@ -1,0 +1,20 @@
+[
+  { "id": "apartment",         "yad2Id": "1",        "name": "דירה",                   "nameEn": "Apartment" },
+  { "id": "garden_apartment",  "yad2Id": "3",        "name": "דירת גן",                "nameEn": "Garden Apartment" },
+  { "id": "studio_loft",       "yad2Id": "4",        "name": "סטודיו/ לופט",           "nameEn": "Studio/Loft" },
+  { "id": "cottage",           "yad2Id": "5,39,55",  "name": "קוטג'/בית פרטי",        "nameEn": "Cottage/Private House/Villa" },
+  { "id": "penthouse",         "yad2Id": "6",        "name": "גג/ פנטהאוז",            "nameEn": "Penthouse/Roof Apartment" },
+  { "id": "duplex",            "yad2Id": "7",        "name": "דופלקס",                 "nameEn": "Duplex" },
+  { "id": "unit",              "yad2Id": "11",       "name": "יחידת דיור",             "nameEn": "Housing Unit" },
+  { "id": "vacation",          "yad2Id": "25",       "name": "תיירות ונופש",           "nameEn": "Vacation/Tourism" },
+  { "id": "parking",           "yad2Id": "30",       "name": "חניה",                   "nameEn": "Parking" },
+  { "id": "agricultural",      "yad2Id": "32",       "name": "משק חקלאי/ נחלה",       "nameEn": "Agricultural/Farm" },
+  { "id": "land",              "yad2Id": "33",       "name": "מגרשים",                 "nameEn": "Land/Plot" },
+  { "id": "general",           "yad2Id": "41",       "name": "כללי",                   "nameEn": "General" },
+  { "id": "building",          "yad2Id": "44",       "name": "בניין מגורים",           "nameEn": "Residential Building" },
+  { "id": "storage",           "yad2Id": "45",       "name": "מחסן",                   "nameEn": "Storage" },
+  { "id": "basement",          "yad2Id": "49",       "name": "מרתף/ פרטר",            "nameEn": "Basement/Parterre" },
+  { "id": "purchase_group",    "yad2Id": "50",       "name": "קב' רכישה/ זכות לנכס", "nameEn": "Purchase Group" },
+  { "id": "triplex",           "yad2Id": "51",       "name": "טריפלקס",                "nameEn": "Triplex" },
+  { "id": "protected_housing", "yad2Id": "61",       "name": "דיור מוגן",              "nameEn": "Protected/Assisted Living" }
+]

@@ -1,32 +1,33 @@
 import type { Listing, SearchParams, SearchResult } from './types.js';
+import propertyTypes from './property-types.json';
 
-export const CITY_CODES = [
-  { code: '5000', name: 'תל אביב-יפו', nameEn: 'Tel Aviv-Yafo' },
-  { code: '3000', name: 'חיפה', nameEn: 'Haifa' },
-  { code: '70', name: 'ירושלים', nameEn: 'Jerusalem' },
-  { code: '8600', name: 'באר שבע', nameEn: 'Beer Sheva' },
-  { code: '6300', name: 'נתניה', nameEn: 'Netanya' },
-  { code: '7900', name: 'פתח תקווה', nameEn: 'Petah Tikva' },
-  { code: '9000', name: 'ראשון לציון', nameEn: 'Rishon LeZion' },
-  { code: '6900', name: 'בני ברק', nameEn: 'Bnei Brak' },
-  { code: '6200', name: 'רמת גן', nameEn: 'Ramat Gan' },
-  { code: '6100', name: 'גבעתיים', nameEn: 'Givatayim' },
-  { code: '1200', name: 'אשדוד', nameEn: 'Ashdod' },
-  { code: '2650', name: 'אשקלון', nameEn: 'Ashkelon' },
-  { code: '4000', name: 'חולון', nameEn: 'Holon' },
-  { code: '9100', name: 'רחובות', nameEn: 'Rehovot' },
-  { code: '7400', name: 'בת ים', nameEn: 'Bat Yam' },
-  { code: '8700', name: 'אילת', nameEn: 'Eilat' },
-  { code: '3100', name: 'נצרת', nameEn: 'Nazareth' },
-  { code: '1300', name: 'אור יהודה', nameEn: 'Or Yehuda' },
-  { code: '5100', name: 'הרצליה', nameEn: 'Herzliya' },
-  { code: '1064', name: 'רעננה', nameEn: 'Raanana' },
-  { code: '2800', name: 'כפר סבא', nameEn: 'Kfar Saba' },
-  { code: '6400', name: 'רמת השרון', nameEn: 'Ramat HaSharon' },
-  { code: '7200', name: 'מודיעין', nameEn: "Modi'in" },
+const CITY_CODES = [
+  { code: '5000', area: '1', name: 'תל אביב-יפו', nameEn: 'Tel Aviv-Yafo' },
+  { code: '3000', area: '3', name: 'חיפה', nameEn: 'Haifa' },
+  { code: '70', area: '11', name: 'ירושלים', nameEn: 'Jerusalem' },
+  { code: '8600', area: '5', name: 'באר שבע', nameEn: 'Beer Sheva' },
+  { code: '6300', area: '18', name: 'נתניה', nameEn: 'Netanya' },
+  { code: '7900', area: '19', name: 'פתח תקווה', nameEn: 'Petah Tikva' },
+  { code: '9000', area: '9', name: 'ראשון לציון', nameEn: 'Rishon LeZion' },
+  { code: '6900', area: '19', name: 'בני ברק', nameEn: 'Bnei Brak' },
+  { code: '6200', area: '19', name: 'רמת גן', nameEn: 'Ramat Gan' },
+  { code: '6100', area: '19', name: 'גבעתיים', nameEn: 'Givatayim' },
+  { code: '1200', area: '6', name: 'אשדוד', nameEn: 'Ashdod' },
+  { code: '2650', area: '18', name: 'רמת השרון', nameEn: 'Ramat HaSharon' },
+  { code: '6400', area: '18', name: 'הרצליה', nameEn: 'Herzliya' },
+  { code: '4000', area: '9', name: 'חולון', nameEn: 'Holon' },
+  { code: '9100', area: '9', name: 'רחובות', nameEn: 'Rehovot' },
+  { code: '7400', area: '9', name: 'בת ים', nameEn: 'Bat Yam' },
+  { code: '8700', area: '22', name: 'אילת', nameEn: 'Eilat' },
+  { code: '3100', area: '2', name: 'נצרת', nameEn: 'Nazareth' },
+  { code: '1300', area: '19', name: 'אור יהודה', nameEn: 'Or Yehuda' },
+  { code: '1064', area: '18', name: 'רעננה', nameEn: 'Raanana' },
+  { code: '2800', area: '18', name: 'כפר סבא', nameEn: 'Kfar Saba' },
+  { code: '1400', area: '6', name: 'אשקלון', nameEn: 'Ashkelon' },
+  { code: '7200', area: '20', name: 'מודיעין', nameEn: "Modi'in" },
 ];
 
-export function extractSearchParamsStrings(
+function extractSearchParamsStrings(
   params: Record<string, unknown>,
 ): Pick<SearchParams, 'city' | 'rooms' | 'floor' | 'propertyType'> {
   return {
@@ -37,7 +38,7 @@ export function extractSearchParamsStrings(
   };
 }
 
-export function extractSearchParamsNumbers(
+function extractSearchParamsNumbers(
   params: Record<string, unknown>,
 ): Pick<SearchParams, 'priceMin' | 'priceMax' | 'sizeMin' | 'sizeMax' | 'page' | 'pageSize'> {
   return {
@@ -50,16 +51,64 @@ export function extractSearchParamsNumbers(
   };
 }
 
+function extractFeatureFiltersA(
+  params: Record<string, unknown>,
+): Pick<
+  SearchParams,
+  'shelter' | 'elevator' | 'parking' | 'balcony' | 'airConditioner' | 'warehouse'
+> {
+  return {
+    shelter: params['shelter'] as boolean | undefined,
+    elevator: params['elevator'] as boolean | undefined,
+    parking: params['parking'] as boolean | undefined,
+    balcony: params['balcony'] as boolean | undefined,
+    airConditioner: params['airConditioner'] as boolean | undefined,
+    warehouse: params['warehouse'] as boolean | undefined,
+  };
+}
+
+function extractFeatureFiltersB(
+  params: Record<string, unknown>,
+): Pick<SearchParams, 'accessibility' | 'furniture' | 'renovated' | 'bars'> {
+  return {
+    accessibility: params['accessibility'] as boolean | undefined,
+    furniture: params['furniture'] as boolean | undefined,
+    renovated: params['renovated'] as boolean | undefined,
+    bars: params['bars'] as boolean | undefined,
+  };
+}
+
 export function extractSearchParams(params: Record<string, unknown>): SearchParams {
-  return { ...extractSearchParamsStrings(params), ...extractSearchParamsNumbers(params) };
+  return {
+    ...extractSearchParamsStrings(params),
+    ...extractSearchParamsNumbers(params),
+    ...extractFeatureFiltersA(params),
+    ...extractFeatureFiltersB(params),
+  };
 }
 
 export function filterCities(
   filter: string | undefined,
-): Array<{ code: string; name: string; nameEn: string }> {
+): Array<{ code: string; area: string; name: string; nameEn: string }> {
   if (filter === undefined) return CITY_CODES;
   return CITY_CODES.filter(
     (c) => c.name.toLowerCase().includes(filter) || c.nameEn.toLowerCase().includes(filter),
+  );
+}
+
+export function lookupCityArea(cityCode: string): string | undefined {
+  return CITY_CODES.find((c) => c.code === cityCode)?.area;
+}
+
+export function filterPropertyTypes(
+  filter: string | undefined,
+): Array<{ id: string; name: string; nameEn: string }> {
+  if (filter === undefined) return propertyTypes;
+  return propertyTypes.filter(
+    (t) =>
+      t.name.toLowerCase().includes(filter) ||
+      t.nameEn.toLowerCase().includes(filter) ||
+      t.id.toLowerCase().includes(filter),
   );
 }
 
