@@ -24,7 +24,8 @@ beforeEach(() => {
 async function getContextOpt(key: string): Promise<unknown> {
   const { launchPage } = await import('../infra/browser.js');
   await launchPage();
-  return (mockNewContext.mock.calls[0][0] as Record<string, unknown>)[key];
+  const callArgs = mockNewContext.mock.calls[0] as [Record<string, unknown>] | undefined;
+  return (callArgs?.[0] ?? {})[key];
 }
 
 async function getPage(): Promise<unknown> {
@@ -72,7 +73,7 @@ describe('launchPage() — context headers/UA', () => {
   it('sets a Chrome user agent version >= 130', async () => {
     const ua = (await getContextOpt('userAgent')) as string;
     const match = ua.match(/Chrome\/(\d+)/);
-    const version = parseInt((match ?? ['', '0'])[1], 10);
+    const version = parseInt((match ?? ['', '0'])[1] ?? '0', 10);
     expect(match).not.toBeNull();
     expect(version).toBeGreaterThanOrEqual(130);
   });
@@ -103,7 +104,8 @@ describe('navigateTo() — timeout', () => {
   it('uses a timeout >= 15000ms', async () => {
     const { navigateTo } = await import('../infra/browser.js');
     await navigateTo((await getPage()) as never, 'https://example.com');
-    const { timeout } = mockGoto.mock.calls[0][1] as { timeout: number };
+    const gotoArgs = mockGoto.mock.calls[0] as [string, { timeout: number }] | undefined;
+    const { timeout } = gotoArgs?.[1] ?? { timeout: 0 };
     expect(timeout).toBeGreaterThanOrEqual(15000);
   });
 });

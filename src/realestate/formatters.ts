@@ -53,26 +53,28 @@ function extractSearchParamsNumbers(
 
 function extractFeatureFiltersA(
   params: Record<string, unknown>,
-): Pick<SearchParams, 'shelter' | 'elevator' | 'parking' | 'balcony' | 'ac' | 'storage'> {
+): Pick<
+  SearchParams,
+  'shelter' | 'elevator' | 'parking' | 'balcony' | 'airConditioner' | 'warehouse'
+> {
   return {
     shelter: params['shelter'] as boolean | undefined,
     elevator: params['elevator'] as boolean | undefined,
     parking: params['parking'] as boolean | undefined,
     balcony: params['balcony'] as boolean | undefined,
-    ac: params['ac'] as boolean | undefined,
-    storage: params['storage'] as boolean | undefined,
+    airConditioner: params['airConditioner'] as boolean | undefined,
+    warehouse: params['warehouse'] as boolean | undefined,
   };
 }
 
 function extractFeatureFiltersB(
   params: Record<string, unknown>,
-): Pick<SearchParams, 'accessibility' | 'pets' | 'furnished' | 'boiler' | 'doorman'> {
+): Pick<SearchParams, 'accessibility' | 'furniture' | 'renovated' | 'bars'> {
   return {
     accessibility: params['accessibility'] as boolean | undefined,
-    pets: params['pets'] as boolean | undefined,
-    furnished: params['furnished'] as boolean | undefined,
-    boiler: params['boiler'] as boolean | undefined,
-    doorman: params['doorman'] as boolean | undefined,
+    furniture: params['furniture'] as boolean | undefined,
+    renovated: params['renovated'] as boolean | undefined,
+    bars: params['bars'] as boolean | undefined,
   };
 }
 

@@ -1,4 +1,5 @@
 import type { Listing, SearchResult, Yad2ApiItem, Yad2FeedData } from './types.js';
+import { Yad2FeedSchema } from './api-schema.js';
 
 const ITEM_BASE = 'https://www.yad2.co.il/realestate/item';
 
@@ -79,6 +80,15 @@ function buildItemScalars(item: Yad2ApiItem, token: string): ItemScalars {
   };
 }
 
+/**
+ * Converts a raw Yad2 API item into a normalized `Listing`.
+ *
+ * Key decisions:
+ * - `token` falls back to `orderId` as a string if `token` is absent.
+ * - Title is the first line of `searchText` (yad2 packs the full description into one field).
+ * - Floor and size are coerced to numbers; missing → `null` (not `0`).
+ * - Coordinates use `lon` (not `lng`) in the API; normalized to `lng` in the output.
+ */
 export function parseItem(item: Yad2ApiItem): Listing {
   const token = String(item.token ?? item.orderId ?? '');
   return {
@@ -101,14 +111,24 @@ function collectFeedItems(feed: Yad2FeedData): Yad2ApiItem[] {
   ];
 }
 
+function warnIfFeedInvalid(data: Record<string, unknown>): void {
+  const validation = Yad2FeedSchema.safeParse(data);
+  if (!validation.success) {
+    console.error(
+      '[yad2] feed schema mismatch — API may have changed:',
+      validation.error.issues[0]?.message,
+    );
+  }
+}
+
+/**
+ * Validates the raw feed payload against `Yad2FeedSchema`, then converts it to `SearchResult`.
+ * Logs a stderr warning if the schema doesn't match (API drift) but continues parsing.
+ */
 export function parseResponse(data: Record<string, unknown>, page: number): SearchResult {
+  warnIfFeedInvalid(data);
   const feed = data as Yad2FeedData;
   const items = collectFeedItems(feed);
   const total = (feed.pagination?.total as number | undefined) ?? items.length;
-  return {
-    listings: items.map(parseItem),
-    total,
-    page,
-    pageSize: items.length,
-  };
+  return { listings: items.map(parseItem), total, page, pageSize: items.length };
 }

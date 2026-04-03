@@ -1,6 +1,6 @@
 {
   "name": "@guy2co/yad2-mcp",
-  "version": "1.0.20",
+  "version": "1.0.22",
   "description": "MCP server for searching yad2.co.il real estate listings",
   "main": "dist/index.js",
   "repository": {
@@ -40,6 +40,7 @@
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
+    "expect-type": "^1.3.0",
     "husky": "^9.1.7",
     "knip": "^5.86.0",
     "lint-staged": "^16.3.3",
