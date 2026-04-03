@@ -1,6 +1,6 @@
 {
   "name": "@guy2co/yad2-mcp",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "MCP server for searching yad2.co.il real estate listings",
   "main": "dist/index.js",
   "repository": {
