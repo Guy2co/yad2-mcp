@@ -3,6 +3,16 @@ import type { Page } from 'playwright';
 const USER_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 
+const BROWSER_CONTEXT_OPTIONS = {
+  userAgent: USER_AGENT,
+  locale: 'he-IL',
+  timezoneId: 'Asia/Jerusalem',
+  geolocation: { latitude: 32.0853, longitude: 34.7818 }, // Tel Aviv
+  permissions: ['geolocation'] as string[],
+  viewport: { width: 1280, height: 800 },
+  extraHTTPHeaders: { 'Accept-Language': 'he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7' },
+};
+
 /**
  * Launches a headless Chromium browser with stealth plugin + Hebrew locale.
  * Returns the page and a `close()` function to tear down the browser.
@@ -10,20 +20,10 @@ const USER_AGENT =
  */
 export async function launchPage(): Promise<{ page: Page; close: () => Promise<void> }> {
   const { chromium } = await import('playwright-extra');
-
   const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-
   chromium.use(StealthPlugin() as Parameters<typeof chromium.use>[0]);
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({
-    userAgent: USER_AGENT,
-    locale: 'he-IL',
-    timezoneId: 'Asia/Jerusalem',
-    geolocation: { latitude: 32.0853, longitude: 34.7818 }, // Tel Aviv
-    permissions: ['geolocation'],
-    viewport: { width: 1280, height: 800 },
-    extraHTTPHeaders: { 'Accept-Language': 'he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7' },
-  });
+  const context = await browser.newContext(BROWSER_CONTEXT_OPTIONS);
   const page = await context.newPage();
   return { page, close: (): Promise<void> => browser.close() };
 }

@@ -82,10 +82,23 @@ MCP tool call → mcp/handlers.ts → {realestate,vehicles}/yad2-*-client.ts
 - **`api-schema.ts` Zod schemas validate external API responses** — keep them in sync when the Yad2 API payload changes. Use `.passthrough()` so extra fields never throw.
 - **Test fixtures live in `src/__tests__/fixtures/index.ts`** — new tests should import from there, not redeclare mock data inline.
 
+## Before committing / pushing
+
+Run these checks locally before pushing — they are all enforced in CI:
+
+```bash
+npm run lint          # ESLint (max-lines-per-function, no-any, etc.)
+npm run format:check  # Prettier formatting
+npm run build         # TypeScript compilation
+npm test              # Unit tests
+```
+
+The most common CI failure is `max-lines-per-function` (≤ 15 non-blank, non-comment lines per function). If you add code to a function and it exceeds 15 lines, extract a helper rather than raising the limit.
+
 ## Code style
 
 Enforced by ESLint + Prettier (auto-run on commit via husky + lint-staged):
-- Max 15 lines per function
+- Max 15 lines per function (blank lines and comments excluded — `skipBlankLines: true, skipComments: true`)
 - Explicit return types on all functions
 - No `any` — everything explicitly typed
 - `import type` for type-only imports
