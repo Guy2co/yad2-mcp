@@ -56,6 +56,12 @@ export default [
       eqeqeq: ['error', 'always'],
       'prefer-const': 'error',
 
+      // ── Async / Promise safety ────────────────────────────────────────────
+      // Catch the most common AI-generated async mistakes.
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-misused-promises': 'error',
+      '@typescript-eslint/prefer-promise-reject-errors': 'error',
+
       // ── Console usage ─────────────────────────────────────────────────────
       // This MCP project uses console.error exclusively for stderr logging
       // (MCP protocol requires stdout to be clean JSON-RPC).

@@ -45,13 +45,13 @@ describe('filterManufacturers — filtering', () => {
 describe('filterManufacturers — data shape', () => {
   it('models have id and name', () => {
     const toyota = filterManufacturers('toyota')[0];
-    expect(toyota.models[0]).toHaveProperty('id');
-    expect(toyota.models[0]).toHaveProperty('name');
+    expect(toyota?.models[0]).toHaveProperty('id');
+    expect(toyota?.models[0]).toHaveProperty('name');
   });
   it('Skoda has Scala (id 10550)', () => {
     const skoda = filterManufacturers('skoda')[0];
     expect(skoda?.id).toBe('40');
-    expect(skoda.models.find((m) => m.name === 'Scala')?.id).toBe(10550);
+    expect(skoda?.models.find((m) => m.name === 'Scala')?.id).toBe(10550);
   });
 });
 

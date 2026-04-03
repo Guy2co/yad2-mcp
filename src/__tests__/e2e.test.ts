@@ -85,24 +85,24 @@ async function assertCityCodes(proc: SpawnedProc): Promise<void> {
   const resp = await callTool(proc, 'list_city_codes', {});
   const result = resp['result'] as Record<string, unknown>;
   const content = result['content'] as Array<{ type: string; text: string }>;
-  expect(content[0].text).toContain('Tel Aviv-Yafo');
-  expect(content[0].text).toContain('5000');
+  expect(content[0]?.text).toContain('Tel Aviv-Yafo');
+  expect(content[0]?.text).toContain('5000');
 }
 
 async function assertManufacturers(proc: SpawnedProc): Promise<void> {
   const resp = await callTool(proc, 'list_manufacturers', {});
   const result = resp['result'] as Record<string, unknown>;
   const content = result['content'] as Array<{ type: string; text: string }>;
-  expect(content[0].text).toContain('Toyota');
-  expect(content[0].text).toMatch(/\d+/);
+  expect(content[0]?.text).toContain('Toyota');
+  expect(content[0]?.text).toMatch(/\d+/);
 }
 
 async function assertWhichTool(proc: SpawnedProc): Promise<void> {
   const resp = await callTool(proc, 'which_tool', {});
   const result = resp['result'] as Record<string, unknown>;
   const content = result['content'] as Array<{ type: string; text: string }>;
-  expect(content[0].text).toContain('search_cars');
-  expect(content[0].text).toContain('search_rentals');
+  expect(content[0]?.text).toContain('search_cars');
+  expect(content[0]?.text).toContain('search_rentals');
 }
 
 describe('E2E: tools/list', { timeout: 15000 }, () => {
