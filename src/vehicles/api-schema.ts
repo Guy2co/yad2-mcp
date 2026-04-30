@@ -22,7 +22,7 @@ const Yad2VehicleMetaDataSchema = z.looseObject({
   images: z.array(z.string()).optional(),
 });
 
-export const Yad2VehicleApiItemSchema = z.looseObject({
+const Yad2VehicleApiItemSchema = z.looseObject({
   token: z.string().optional(),
   price: z.number().optional(),
   manufacturer: IdTextFieldSchema.optional(),
@@ -51,6 +51,3 @@ export const Yad2VehicleFeedSchema = z.looseObject({
   boost: z.array(Yad2VehicleApiItemSchema).optional(),
   pagination: Yad2VehiclePaginationSchema.optional(),
 });
-
-export type Yad2VehicleFeedSchemaType = z.infer<typeof Yad2VehicleFeedSchema>;
-export type Yad2VehicleApiItemSchemaType = z.infer<typeof Yad2VehicleApiItemSchema>;

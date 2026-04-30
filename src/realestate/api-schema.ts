@@ -35,7 +35,7 @@ const Yad2ApiMetaDataSchema = z.looseObject({
   images: z.array(z.string()).optional(),
 });
 
-export const Yad2ApiItemSchema = z.looseObject({
+const Yad2ApiItemSchema = z.looseObject({
   token: z.string().optional(),
   orderId: z.number().optional(),
   adNumber: z.number().optional(),
@@ -67,6 +67,3 @@ export const Yad2FeedSchema = z.looseObject({
   leadingBroker: z.array(Yad2ApiItemSchema).optional(),
   pagination: Yad2PaginationSchema.optional(),
 });
-
-export type Yad2FeedSchemaType = z.infer<typeof Yad2FeedSchema>;
-export type Yad2ApiItemSchemaType = z.infer<typeof Yad2ApiItemSchema>;
