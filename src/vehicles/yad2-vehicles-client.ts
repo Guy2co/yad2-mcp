@@ -1,4 +1,4 @@
-import type { Page } from 'playwright';
+import type { Page } from 'patchright';
 import { navigateTo, extractNextDataByMatcher, withPage } from '../infra/browser.js';
 import { parseVehicleItem, parseVehicleResponse } from './parser.js';
 import { buildVehicleQuery } from './query-builder.js';

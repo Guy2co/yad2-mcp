@@ -4,7 +4,7 @@ An MCP (Model Context Protocol) server that lets AI assistants search real estat
 
 ## How it works
 
-Yad2 uses bot protection (PerimeterX/ShieldSquare). This server uses a headless Chromium browser via [Playwright](https://playwright.dev) to load the page and extract listing data from the Next.js SSR payload (`__NEXT_DATA__`) embedded in the HTML.
+Yad2 uses Radware/ShieldSquare bot protection. This server uses a headless Chromium browser via [patchright](https://github.com/Kaliiiiiiiiii-Vinyzu/patchright) (a CDP-leak-patched Playwright fork) to clear the bot challenge, load the page, and extract listing data from the Next.js SSR payload (`__NEXT_DATA__`) embedded in the HTML.
 
 ## Tools
 
@@ -64,7 +64,7 @@ Use the `list_city_codes` tool with a `filter` param to search others (e.g. `fil
 git clone https://github.com/Guy2co/yad2-mcp.git
 cd yad2-mcp
 npm install
-npx playwright install chromium
+npx patchright install chromium
 npm run build
 ```
 
