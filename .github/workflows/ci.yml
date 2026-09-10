@@ -53,27 +53,39 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm ci
       - run: npm run build
-      # The version bump lives here rather than in a local git hook so that
-      # merges authored by bots (Dependabot) get a fresh version too -- bots
-      # never run husky, so they used to reach master on an already-published
-      # version and fail with 409. Committing by hand with hooks disabled:
-      # `npm ci` installs husky, and .husky/pre-commit shells out to gitleaks,
-      # which is not on the runner.
-      - name: Bump version
+      # The release tag is the record of what shipped, not package.json on
+      # master. This job cannot commit a bump back to the branch: master is
+      # protected (pull requests only), and the bypass list cannot name the
+      # actor GITHUB_TOKEN runs as -- rulesets only accept apps installed on
+      # the repository, and the built-in GitHub Actions integration is not one.
+      #
+      # The bump still happens here rather than in a local git hook so that
+      # merges authored by bots get a fresh version too: Dependabot never runs
+      # husky, so it used to reach master on an already-published version and
+      # fail with 409.
+      #
+      # package.json acts as a floor rather than the source: whichever of the
+      # two is higher becomes the base for the patch bump. So hand-editing it
+      # to 1.1.0 makes the next release 1.1.1, which is how the previous
+      # `npm version patch` flow behaved too.
+      - name: Resolve next version
         id: bump
         run: |
-          npm version patch --no-git-tag-version
-          VERSION="$(node -p "require('./package.json').version")"
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git -c core.hooksPath=/dev/null commit -am "chore: bump version to $VERSION"
-          git tag "v$VERSION"
+          TAGGED="$(git tag --list 'v*' --sort=-v:refname | head -n1 | sed 's/^v//')"
+          PACKAGED="$(node -p "require('./package.json').version")"
+          BASE="$(printf '%s\n%s\n' "${TAGGED:-0.0.0}" "$PACKAGED" | sort -V | tail -n1)"
+          npm version "$BASE" --no-git-tag-version --allow-same-version >/dev/null
+          VERSION="$(npm version patch --no-git-tag-version | sed 's/^v//')"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-      # Pushed before publishing so a publish failure leaves git ahead of the
-      # registry, not behind: the next merge just bumps past it. Pushes made
-      # with GITHUB_TOKEN do not trigger workflows, so this cannot loop.
-      - name: Push version bump
-        run: git push --follow-tags origin HEAD:${{ github.ref_name }}
+      # Tagged before publishing so a publish failure leaves git ahead of the
+      # registry, not behind: the next merge bumps past the unused tag. The
+      # reverse order would leave the registry holding a version no tag records,
+      # and the next run would retry it and 409. A tag push does not match this
+      # workflow's branch filter, so this cannot loop.
+      - name: Push release tag
+        run: |
+          git tag "v${{ steps.bump.outputs.version }}"
+          git push origin "v${{ steps.bump.outputs.version }}"
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
