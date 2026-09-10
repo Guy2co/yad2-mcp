@@ -9,6 +9,7 @@ import {
 } from '../realestate/formatters.js';
 import {
   filterManufacturers,
+  formatManufacturerEntry,
   formatVehicleListing,
   formatVehicleSearchResults,
 } from '../vehicles/formatters.js';
@@ -23,7 +24,20 @@ import type {
   ListPropertyTypesSchema,
 } from './tools.js';
 
-type ToolResponse = { content: Array<{ type: 'text'; text: string }>; isError?: boolean };
+/**
+ * An MCP tool result. `content` is the human-readable markdown every client renders;
+ * `structuredContent` is the same data unflattened, for programmatic consumers.
+ *
+ * No tool declares an `outputSchema`, deliberately: the SDK turns a declared schema into
+ * a hard gate (server-side Zod plus client-side Ajv against `additionalProperties: false`),
+ * so a single unexpected value in a scraped payload would fail the whole call instead of
+ * degrading one field. Consumers validate the shape themselves and can skip a bad row.
+ */
+type ToolResponse = {
+  content: Array<{ type: 'text'; text: string }>;
+  structuredContent?: Record<string, unknown>;
+  isError?: boolean;
+};
 
 type SearchParams_ = z.infer<typeof SearchSchema>;
 type GetListingParams = z.infer<typeof GetListingSchema>;
@@ -38,16 +52,25 @@ const vehiclesClient = new Yad2VehiclesClient();
 export async function handleSearch(toolName: string, params: SearchParams_): Promise<ToolResponse> {
   const type = toolName === 'search_rentals' ? 'rent' : 'forsale';
   const result = await realEstateClient.search(type, extractSearchParams(params) as SearchParams);
-  return { content: [{ type: 'text', text: formatSearchResults(result, type) }] };
+  return {
+    content: [{ type: 'text', text: formatSearchResults(result, type) }],
+    structuredContent: { ...result },
+  };
 }
 
 export async function handleGetListing(params: GetListingParams): Promise<ToolResponse> {
   if (params.type === 'car') {
     const listing = await vehiclesClient.getCarListing(params.token);
-    return { content: [{ type: 'text', text: formatVehicleListing(listing) }] };
+    return {
+      content: [{ type: 'text', text: formatVehicleListing(listing) }],
+      structuredContent: { ...listing },
+    };
   }
   const listing = await realEstateClient.getListing(params.token);
-  return { content: [{ type: 'text', text: formatListing(listing) }] };
+  return {
+    content: [{ type: 'text', text: formatListing(listing) }],
+    structuredContent: { ...listing },
+  };
 }
 
 export function handleListCityCodes(params: ListCityCodesParams): ToolResponse {
@@ -60,16 +83,19 @@ export function handleListCityCodes(params: ListCityCodesParams): ToolResponse {
 
 export async function handleSearchCars(params: SearchCarsParams): Promise<ToolResponse> {
   const result = await vehiclesClient.searchVehicles(params);
-  return { content: [{ type: 'text', text: formatVehicleSearchResults(result) }] };
+  return {
+    content: [{ type: 'text', text: formatVehicleSearchResults(result) }],
+    structuredContent: { ...result },
+  };
 }
 
 export function handleListManufacturers(params: ListManufacturersParams): ToolResponse {
   const filter = params.filter?.toLowerCase();
-  const lines = filterManufacturers(filter).map((m) => {
-    const modelList = m.models.map((mod) => `${mod.name} (${mod.id})`).join(', ');
-    return `**${m.nameEn}** (${m.name}) — manufacturer ID: ${m.id}\n  Models: ${modelList}`;
-  });
-  return { content: [{ type: 'text', text: `Car manufacturers:\n\n${lines.join('\n\n')}` }] };
+  const withModels = filter !== undefined;
+  const lines = filterManufacturers(filter).map((m) => formatManufacturerEntry(m, withModels));
+  const body = lines.join(withModels ? '\n\n' : '\n');
+  const hint = withModels ? '' : '\n\nPass a filter (e.g. "toyota") to list model IDs.';
+  return { content: [{ type: 'text', text: `Car manufacturers:\n\n${body}${hint}` }] };
 }
 
 export function handleListPropertyTypes(params: ListPropertyTypesParams): ToolResponse {
@@ -111,6 +137,7 @@ Search for used cars on yad2. Use when the user wants to **buy a car**.
 
 ### \`list_manufacturers\`
 Returns a list of car manufacturer IDs and names. Use before \`search_cars\` when you need a manufacturer ID.
+Pass \`filter\` (e.g. "toyota") to also get the model IDs for the matching manufacturers.
 
 ## General Tools
 

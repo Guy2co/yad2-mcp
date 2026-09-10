@@ -36,8 +36,8 @@ describe('buildQuery - feature filters', () => {
     expect(buildQuery({ shelter: false })).not.toHaveProperty('shelter');
   });
 
-  it('maps propertyType cottage to yad2 numeric IDs', () => {
-    expect(buildQuery({ propertyType: 'cottage' })['property']).toBe('5,39,55');
+  it('maps propertyType cottage to its yad2 numeric ID', () => {
+    expect(buildQuery({ propertyType: 'cottage' })['property']).toBe('5');
   });
 });
 

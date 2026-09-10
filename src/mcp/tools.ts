@@ -22,6 +22,10 @@ export const SearchSchema = z.object({
       'unit',
       'vacation',
       'cottage',
+      'semi_detached',
+      'auxiliary_farm',
+      'sublet',
+      'apartment_swap',
       'agricultural',
       'land',
       'general',
@@ -33,7 +37,9 @@ export const SearchSchema = z.object({
       'protected_housing',
     ])
     .optional()
-    .describe('Property type (use list_property_types to see all options)'),
+    .describe(
+      'Property type (use list_property_types to see all options; sublet and apartment_swap exist only for rentals)',
+    ),
   shelter: z.boolean().optional().describe('Has shelter/safe room (ממ"ד)'),
   elevator: z.boolean().optional().describe('Has elevator'),
   parking: z.boolean().optional().describe('Has parking space'),

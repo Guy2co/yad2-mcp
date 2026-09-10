@@ -1,7 +1,11 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { parseResponse } from '../realestate/parser.js';
+import { parseItem, parseResponse } from '../realestate/parser.js';
 import { parseVehicleResponse } from '../vehicles/parser.js';
-import { FAKE_FEED_DATA, FAKE_VEHICLE_FEED_DATA } from './fixtures/index.js';
+import {
+  FAKE_FEED_DATA,
+  FAKE_REALESTATE_ITEM_GROUND_FLOOR,
+  FAKE_VEHICLE_FEED_DATA,
+} from './fixtures/index.js';
 
 type Spy = ReturnType<typeof vi.spyOn>;
 
@@ -48,6 +52,32 @@ describe('parseResponse — degraded result', () => {
     captureStderr();
     const expected = { listings: [], total: 0, page: 2, pageSize: 0 };
     expect(parseResponse({ privateFeed: [] }, 2)).toEqual(expected);
+  });
+});
+
+describe('parseItem — non-numeric numeric fields', () => {
+  it('normalizes a Hebrew floor label to null rather than NaN', () => {
+    const listing = parseItem(FAKE_REALESTATE_ITEM_GROUND_FLOOR);
+    expect(listing.floor).toBeNull();
+    expect(listing.floor).not.toBeNaN();
+  });
+
+  it('keeps the rest of the listing intact', () => {
+    const listing = parseItem(FAKE_REALESTATE_ITEM_GROUND_FLOOR);
+    expect(listing.rooms).toBe(2);
+    expect(listing.size).toBe(55);
+    expect(listing.propertyType).toBe('דירת גן');
+  });
+});
+
+describe('parseItem — unparseable measurements', () => {
+  it('normalizes unparseable rooms and size to null', () => {
+    const listing = parseItem({
+      token: 't',
+      additionalDetails: { roomsCount: 'הרבה', squareMeter: '' },
+    } as unknown as Parameters<typeof parseItem>[0]);
+    expect(listing.rooms).toBeNull();
+    expect(listing.size).toBeNull();
   });
 });
 

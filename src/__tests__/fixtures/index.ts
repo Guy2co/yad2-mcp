@@ -22,7 +22,7 @@ export const FAKE_REALESTATE_ITEM: Yad2ApiItem = {
   price: 7500,
   currency: 'ILS',
   searchText: 'דירה 3 חדרים בתל אביב\nפרטים נוספים',
-  additionalDetails: { roomsCount: 3, squareMeter: 75 },
+  additionalDetails: { roomsCount: 3, squareMeter: 75, property: { text: 'דירה' } },
   address: {
     city: { text: 'תל אביב' },
     neighborhood: { text: 'פלורנטין' },
@@ -40,6 +40,20 @@ export const FAKE_REALESTATE_ITEM_FORSALE: Yad2ApiItem = {
   searchText: 'דירה 4 חדרים\nפרטים',
   additionalDetails: { roomsCount: 4, squareMeter: 120 },
   address: { city: { text: 'חיפה' }, neighborhood: { text: 'הדר' }, house: { floor: 5 } },
+};
+
+/**
+ * Ground-floor flat. Yad2 types `house.floor` as `number | string` and sends the Hebrew
+ * word "קרקע" (ground) rather than 0 — a bare `Number()` yields `NaN`, so the parser must
+ * normalize it to `null`.
+ */
+export const FAKE_REALESTATE_ITEM_GROUND_FLOOR: Yad2ApiItem = {
+  token: 'ground1',
+  price: 6000,
+  currency: 'ILS',
+  searchText: 'דירת גן 2 חדרים\nפרטים',
+  additionalDetails: { roomsCount: 2, squareMeter: 55, property: { text: 'דירת גן' } },
+  address: { city: { text: 'רמת גן' }, house: { floor: 'קרקע' } },
 };
 
 export const FAKE_FEED_DATA: Yad2FeedData = {
@@ -84,6 +98,7 @@ export const FAKE_LISTING: Listing = {
   rooms: 3,
   floor: 2,
   size: 80,
+  propertyType: 'דירה',
   address: 'הלל 5, תל אביב',
   city: 'תל אביב',
   neighborhood: 'פלורנטין',

@@ -111,6 +111,44 @@ The server speaks the [MCP stdio transport](https://modelcontextprotocol.io) —
 command: node /path/to/yad2-mcp/dist/index.js
 ```
 
+### Structured output
+
+Every listing-returning tool (`search_rentals`, `search_for_sale`, `search_cars`,
+`get_listing`) returns its data twice: as rendered markdown in `content[0].text`, and as
+JSON in `structuredContent`. Programmatic consumers should read `structuredContent` —
+the markdown search results omit `neighborhood`, `coordinates`, `contactPhone` and
+`images`, and truncate `description` to 200 characters.
+
+The search tools return `{ listings, total, page, pageSize }`; `get_listing` returns a
+bare listing object. A real-estate listing is:
+
+```jsonc
+{
+  "id": "abc123",          "token": "abc123",
+  "title": "דירה 3 חדרים בתל אביב",
+  "price": 7500,           "currency": "ILS",
+  "rooms": 3,              "floor": 2,        "size": 75,
+  "propertyType": "דירה",  // yad2's own label; "" when absent
+  "address": "הלל 5, פלורנטין, תל אביב",
+  "city": "תל אביב",       "neighborhood": "פלורנטין",
+  "description": "...",    // full text, untruncated
+  "images": ["https://img.yad2.co.il/..."],
+  "url": "https://www.yad2.co.il/realestate/item/abc123",
+  "date": "2024-01-15",    // yad2's raw dateAdded string — format is not guaranteed
+  "contactName": "דוד",    "contactPhone": "052-0000000",
+  "coordinates": { "lat": 32.06, "lng": 34.77 }
+}
+```
+
+`price`, `rooms`, `floor`, `size`, `contactName`, `contactPhone` and `coordinates` are
+`null` when yad2 omits them or sends a non-numeric value (ground floors arrive as the
+Hebrew word `"קרקע"`, which normalizes to `floor: null`).
+
+No tool declares an MCP `outputSchema`, deliberately. A declared schema is a hard
+validation gate on both the server and the client, so one unexpected value in a scraped
+payload would fail the entire call rather than degrading a single field. Validate the
+shape on your side and skip rows you can't parse.
+
 ---
 
 ## Example usage

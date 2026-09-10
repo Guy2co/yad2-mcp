@@ -7,7 +7,7 @@ export interface SearchParams {
   sizeMin?: number | undefined; // sqm
   sizeMax?: number | undefined;
   floor?: string | undefined; // e.g. "1-5", "0" for ground
-  propertyType?: string | undefined; // apartment, garden_apartment, studio_loft, penthouse, duplex, triplex, unit, vacation, cottage, agricultural, land, general, building, storage, basement, purchase_group, parking, protected_housing
+  propertyType?: string | undefined; // apartment, garden_apartment, studio_loft, penthouse, duplex, triplex, unit, vacation, cottage, semi_detached, auxiliary_farm, sublet, apartment_swap, agricultural, land, general, building, storage, basement, purchase_group, parking, protected_housing
   shelter?: boolean | undefined;
   elevator?: boolean | undefined;
   parking?: boolean | undefined;
@@ -31,6 +31,7 @@ export interface Listing {
   rooms: number | null;
   floor: number | null;
   size: number | null; // sqm
+  propertyType: string; // yad2's own label, e.g. "דירה" — '' when absent
   address: string;
   city: string;
   neighborhood: string;
