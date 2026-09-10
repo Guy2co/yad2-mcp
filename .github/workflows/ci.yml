@@ -39,6 +39,9 @@ jobs:
     permissions:
       contents: write
       packages: write
+    concurrency:
+      group: publish-${{ github.ref }}
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,6 +53,27 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm ci
       - run: npm run build
+      # The version bump lives here rather than in a local git hook so that
+      # merges authored by bots (Dependabot) get a fresh version too -- bots
+      # never run husky, so they used to reach master on an already-published
+      # version and fail with 409. Committing by hand with hooks disabled:
+      # `npm ci` installs husky, and .husky/pre-commit shells out to gitleaks,
+      # which is not on the runner.
+      - name: Bump version
+        id: bump
+        run: |
+          npm version patch --no-git-tag-version
+          VERSION="$(node -p "require('./package.json').version")"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -c core.hooksPath=/dev/null commit -am "chore: bump version to $VERSION"
+          git tag "v$VERSION"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+      # Pushed before publishing so a publish failure leaves git ahead of the
+      # registry, not behind: the next merge just bumps past it. Pushes made
+      # with GITHUB_TOKEN do not trigger workflows, so this cannot loop.
+      - name: Push version bump
+        run: git push --follow-tags origin HEAD:${{ github.ref_name }}
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -57,5 +81,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VERSION="v$(node -p "require('./package.json').version")"
+          VERSION="v${{ steps.bump.outputs.version }}"
           gh release create "$VERSION" --title "$VERSION" --generate-notes
