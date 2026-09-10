@@ -119,7 +119,14 @@ npm run test:e2e      # End-to-end tests (requires built dist/)
 | Hook | Runs |
 |------|------|
 | `pre-commit` | lint-staged, unit tests, gitleaks (staged files) |
-| `pre-push` | version bump (patch) with your commit message |
+
+### Releases
+
+You don't bump the version by hand. On merge to `master`, CI patch-bumps the newest
+`v*` tag, publishes that version to GitHub Packages, and pushes the tag with a matching
+release. `package.json` on `master` therefore lags the published version — the tag is the
+record of what shipped. To cut a minor or major release, raise `package.json` in your PR
+and CI bumps the patch from there (set `1.1.0` and the release lands as `1.1.1`).
 
 ---
 
