@@ -50,7 +50,7 @@ export interface SearchResult {
   pageSize: number;
 }
 
-export interface Yad2ApiAddress {
+interface Yad2ApiAddress {
   city?: { text?: string };
   neighborhood?: { text?: string };
   street?: { text?: string };
@@ -58,13 +58,13 @@ export interface Yad2ApiAddress {
   coords?: { lat?: number; lon?: number };
 }
 
-export interface Yad2ApiAdditionalDetails {
+interface Yad2ApiAdditionalDetails {
   roomsCount?: number;
   squareMeter?: number;
   property?: { text?: string };
 }
 
-export interface Yad2ApiMetaData {
+interface Yad2ApiMetaData {
   coverImage?: string;
   images?: string[];
 }
