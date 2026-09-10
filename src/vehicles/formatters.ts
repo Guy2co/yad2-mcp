@@ -18,6 +18,18 @@ export function filterManufacturers(filter: string | undefined): ManufacturerEnt
   );
 }
 
+/**
+ * Renders one manufacturer. `withModels` inlines every model ID — only worth it for a
+ * filtered listing, since the full catalog runs to ~1100 models.
+ */
+export function formatManufacturerEntry(m: ManufacturerEntry, withModels: boolean): string {
+  const head = `**${m.nameEn}** (${m.name}) — manufacturer ID: ${m.id}`;
+  if (!withModels) return `${head} — ${m.models.length} models`;
+  if (m.models.length === 0) return `${head}\n  Models: none listed`;
+  const modelList = m.models.map((mod) => `${mod.name} (${mod.id})`).join(', ');
+  return `${head}\n  Models: ${modelList}`;
+}
+
 function buildEntryDetails(listing: VehicleListing): string[] {
   const details: string[] = [];
   if (listing.km !== null) details.push(`${listing.km.toLocaleString()} km`);

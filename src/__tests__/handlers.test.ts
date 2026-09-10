@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { FAKE_LISTING, FAKE_VEHICLE_LISTING } from './fixtures/index.js';
+import type { Listing } from '../realestate/types.js';
 
 // handlers.ts constructs both clients at module load, which happens before plain
 // `const` declarations in this file initialize — hence vi.hoisted.
@@ -90,6 +91,53 @@ describe('handleSearchCars', () => {
     const response = await handleSearchCars({ manufacturer: '19' });
     expect(mocks.searchVehicles).toHaveBeenCalledWith({ manufacturer: '19' });
     expect(text(response)).toContain('Corolla');
+  });
+});
+
+function firstListing(structured: Record<string, unknown> | undefined): Listing | undefined {
+  return (structured?.['listings'] as Listing[] | undefined)?.[0];
+}
+
+describe('structuredContent — search results', () => {
+  it('carries the fields the search markdown drops', async () => {
+    const response = await handleSearch('search_rentals', {});
+    const listing = firstListing(response.structuredContent);
+    // formatSearchResults omits every one of these — they are the reason
+    // structuredContent exists at all.
+    expect(listing?.neighborhood).toBe(FAKE_LISTING.neighborhood);
+    expect(listing?.coordinates).toEqual(FAKE_LISTING.coordinates);
+    expect(listing?.contactPhone).toBe(FAKE_LISTING.contactPhone);
+    expect(listing?.propertyType).toBe(FAKE_LISTING.propertyType);
+  });
+
+  it('reports pagination alongside the listings', async () => {
+    const response = await handleSearch('search_for_sale', {});
+    expect(response.structuredContent).toMatchObject({ total: 1, page: 1, pageSize: 20 });
+  });
+});
+
+describe('structuredContent — single listings', () => {
+  it('returns a bare listing for get_listing on realestate', async () => {
+    const response = await handleGetListing({ token: 'tok1', type: 'realestate' });
+    expect(response.structuredContent?.['token']).toBe(FAKE_LISTING.token);
+  });
+
+  it('returns a bare listing for get_listing on a car', async () => {
+    const response = await handleGetListing({ token: 'car123', type: 'car' });
+    expect(response.structuredContent?.['manufacturer']).toBe(FAKE_VEHICLE_LISTING.manufacturer);
+  });
+});
+
+describe('structuredContent — vehicles and static tools', () => {
+  it('is present on car searches', async () => {
+    const response = await handleSearchCars({ manufacturer: '19' });
+    expect(firstListing(response.structuredContent)).toBeDefined();
+  });
+
+  it('is omitted by the static list handlers', () => {
+    expect(handleListCityCodes({}).structuredContent).toBeUndefined();
+    expect(handleListPropertyTypes({}).structuredContent).toBeUndefined();
+    expect(handleWhichTool().structuredContent).toBeUndefined();
   });
 });
 

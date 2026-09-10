@@ -17,9 +17,22 @@ function buildAddress(item: Yad2ApiItem): string {
   return [house, street, neighborhood, city].filter((p): p is string => p !== undefined).join(', ');
 }
 
+/**
+ * Coerces a raw yad2 numeric field to a number, or `null` when it isn't one.
+ *
+ * Yad2 types several numeric fields as `number | string` and sends Hebrew words
+ * in them — `house.floor` is `"קרקע"` (ground) for ground-floor flats. A bare
+ * `Number()` turns that into `NaN`, which then renders as "Floor: NaN" and
+ * poisons any arithmetic downstream. `null` is the honest answer.
+ */
+function toNumberOrNull(val: unknown): number | null {
+  if (val === undefined || val === null || val === '') return null;
+  const num = Number(val);
+  return Number.isFinite(num) ? num : null;
+}
+
 function buildFloor(item: Yad2ApiItem): number | null {
-  const floor = item.address?.house?.floor;
-  return floor !== undefined ? Number(floor) : null;
+  return toNumberOrNull(item.address?.house?.floor);
 }
 
 function buildCoordinates(item: Yad2ApiItem): { lat: number; lng: number } | null {
@@ -48,14 +61,20 @@ function buildItemCore(
   };
 }
 
-function buildItemDetails(
+function buildItemMeasurements(
   item: Yad2ApiItem,
-): Pick<Listing, 'rooms' | 'floor' | 'size' | 'address' | 'city' | 'neighborhood'> {
+): Pick<Listing, 'rooms' | 'floor' | 'size' | 'propertyType'> {
   const details = item.additionalDetails ?? {};
   return {
-    rooms: details.roomsCount !== undefined ? Number(details.roomsCount) : null,
+    rooms: toNumberOrNull(details.roomsCount),
     floor: buildFloor(item),
-    size: details.squareMeter !== undefined ? Number(details.squareMeter) : null,
+    size: toNumberOrNull(details.squareMeter),
+    propertyType: details.property?.text ?? '',
+  };
+}
+
+function buildItemLocation(item: Yad2ApiItem): Pick<Listing, 'address' | 'city' | 'neighborhood'> {
+  return {
     address: buildAddress(item),
     city: item.address?.city?.text ?? '',
     neighborhood: item.address?.neighborhood?.text ?? '',
@@ -86,14 +105,15 @@ function buildItemScalars(item: Yad2ApiItem, token: string): ItemScalars {
  * Key decisions:
  * - `token` falls back to `orderId` as a string if `token` is absent.
  * - Title is the first line of `searchText` (yad2 packs the full description into one field).
- * - Floor and size are coerced to numbers; missing → `null` (not `0`).
+ * - Rooms, floor and size are coerced to numbers; missing or non-numeric → `null` (not `0`).
  * - Coordinates use `lon` (not `lng`) in the API; normalized to `lng` in the output.
  */
 export function parseItem(item: Yad2ApiItem): Listing {
   const token = String(item.token ?? item.orderId ?? '');
   return {
     ...buildItemCore(item, token),
-    ...buildItemDetails(item),
+    ...buildItemMeasurements(item),
+    ...buildItemLocation(item),
     ...buildItemScalars(item, token),
   };
 }

@@ -131,8 +131,8 @@ describe('extractSearchParams - feature filters', () => {
 });
 
 describe('filterPropertyTypes', () => {
-  it('returns all 18 types when filter is undefined', () => {
-    expect(filterPropertyTypes(undefined)).toHaveLength(18);
+  it('returns all 22 types when filter is undefined', () => {
+    expect(filterPropertyTypes(undefined)).toHaveLength(22);
   });
 
   it('returns cottage entry when filtering by "villa"', () => {
