@@ -5,20 +5,24 @@ const mockNewContext = vi.fn();
 const mockLaunch = vi.fn();
 const mockClose = vi.fn().mockResolvedValue(undefined);
 const mockGoto = vi.fn().mockResolvedValue(undefined);
+const mockWaitForSelector = vi.fn().mockResolvedValue(undefined);
 const mockEvaluate = vi.fn();
 
-vi.mock('playwright-extra', () => ({
-  chromium: { launch: mockLaunch, use: vi.fn() },
+vi.mock('patchright', () => ({
+  chromium: { launch: mockLaunch },
 }));
-vi.mock('puppeteer-extra-plugin-stealth', () => vi.fn(() => ({})));
+
+function wireMocks(): void {
+  const page = { goto: mockGoto, evaluate: mockEvaluate, waitForSelector: mockWaitForSelector };
+  mockNewPage.mockResolvedValue(page);
+  mockNewContext.mockResolvedValue({ newPage: mockNewPage });
+  mockLaunch.mockResolvedValue({ newContext: mockNewContext, close: mockClose });
+}
 
 beforeEach(() => {
   vi.resetModules();
   vi.clearAllMocks();
-  const page = { goto: mockGoto, evaluate: mockEvaluate };
-  mockNewPage.mockResolvedValue(page);
-  mockNewContext.mockResolvedValue({ newPage: mockNewPage });
-  mockLaunch.mockResolvedValue({ newContext: mockNewContext, close: mockClose });
+  wireMocks();
 });
 
 async function getContextOpt(key: string): Promise<unknown> {
@@ -59,8 +63,8 @@ describe('launchPage() — context locale/viewport', () => {
     expect(await getContextOpt('locale')).toBe('he-IL');
   });
 
-  it('sets viewport to 1280x800', async () => {
-    expect(await getContextOpt('viewport')).toEqual({ width: 1280, height: 800 });
+  it('sets viewport to 1920x1080', async () => {
+    expect(await getContextOpt('viewport')).toEqual({ width: 1920, height: 1080 });
   });
 });
 
@@ -79,13 +83,20 @@ describe('launchPage() — context headers/UA', () => {
   });
 });
 
-describe('launchPage() — stealth plugin', () => {
-  it('uses playwright-extra with stealth plugin', async () => {
-    const { chromium } = await import('playwright-extra');
+describe('launchPage() — anti-bot UA', () => {
+  it('does not advertise a headless user agent', async () => {
+    // Yad2's Radware bot manager escalates to hCaptcha on any "HeadlessChrome" UA.
+    const ua = (await getContextOpt('userAgent')) as string;
+    expect(ua).not.toMatch(/headless/i);
+  });
+});
+
+describe('launchPage() — patchright', () => {
+  it('launches patchright chromium headless', async () => {
+    const { chromium } = await import('patchright');
     const { launchPage } = await import('../infra/browser.js');
     await launchPage();
-    expect(chromium.use).toHaveBeenCalledOnce();
-    expect(mockLaunch).toHaveBeenCalledWith({ headless: true });
+    expect(chromium.launch).toHaveBeenCalledWith({ headless: true });
   });
 });
 
@@ -97,6 +108,14 @@ describe('navigateTo() — wait strategy', () => {
       'https://example.com',
       expect.objectContaining({ waitUntil: 'load' }),
     );
+  });
+});
+
+describe('navigateTo() — waits for challenge to clear', () => {
+  it('waits for the __NEXT_DATA__ selector after load', async () => {
+    const { navigateTo } = await import('../infra/browser.js');
+    await navigateTo((await getPage()) as never, 'https://example.com');
+    expect(mockWaitForSelector).toHaveBeenCalledWith('#__NEXT_DATA__', expect.anything());
   });
 });
 

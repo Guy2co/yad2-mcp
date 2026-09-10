@@ -34,7 +34,7 @@ MCP tool call → handlers.ts → Yad2Client → browser.ts (Playwright) → yad
 ```
 
 **Key design points:**
-- `browser.ts` launches headless Chromium, navigates, then extracts listing data from the `__NEXT_DATA__` JSON script tag embedded by Next.js SSR. The dehydrated React Query state (`pageProps.dehydratedState.queries`) contains the feed.
+- `browser.ts` launches headless Chromium via **patchright** (a CDP-leak-patched Playwright fork — stock Playwright + stealth is now detected by Yad2's Radware bot manager). It navigates, waits for the Radware challenge to clear (the real `__NEXT_DATA__` tag appears via a client-side redirect a few seconds after `load`), then extracts listing data from the `__NEXT_DATA__` JSON script tag embedded by Next.js SSR. The dehydrated React Query state (`pageProps.dehydratedState.queries`) contains the feed. The context UA must NOT contain "HeadlessChrome" or Radware escalates to an hCaptcha wall.
 - `parser.ts` and `formatters.ts` are pure functions — no side effects, fully unit-testable without a browser.
 - `query-builder.ts` maps `SearchParams` to yad2 URL query parameters.
 - `handlers.ts` is thin: it wires Zod-validated tool inputs to `Yad2Client` and formatters.
