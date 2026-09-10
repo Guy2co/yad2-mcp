@@ -1,0 +1,1839 @@
+- generic [ref=f13e1]:
+  - main [ref=f13e4]:
+    - generic:
+      - generic [ref=f13e5]:
+        - navigation [ref=f13e7]:
+          - list [ref=f13e8]:
+            - listitem [ref=f13e9]:
+              - link [ref=f13e10] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/
+                - generic [ref=f13e11]: דף הבית
+            - listitem [ref=f13e12]:
+              - link [ref=f13e13] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/realestate/forsale
+                - generic [ref=f13e14]: נדל״ן
+            - listitem [ref=f13e15]:
+              - link [ref=f13e16] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1
+                - generic [ref=f13e17]: דירות חדשות
+            - listitem [ref=f13e18]:
+              - link [ref=f13e19] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/vehicles/cars
+                - generic [ref=f13e20]: רכב
+            - listitem [ref=f13e21]:
+              - link [ref=f13e22] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/market
+                - generic [ref=f13e23]: מוצרים
+            - listitem [ref=f13e24]:
+              - link [ref=f13e25] [cursor=pointer]:
+                - /url: https://www.drushim.co.il/?utm_source=yad2&utm_medium=hp
+                - generic [ref=f13e26]: דרושים IL
+            - listitem [ref=f13e27]:
+              - link [ref=f13e28] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/products/businesses-for-sale?category=37
+                - generic [ref=f13e29]: עסקים למכירה
+            - listitem [ref=f13e30]:
+              - link [ref=f13e31] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/pets/sale
+                - generic [ref=f13e32]: חיות מחמד
+            - listitem [ref=f13e33]:
+              - link [ref=f13e34] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/b144
+                - generic [ref=f13e35]: בעלי מקצוע
+        - generic [ref=f13e36]:
+          - generic [ref=f13e37] [cursor=pointer]
+          - button [ref=f13e42] [cursor=pointer]
+        - button [ref=f13e48] [cursor=pointer]
+        - button [ref=f13e53] [cursor=pointer]: פרסום מודעה
+      - text: "| | | | | | | | | | | | | | | | | | | |"
+    - generic [ref=f13e57]:
+      - generic [ref=f13e58]:
+        - search [ref=f13e59]:
+          - generic [ref=f13e61]:
+            - button [ref=f13e64] [cursor=pointer]
+            - combobox [ref=f13e79]: תל אביב יפו
+            - radiogroup [ref=f13e81]:
+              - radio [checked] [ref=f13e82] [cursor=pointer]: כל הדירות
+              - radio [ref=f13e83] [cursor=pointer]: דירות חדשות
+            - button [ref=f13e86] [cursor=pointer]:
+              - generic [ref=f13e87]: מכירה
+            - button [ref=f13e93] [cursor=pointer]:
+              - generic [ref=f13e94]: סוג הנכס
+            - text: "| | | |"
+            - generic [ref=f13e99]:
+              - button [ref=f13e101] [cursor=pointer]:
+                - generic [ref=f13e102]: סינונים
+              - text: "| | | | | | | | | | | | | | | |"
+          - button [ref=f13e108] [cursor=pointer]:
+            - generic [ref=f13e109]: חיפוש
+        - button [ref=f13e111] [cursor=pointer]:
+          - generic [ref=f13e114]: יצירת התראה
+      - generic [ref=f13e115]:
+        - generic [ref=f13e117]:
+          - generic [ref=f13e118]:
+            - iframe [ref=f13e122]:
+              - link [ref=f19e2] [cursor=pointer]:
+                - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjsuAXOIwPnyW7n8G6MttAQL62287D7s0Ciy7DeHh57UwaoCYHmKNoJGMM09XXZa3Y1xCmX_ajHixUxpVHBMsSB-cjWHOM5IkFXHol2jVKNt1xYXl2vlFJOASDHPqYwd9x2qjjbetYvSB0f8XztRfEJIqeXS57H6AcYD4o7AoDn31Iy2cpAgmeSrNckDv5YbQ5KfhIpE8tPqNNZaXjtGXfLTvtmaHu-r2uYYx3vK7NXpvtg4_gX0iBkG89D2Ye-0U-LgPTXE-KxCDqbu1DXh6TL169by6VHKz2661jzq51FgsJK3W_ESBShiDhBLCuIr-rVx0HfENHGxvSIXSGjZKzi46qSjMTcNwMKVSMy5RzA8Qd1iz3HpUVIwXF1szFMXnzFFfCGZDiC8MGhGdwybDoY1Ao1UAu8G9CT8C5XLziCo2sw&sai=AMfl-YRyh_g3Wk1YZ5v9AibLV8oslrRycTBkqm9mwrOCzavu76FaxhrotpdV209UTm8iV9zisFzisbzV5Er-BdcMOpEl4au2KQoW4scPDF9SO5rXA54P-ZIclmdOohcxFArucqx0_5jryZ_QiMZCCZ7XjEQUL-tb9ARU2XiRn58ZfzkvN0QvtCU13Ks9JIrXOZrGv7m1jnn516tqSFRZytA_VKVhsIQq6FjiE_39R5eNTo_FlcsS3FRoUYK1rdreOc0y2R8Pl3uqHsQjv_cLbfBPHKFAIEzIrAYLgXqHSyrE9IuGpP6aVdQjxGjyE6euUi3Aw4j_hB7Cs6YqBiCsDZ5qY2hak6m9M_kt78cqxoJXpN7JJCvAQ6TKAdk&sig=Cg0ArKJSzCv5h-c4Fjlm&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://www.yad2.co.il/yad1/project/13671%3Fsite%3D_inres_x1_b_284_s_nad_takeover__tel_aviv_north_project_BNEI-EFRAIM-236-240
+            - heading [level=1] [ref=f13e123]: נדל"ן למכירה בתל אביב יפו
+            - generic [ref=f13e124]:
+              - generic [ref=f13e125]: 10,118 תוצאות
+              - button [ref=f13e129] [cursor=pointer]:
+                - generic [ref=f13e130]: מיון לפי תאריך
+            - generic [ref=f13e133]:
+              - generic [ref=f13e134]:
+                - heading [level=2] [ref=f13e135]: פרויקטים חדשים
+                - link [ref=f13e136] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/yad1/newprojects/tel-aviv-area?category=1&area=1&city=5000
+                  - text: לכל הפרויקטים
+              - generic [ref=f13e141]:
+                - link [ref=f13e144] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/yad1/project/18671?wat=4_0_0_0_22_0_0_1_0_1_52_0_0_77&site=_inres_x2_py2_TopGallery_s_1101_18671
+                  - generic [ref=f13e147]:
+                    - generic [ref=f13e148]:
+                      - button [ref=f13e154]
+                      - generic [ref=f13e173]: פרויקט במבצע
+                      - generic: מבצע ל־5 דירות בלבד!
+                    - generic [ref=f13e175]:
+                      - generic [ref=f13e176]:
+                        - generic [ref=f13e177]: המגדל בחורשות
+                        - generic [ref=f13e178]: תל אביב יפו
+                      - generic [ref=f13e179]:
+                        - generic [ref=f13e180]: החל מ-
+                        - generic [ref=f13e181]: ‏2,990,000 ‏₪
+                - link [ref=f13e184] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/yad1/project/8326?wat=4_0_0_0_22_0_0_2_0_1_52_0_0_77&site=_inres_x2_py2_TopGallery_s_1102_8326
+                  - generic [ref=f13e187]:
+                    - generic [ref=f13e188]:
+                      - button [ref=f13e194]
+                      - generic [ref=f13e213]: פרויקט חדש
+                      - generic: קריאה אחרונה למחירי השקה!
+                    - generic [ref=f13e215]:
+                      - generic [ref=f13e216]:
+                        - generic [ref=f13e217]: אמוראים 11-13
+                        - generic [ref=f13e218]: תל אביב יפו
+                      - generic [ref=f13e219]:
+                        - generic [ref=f13e220]: החל מ-
+                        - generic [ref=f13e221]: ‏4,120,000 ‏₪
+                - link [ref=f13e224] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/yad1/project/18042?wat=4_0_0_0_22_0_0_3_0_1_52_0_0_77&site=_inres_x2_py2_TopGallery_s_1103_18042
+                  - generic [ref=f13e227]:
+                    - generic [ref=f13e228]:
+                      - button [ref=f13e234]
+                      - generic [ref=f13e253]: פרויקט במבצע
+                      - generic: PRESALE
+                    - generic [ref=f13e255]:
+                      - generic [ref=f13e256]:
+                        - generic [ref=f13e257]: נחלת יצחק 17-19
+                        - generic [ref=f13e258]: תל אביב יפו
+                      - generic [ref=f13e259]:
+                        - generic [ref=f13e260]: החל מ-
+                        - generic [ref=f13e261]: ‏3,680,000 ‏₪
+            - list [ref=f13e262]:
+              - listitem [ref=f13e263]:
+                - link [ref=f13e264] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/realestate/agency/1831559/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=kingofhood
+                  - generic [ref=f13e265]:
+                    - generic [ref=f13e270]: לסוכנות א.ג.ש נכסים יש 61 מודעות שמתאימות לחיפוש שלך.
+                    - button [ref=f13e271]: לצפייה
+              - listitem [ref=f13e272]:
+                - generic [ref=f13e274]:
+                  - link [ref=f13e275] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/bevwhk6j?opened-from=feed&component-type=main_feed&spot=platinum&location=1
+                    - generic [ref=f13e283]:
+                      - generic [ref=f13e285]:
+                        - generic [ref=f13e286]: תיווך יד אליהו 50 שנות ניסיון
+                        - generic [ref=f13e287]: ₪ 1,980,000
+                      - heading [level=2] [ref=f13e288]:
+                        - generic [ref=f13e289]: מח"ל 51
+                        - generic [ref=f13e291]: דירה, נווה אליעזר וכפר שלם מזרח, תל אביב יפו
+                        - generic [ref=f13e292]: 4 חדרים • קומה ‎5‏ • 90 מ״ר
+                  - button [ref=f13e295] [cursor=pointer]
+              - listitem [ref=f13e308]:
+                - generic [ref=f13e310]:
+                  - link [ref=f13e311] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/z9kwx3ah?opened-from=feed&component-type=main_feed&spot=platinum&location=2
+                    - generic [ref=f13e319]:
+                      - generic [ref=f13e321]:
+                        - generic [ref=f13e322]: טל נכסים -מבית קלר וויליאמס צפון מערב ת"א
+                        - generic [ref=f13e323]: ₪ 11,500,000
+                      - heading [level=2] [ref=f13e324]:
+                        - generic [ref=f13e325]: עומרי
+                        - generic [ref=f13e327]: מגרשים, תל אביב יפו
+                        - generic [ref=f13e328]: קומה ‎קרקע‏ • 500 מ״ר
+                  - button [ref=f13e331] [cursor=pointer]
+              - listitem [ref=f13e344]:
+                - generic [ref=f13e346]:
+                  - link [ref=f13e347] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/1z6igpnd?opened-from=feed&component-type=main_feed&spot=platinum&location=3
+                    - generic [ref=f13e355]:
+                      - generic [ref=f13e357]:
+                        - generic [ref=f13e358]: א.אקספרס
+                        - generic [ref=f13e359]: ₪ 4,800,000
+                      - heading [level=2] [ref=f13e360]:
+                        - generic [ref=f13e361]: לואי מרשל
+                        - generic [ref=f13e363]: דירה, הצפון החדש -החלק הצפוני, תל אביב יפו
+                        - generic [ref=f13e364]: 3 חדרים • קומה ‎7‏ • 91 מ״ר
+                  - button [ref=f13e367] [cursor=pointer]
+              - listitem [ref=f13e380]:
+                - generic [ref=f13e382]:
+                  - link [ref=f13e383] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/17622?wat=1_0_0_0_22_0_0_4_0_1_62_0_0_77&site=_inres_x2_py2_Yad2Boost_s_3104_17622
+                    - generic [ref=f13e385]:
+                      - generic [ref=f13e386]: פרויקט במבצע
+                      - generic [ref=f13e396]:
+                        - generic [ref=f13e397]: תל אביבה TEL AVIVA
+                        - generic [ref=f13e398]: קהילת קנדה 10, תל אביב יפו
+                        - list [ref=f13e399]:
+                          - listitem [ref=f13e400]: • 2-5 חדרים
+                          - listitem [ref=f13e401]: 110 מ״ר
+                        - generic [ref=f13e406]:
+                          - generic [ref=f13e407]: החל מ-
+                          - text: 2,585,000 ₪
+                        - button [ref=f13e408]: מגוון הטבות מיוחדות!
+                  - button [ref=f13e411] [cursor=pointer]
+              - listitem [ref=f13e424]:
+                - generic [ref=f13e426]:
+                  - link [ref=f13e427] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/13899/apartment/1000798?wat=1_0_0_0_22_0_0_5_0_1_60_0_0_77&isRegion=true&matchPrecision=full&isAbTest=true&site=_inres_x1_l_ListingPremium_s_14105_1000798
+                    - generic [ref=f13e428]:
+                      - generic [ref=f13e429]: פרויקט במבצע
+                      - generic [ref=f13e439]:
+                        - heading [level=2] [ref=f13e440]:
+                          - generic [ref=f13e441]: BLOCH 10 - בלוך 10
+                          - generic [ref=f13e442]: גג/פנטהאוז, הצפון החדש - דרום, תל אביב יפו
+                          - generic [ref=f13e443]: 4 חדרים
+                        - paragraph [ref=f13e445]:
+                          - text: בונים לאנשים שאוהבים את תל אביב דירות אחרונות בפרויקט בלוך ‏10 לאכלוס מיידי דירות 4 חד' החל מ6,150,000 ₪ בתנאי תשלום בהתאמה אישית
+                          - generic [ref=f13e446]: ... קרא עוד
+                      - generic [ref=f13e447]: למידע נוסף
+                  - button [ref=f13e453] [cursor=pointer]
+              - listitem [ref=f13e466]:
+                - generic [ref=f13e468]:
+                  - link [ref=f13e469] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/lw652s1b?opened-from=feed&component-type=main_feed&spot=standard&location=6
+                    - generic [ref=f13e470]:
+                      - generic [ref=f13e477]:
+                        - generic [ref=f13e478]: ₪ 3,150,000
+                        - heading [level=2] [ref=f13e481]:
+                          - generic [ref=f13e482]: רש"י 49
+                          - generic [ref=f13e484]: דירה, לב תל אביב, לב העיר צפון, תל אביב יפו
+                          - generic [ref=f13e485]: 2 חדרים • קומה ‎4‏ • 48 מ״ר
+                      - generic [ref=f13e486]: נכס חדשנכס עורפיממ"ד
+                  - button [ref=f13e489] [cursor=pointer]
+              - listitem [ref=f13e502]:
+                - iframe [ref=f13e506]:
+                  - link [ref=f20e2] [cursor=pointer]:
+                    - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjsuX_eON-T_BLwkaYLziLs-Fccz27FrIO3_IFFYR37g3jr5MPlT4l0lsX90zJ8e3y8Qfrtt18OcjL0FNDUdrR_5uY-LxW24cNymIYgEzsWF46uTbbhbP8Pyn9GrervUY_TvDkr6F0RFNh6L6XuTOjd43AmEFkTqCc2Ilib3qZqw6ZIC3QoPPVwZCqjawBwOPyqArTtv3NMwBycR9_5SZyWPUPG0nnUJ0-wvqBnMakv4ZhgDL8leZzxgRO7Zc2IplywELIBOJzB3TlWuQC-D6Kovfch2vtoEBrHNrpkMPxNJTVvtG9sODt36EbXqKbiMItH9iecvBFixeu7qqmTg6KSH63ril9QIHKRtBzEuYqF1HnKBSo4jHngsen6QSUqDO9Y1yDpIkcNe4sl9vWr-GB-bcpeaqrfDY5FVt7Wgo2LiT38w&sai=AMfl-YTtwzzyrxBNg62AWba6gu3ll8t7mGbWLFynSRi491i5mliyo7ZQGSeuN1Ugq0FC2piwZJhh6MghbE3sDlQcvaQoOemmE6ponE69bN1Y7g47M7M-h8u4OFhyj6ZqM5Ur_sxeoDRuRFEq63YSKuwyu-iopSCJH4L2kUsAOWBh_uIxOBQxemw52No0geBMC__Sq6WZoVUInSX_LWzDkoBkV6jASbu7FPdU3atpOhLchTwhGkiQ70Oz-06uGsLM1JUtOe0QwbD4cOd0IA_FcRiptTNxnFcaivIzVF_nduVRArmCbJVY98ueHW05VVzZZ3MpZaVCohcJkYCjCIjbSIPQhnW_1tA2uv3Wghbp81lOjYC49-rgaD25B_g&sig=Cg0ArKJSzMwimNvgbVp-&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://www.yad2.co.il/yad1/project/13671%3Fsite%3D_inres_x1_b_284_s_nad_takeover__tel_aviv_north_project_BNEI-EFRAIM-236-240
+              - listitem [ref=f13e507]:
+                - generic [ref=f13e509]:
+                  - link [ref=f13e510] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/19179/apartment/1013292?wat=1_0_0_0_22_0_0_7_0_1_53_0_0_77&isRegion=true&site=_inres_x1_l_Solo_s_18107_1013292
+                    - generic [ref=f13e511]:
+                      - generic [ref=f13e512]: פרויקט חדש
+                      - generic [ref=f13e519]:
+                        - heading [level=2] [ref=f13e520]:
+                          - generic [ref=f13e521]: The Square Tel Aviv
+                          - generic [ref=f13e522]: דירה, נחלת יצחק, תל אביב יפו
+                          - generic [ref=f13e523]: 4 חדרים • קומה 1-22 • 93 מ״ר
+                        - generic [ref=f13e524]: למידע נוסף
+                  - button [ref=f13e527] [cursor=pointer]
+              - listitem [ref=f13e540]:
+                - generic [ref=f13e542]:
+                  - link [ref=f13e543] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/13671/apartment/1000772?wat=1_0_0_0_22_0_0_8_0_1_60_0_0_77&isRegion=true&matchPrecision=full&isAbTest=true&site=_inres_x1_l_ListingPremium_s_14108_1000772
+                    - generic [ref=f13e544]:
+                      - generic [ref=f13e545]: פרויקט חדש
+                      - generic [ref=f13e555]:
+                        - heading [level=2] [ref=f13e556]:
+                          - generic [ref=f13e557]: בני אפרים 236-240
+                          - generic [ref=f13e558]: דירת גן, נאות אפקה ב', תל אביב יפו
+                          - generic [ref=f13e559]: 4 חדרים • קומה קרקע
+                        - paragraph [ref=f13e561]:
+                          - text: בני אפרים ‏236-240 בונים סביבה ירוקה ומשפחתית בתל אביב החל מ-42,000 ₪ למ"ר
+                          - generic [ref=f13e562]: ... קרא עוד
+                      - generic [ref=f13e563]: למידע נוסף
+                  - button [ref=f13e569] [cursor=pointer]
+              - listitem [ref=f13e582]:
+                - generic [ref=f13e584]:
+                  - link [ref=f13e585] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/5793/apartment/1014009?wat=1_0_0_0_22_0_0_9_0_1_60_0_0_77&isRegion=true&matchPrecision=full&isAbTest=true&site=_inres_x1_l_ListingPremium_s_14109_1014009
+                    - generic [ref=f13e586]:
+                      - generic [ref=f13e587]: פרויקט חדש
+                      - generic [ref=f13e597]:
+                        - heading [level=2] [ref=f13e598]:
+                          - generic [ref=f13e599]: INFINITY TOWER
+                          - generic [ref=f13e600]: גג/פנטהאוז, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e601]: 6 חדרים • קומה 51-52
+                        - paragraph [ref=f13e603]:
+                          - text: קבוצת חג'ג' מציעה מודל רכישה חדש בפרויקט INFINITY TOWER הממוקם בפינת אבן גבירול וז'בוטינסקי, בלב העיר הלבנה
+                          - generic [ref=f13e604]: ... קרא עוד
+                      - generic [ref=f13e605]: למידע נוסף
+                  - button [ref=f13e611] [cursor=pointer]
+              - listitem [ref=f13e624]:
+                - generic [ref=f13e626]:
+                  - link [ref=f13e627] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/300nwmvp?opened-from=feed&component-type=main_feed&spot=standard&location=10
+                    - generic [ref=f13e628]:
+                      - generic [ref=f13e635]:
+                        - generic [ref=f13e636]: ₪ 3,450,000
+                        - heading [level=2] [ref=f13e639]:
+                          - generic [ref=f13e640]: נחלת יצחק 23
+                          - generic [ref=f13e642]: דירה, נחלת יצחק, תל אביב יפו
+                          - generic [ref=f13e643]: 4 חדרים • קומה ‎4‏ • 85 מ״ר
+                      - generic [ref=f13e644]: חניהנוף פתוח לעיר3 כיווני אוויר
+                  - button [ref=f13e647] [cursor=pointer]
+              - listitem [ref=f13e660]:
+                - generic [ref=f13e662]:
+                  - link [ref=f13e663] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/5efgg800?opened-from=feed&component-type=main_feed&spot=standard&location=11
+                    - generic [ref=f13e664]:
+                      - generic [ref=f13e665]: ירד ב-100,000 ₪
+                      - generic [ref=f13e673]:
+                        - generic [ref=f13e674]: ₪ 3,300,000
+                        - heading [level=2] [ref=f13e677]:
+                          - generic [ref=f13e678]: 3628 16
+                          - generic [ref=f13e680]: דירה, קרית שלום, תל אביב יפו
+                          - generic [ref=f13e681]: 4 חדרים • קומה ‎2‏ • 96 מ״ר
+                      - generic [ref=f13e682]: חניה3 כיווני אווירממ"ד
+                  - button [ref=f13e685] [cursor=pointer]
+              - listitem [ref=f13e698]:
+                - generic [ref=f13e700]:
+                  - link [ref=f13e701] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/deg4ilb2?opened-from=feed&component-type=main_feed&spot=standard&location=12
+                    - generic [ref=f13e702]:
+                      - generic [ref=f13e709]:
+                        - generic [ref=f13e710]: ₪ 5,790,000
+                        - heading [level=2] [ref=f13e713]:
+                          - generic [ref=f13e714]: שלומציון המלכה 42
+                          - generic [ref=f13e716]: דירה, הצפון החדש -החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e717]: 3 חדרים • קומה ‎4‏ • 94 מ״ר
+                      - generic [ref=f13e718]: חדש מקבלןחניהממ"ד
+                  - button [ref=f13e721] [cursor=pointer]
+              - generic [ref=f13e734]:
+                - generic [ref=f13e735]:
+                  - heading [level=2] [ref=f13e737]: פרויקטים חדשים באזור
+                  - link [ref=f13e738] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1
+                    - text: לכל הפרויקטים
+                - generic [ref=f13e741]:
+                  - button [ref=f13e743] [cursor=pointer]
+                  - generic [ref=f13e747]:
+                    - link [ref=f13e750] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/13671?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_1_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8101_13671
+                      - generic [ref=f13e753]:
+                        - generic [ref=f13e754]:
+                          - button [ref=f13e760]
+                          - generic [ref=f13e779]: פרויקט חדש
+                          - generic: החל מ-42,000 ₪ למ"ר
+                        - generic [ref=f13e781]:
+                          - generic [ref=f13e782]:
+                            - generic [ref=f13e783]: בני אפרים 236-240
+                            - generic [ref=f13e784]: תל אביב יפו
+                          - generic [ref=f13e785]:
+                            - generic [ref=f13e786]: החל מ-
+                            - generic [ref=f13e787]: ‏4,650,000 ‏₪
+                    - link [ref=f13e790] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/7049?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_2_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8102_7049
+                      - generic [ref=f13e793]:
+                        - generic [ref=f13e794]:
+                          - button [ref=f13e800]
+                          - generic [ref=f13e819]: פרויקט חדש
+                        - generic [ref=f13e822]:
+                          - generic [ref=f13e823]: PADOVA NEOT AFEKA/קהילת פאדובה 17
+                          - generic [ref=f13e824]: תל אביב יפו
+                    - link [ref=f13e827] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/11491?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_3_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8103_11491
+                      - generic [ref=f13e830]:
+                        - generic [ref=f13e831]:
+                          - button [ref=f13e837]
+                          - generic [ref=f13e856]: פרויקט חדש
+                          - generic: דירות בצפון החדש של ת"א
+                        - generic [ref=f13e858]:
+                          - generic [ref=f13e859]:
+                            - generic [ref=f13e860]: הלסינקי 24
+                            - generic [ref=f13e861]: תל אביב יפו
+                          - generic [ref=f13e862]:
+                            - generic [ref=f13e863]: החל מ-
+                            - generic [ref=f13e864]: ‏3,200,000 ‏₪
+                    - link [ref=f13e867] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/17622?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_4_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8104_17622
+                      - generic [ref=f13e870]:
+                        - generic [ref=f13e871]:
+                          - button [ref=f13e877]
+                          - generic [ref=f13e896]: פרויקט במבצע
+                          - generic: מגוון הטבות מיוחדות!
+                        - generic [ref=f13e898]:
+                          - generic [ref=f13e899]:
+                            - generic [ref=f13e900]: תל אביבה TEL AVIVA
+                            - generic [ref=f13e901]: תל אביב יפו
+                          - generic [ref=f13e902]:
+                            - generic [ref=f13e903]: החל מ-
+                            - generic [ref=f13e904]: ‏2,585,000 ‏₪
+                    - link [ref=f13e907] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/13684?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_5_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8105_13684
+                      - generic [ref=f13e910]:
+                        - generic [ref=f13e911]:
+                          - button [ref=f13e917]
+                          - generic [ref=f13e936]: פרויקט במבצע
+                          - generic: החל מ־39,000 ₪ למ"ר
+                        - generic [ref=f13e939]:
+                          - generic [ref=f13e940]: קיציס תל אביב
+                          - generic [ref=f13e941]: תל אביב יפו
+                    - link [ref=f13e944] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/5793?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_6_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8106_5793
+                      - generic [ref=f13e947]:
+                        - generic [ref=f13e948]:
+                          - button [ref=f13e954]
+                          - generic [ref=f13e973]: פרויקט חדש
+                          - generic: משלמים 1M בלבד במעמד החוזה
+                        - generic [ref=f13e976]:
+                          - generic [ref=f13e977]: INFINITY TOWER
+                          - generic [ref=f13e978]: תל אביב יפו
+                    - link [ref=f13e981] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/19419?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_7_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8107_19419
+                      - generic [ref=f13e984]:
+                        - generic [ref=f13e985]:
+                          - button [ref=f13e991]
+                          - generic [ref=f13e1010]: פרויקט חדש
+                          - generic: רחוב שקט בסובב כיכר המדינה
+                        - generic [ref=f13e1013]:
+                          - generic [ref=f13e1014]: ליפסקי 10, תל אביב
+                          - generic [ref=f13e1015]: תל אביב יפו
+                    - link [ref=f13e1018] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/11025?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_8_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8108_11025
+                      - generic [ref=f13e1021]:
+                        - generic [ref=f13e1022]:
+                          - button [ref=f13e1028]
+                          - generic [ref=f13e1047]: פרויקט במבצע
+                          - generic: 3-5 חד' PRESALE לזמן מוגבל!
+                        - generic [ref=f13e1049]:
+                          - generic [ref=f13e1050]:
+                            - generic [ref=f13e1051]: ESSENCE בית צורי רמת אביב ג'
+                            - generic [ref=f13e1052]: תל אביב יפו
+                          - generic [ref=f13e1053]:
+                            - generic [ref=f13e1054]: החל מ-
+                            - generic [ref=f13e1055]: ‏4,350,000 ‏₪
+                    - link [ref=f13e1058] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/9502?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_9_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8109_9502
+                      - generic [ref=f13e1061]:
+                        - generic [ref=f13e1062]:
+                          - button [ref=f13e1068]
+                          - generic [ref=f13e1087]: פרויקט במבצע
+                          - generic: החל מ-399,000 ₪ בחתימה
+                        - generic [ref=f13e1090]:
+                          - generic [ref=f13e1091]: יהודה הנשיא 9-11
+                          - generic [ref=f13e1092]: תל אביב יפו
+                    - link [ref=f13e1095] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/19426?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_10_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8110_19426
+                      - generic [ref=f13e1098]:
+                        - generic [ref=f13e1099]:
+                          - button [ref=f13e1105]
+                          - generic [ref=f13e1124]: פרויקט חדש
+                          - generic: לגור בדיוק איפה שתמיד רציתם
+                        - generic [ref=f13e1126]:
+                          - generic [ref=f13e1127]:
+                            - generic [ref=f13e1128]: רמז 36 - תל אביב
+                            - generic [ref=f13e1129]: תל אביב יפו
+                          - generic [ref=f13e1130]:
+                            - generic [ref=f13e1131]: החל מ-
+                            - generic [ref=f13e1132]: ‏5,900,000 ‏₪
+                    - link [ref=f13e1135] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/38?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_11_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8111_38
+                      - generic [ref=f13e1138]:
+                        - generic [ref=f13e1139]:
+                          - button [ref=f13e1145]
+                          - generic [ref=f13e1164]:
+                            - generic [ref=f13e1165]: פרויקט במבצע
+                            - generic [ref=f13e1166]: 3D
+                          - generic: אל תפספסו את ההזדמנות!
+                        - generic [ref=f13e1167]:
+                          - generic [ref=f13e1168]:
+                            - generic [ref=f13e1169]: אאורה הרא"ה
+                            - generic [ref=f13e1170]: רמת גן
+                          - generic [ref=f13e1171]:
+                            - generic [ref=f13e1172]: החל מ-
+                            - generic [ref=f13e1173]: ‏3,790,000 ‏₪
+                    - link [ref=f13e1176] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/5427?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_12_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8112_5427
+                      - generic [ref=f13e1179]:
+                        - generic [ref=f13e1180]:
+                          - button [ref=f13e1186]
+                          - generic [ref=f13e1205]: פרויקט במבצע
+                          - generic: בתנאי מימון של 20/80
+                        - generic [ref=f13e1207]:
+                          - generic [ref=f13e1208]:
+                            - generic [ref=f13e1209]: ארלוזורוב 57
+                            - generic [ref=f13e1210]: רמת גן
+                          - generic [ref=f13e1211]:
+                            - generic [ref=f13e1212]: החל מ-
+                            - generic [ref=f13e1213]: ‏3,590,000 ‏₪
+                    - link [ref=f13e1216] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/15794?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_13_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8113_15794
+                      - generic [ref=f13e1219]:
+                        - generic [ref=f13e1220]:
+                          - button [ref=f13e1226]
+                          - generic [ref=f13e1245]: פרויקט חדש
+                          - generic: קו ראשון לפארק
+                        - generic [ref=f13e1247]:
+                          - generic [ref=f13e1248]:
+                            - generic [ref=f13e1249]: אלקטרה לייף סטייל פארק אפעל
+                            - generic [ref=f13e1250]: רמת גן
+                          - generic [ref=f13e1251]:
+                            - generic [ref=f13e1252]: החל מ-
+                            - generic [ref=f13e1253]: ‏2,550,000 ‏₪
+                    - link [ref=f13e1256] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/4226?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_14_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8114_4226
+                      - generic [ref=f13e1259]:
+                        - generic [ref=f13e1260]:
+                          - button [ref=f13e1266]
+                          - generic [ref=f13e1285]: פרויקט חדש
+                          - generic: הזדמנות לדירה עם ממד בבת ים
+                        - generic [ref=f13e1288]:
+                          - generic [ref=f13e1289]: OLIO בת ים
+                          - generic [ref=f13e1290]: בת ים
+                    - link [ref=f13e1293] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/9208?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_15_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8115_9208
+                      - generic [ref=f13e1296]:
+                        - generic [ref=f13e1297]:
+                          - button [ref=f13e1303]
+                          - generic [ref=f13e1322]: פרויקט חדש
+                          - generic: 4 חד' החל מ - 2,685,000 ₪
+                        - generic [ref=f13e1325]:
+                          - generic [ref=f13e1326]: הורדים
+                          - generic [ref=f13e1327]: בת ים
+                    - link [ref=f13e1330] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/yad1/project/19454?wat=3_0_0_0_22_%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%D7%99%D7%9D+%D7%97%D7%93%D7%A9%D7%99%D7%9D+%D7%91%D7%90%D7%96%D7%95%D7%A8_0_16_0_1_52_0_0_77&site=_inres_x2_py2_MiddleCarousel_s_8116_19454
+                      - generic [ref=f13e1333]:
+                        - generic [ref=f13e1334]:
+                          - button [ref=f13e1340]
+                          - generic [ref=f13e1359]: פרויקט במבצע
+                          - generic: מסלול 20/80 אטרקטיבי
+                        - generic [ref=f13e1362]:
+                          - generic [ref=f13e1363]: שיכון ובינוי גולומב חולון
+                          - generic [ref=f13e1364]: חולון
+                - button [ref=f13e1366] [cursor=pointer]: למה כדאי לקנות נכסים יד1
+              - listitem [ref=f13e1367]:
+                - generic [ref=f13e1369]:
+                  - link [ref=f13e1370] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/t8rl4c5h?opened-from=feed&component-type=main_feed&spot=standard&location=13
+                    - generic [ref=f13e1371]:
+                      - generic [ref=f13e1378]:
+                        - generic [ref=f13e1379]: ₪ 4,500,000
+                        - heading [level=2] [ref=f13e1382]:
+                          - generic [ref=f13e1383]: אלכסנדר ינאי 23
+                          - generic [ref=f13e1385]: דירה, הצפון הישן - החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e1386]: 3 חדרים • קומה ‎3‏ • 82 מ״ר
+                      - generic [ref=f13e1387]: 3 כיווני אווירנוף פתוח לפארקבהזדמנות
+                  - button [ref=f13e1390] [cursor=pointer]
+              - listitem [ref=f13e1403]:
+                - iframe [ref=f13e1407]:
+                  - link [ref=f22e2] [cursor=pointer]:
+                    - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjstIvm2R2hjRT_Av3DpgRs-inWDJL6xYacIPRiQsIUFuqhvUhfGsvlLqlRU5dg8NNNVfCMkR1uO3nNaRJQ6b4G1BKY62tDE2GaWlYmIRweuxOKRFjydSDSjB9k42hYddm4B0PEWenEcFUVun9sNsxIDEIQaANOhmmJFv-4HN5f8aqK_lOv7WZ7Mv_Ac9DNFd7cXufRzZUpnT0F6YDrsgE38P06thqRVei8cKC-OiA5cjXREqFhKNKtbzPldkmYIuRwpAbLgWzW0caYbxl6g0DvNYUx4iOQLRMa26PchZPWH1YZDAQYHcY_v5IT8T36JXm8YMbHTucD5FixZmwjWW3FbHrS_cjm2mgqBTwxupLuV_yq7xeMcz_vtUngrHQgGg9WHYHU1jsfqZghoMLMjj2ARphmwDs_0LF2wwlOrihu6tdAc&sai=AMfl-YQvHqDejAfm0gKV2svD_NpXutMvz3Y7ydE65iIsJv3btmbo5GEa57_WvVlUWJ3jk3AQSOdypCVy6ssM4hqKrHSuWTJgkrCtVm-EGRm2_xDb5m76TnHXJ6BNgT6g4HyNakr-FqGJnBdUq_t4UW64rEv6tV3wzzkBPOV68T0UoE_Asx60S6EzCRAQdXox4yxyp7KbyJXHPkf9zFdrkXJycsTsHlmDrdHXpIQ5jjVLFuZZgsSmxZO3ot7dt3HIYm-LPn3E0hSBXO32UbMkcU99vv8jRNkBhENMmeZiLnyVSdy56Kf11UlmmCTEWm3gdipjlPmfbLvIRaAQsv6jigSyt_bmc3DH-7uyP9aw9o6SmvVvhr4gAf8kcQQ&sig=Cg0ArKJSzIvkj650qwbX&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://www.yad2.co.il/yad1/project/13671%3Fsite%3D_inres_x1_b_284_s_nad_takeover__tel_aviv_north_project_BNEI-EFRAIM-236-240
+              - listitem [ref=f13e1408]:
+                - generic [ref=f13e1410]:
+                  - link [ref=f13e1411] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/2lwfra7z?opened-from=feed&component-type=main_feed&spot=standard&location=14
+                    - generic [ref=f13e1412]:
+                      - generic [ref=f13e1419]:
+                        - generic [ref=f13e1420]: ₪ 2,200,000
+                        - heading [level=2] [ref=f13e1423]:
+                          - generic [ref=f13e1424]: הרצל 94
+                          - generic [ref=f13e1426]: דירה, פלורנטין, תל אביב יפו
+                          - generic [ref=f13e1427]: 2 חדרים • קומה ‎2‏ • 51 מ״ר
+                      - generic [ref=f13e1428]: נוף פתוח לעיר3 כיווני אווירבהזדמנות
+                  - button [ref=f13e1431] [cursor=pointer]
+              - listitem [ref=f13e1444]:
+                - generic [ref=f13e1446]:
+                  - link [ref=f13e1447] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/k58u3oqu?opened-from=feed&component-type=main_feed&spot=standard&location=15
+                    - generic [ref=f13e1448]:
+                      - generic [ref=f13e1455]:
+                        - generic [ref=f13e1456]: ₪ 3,280,000
+                        - heading [level=2] [ref=f13e1459]:
+                          - generic [ref=f13e1460]: אח"י דקר 30
+                          - generic [ref=f13e1462]: דירה, נווה שרת, תל אביב יפו
+                          - generic [ref=f13e1463]: 3.5 חדרים • קומה ‎2‏ • 88 מ״ר
+                      - generic [ref=f13e1464]: נוף פתוח לעירבהזדמנותחבל לפספס
+                  - button [ref=f13e1467] [cursor=pointer]
+              - listitem [ref=f13e1480]:
+                - generic [ref=f13e1482]:
+                  - link [ref=f13e1483] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/qui6fwm3?opened-from=feed&component-type=main_feed&spot=standard&location=16
+                    - generic [ref=f13e1484]:
+                      - generic [ref=f13e1491]:
+                        - generic [ref=f13e1492]: ₪ 3,300,000
+                        - heading [level=2] [ref=f13e1495]:
+                          - generic [ref=f13e1496]: בעל העקידה 27
+                          - generic [ref=f13e1498]: דירת גן, שפירא, תל אביב יפו
+                          - generic [ref=f13e1499]: 3 חדרים • קומה ‎קרקע‏ • 77 מ״ר
+                      - generic [ref=f13e1500]: חניהנוף פתוח לפארקממ"ד
+                  - button [ref=f13e1503] [cursor=pointer]
+              - listitem [ref=f13e1516]:
+                - generic [ref=f13e1518]:
+                  - link [ref=f13e1519] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/zbsvfxdd?opened-from=feed&component-type=main_feed&spot=standard&location=17
+                    - generic [ref=f13e1520]:
+                      - generic [ref=f13e1527]:
+                        - generic [ref=f13e1528]: ₪ 6,999,999
+                        - heading [level=2] [ref=f13e1531]:
+                          - generic [ref=f13e1532]: מיכאל נאמן 8
+                          - generic [ref=f13e1534]: דירה, גלילות, תל אביב יפו
+                          - generic [ref=f13e1535]: 4.5 חדרים • קומה ‎1‏ • 205 מ״ר
+                      - generic [ref=f13e1536]: ממ"דנוף פתוח ליםחניה
+                  - button [ref=f13e1539] [cursor=pointer]
+              - listitem [ref=f13e1552]:
+                - generic [ref=f13e1554]:
+                  - link [ref=f13e1555] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/u3kmnsro?opened-from=feed&component-type=main_feed&spot=standard&location=18
+                    - generic [ref=f13e1556]:
+                      - generic [ref=f13e1563]:
+                        - generic [ref=f13e1564]: ₪ 3,300,000
+                        - heading [level=2] [ref=f13e1567]:
+                          - generic [ref=f13e1568]: דרך שלמה 49
+                          - generic [ref=f13e1570]: דירה, פלורנטין, תל אביב יפו
+                          - generic [ref=f13e1571]: 2 חדרים • קומה ‎2‏ • 70 מ״ר
+                      - generic [ref=f13e1572]: חניהנוף פתוח לפארקבהזדמנות
+                  - button [ref=f13e1575] [cursor=pointer]
+              - listitem [ref=f13e1588]:
+                - generic [ref=f13e1590]:
+                  - link [ref=f13e1591] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/sk6tbor2?opened-from=feed&component-type=main_feed&spot=standard&location=19
+                    - generic [ref=f13e1592]:
+                      - generic [ref=f13e1599]:
+                        - generic [ref=f13e1600]: ₪ 1,850,000
+                        - heading [level=2] [ref=f13e1603]:
+                          - generic [ref=f13e1604]: לוינסקי 138
+                          - generic [ref=f13e1606]: דירה, שפירא, תל אביב יפו
+                          - generic [ref=f13e1607]: 2.5 חדרים • קומה ‎5‏ • 53 מ״ר
+                      - generic [ref=f13e1608]: נוף פתוח לעירבהזדמנותחבל לפספס
+                  - button [ref=f13e1611] [cursor=pointer]
+              - listitem [ref=f13e1624]:
+                - generic [ref=f13e1626]:
+                  - link [ref=f13e1627] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/pjxsdu42?opened-from=feed&component-type=main_feed&spot=standard&location=20
+                    - generic [ref=f13e1628]:
+                      - generic [ref=f13e1635]:
+                        - generic [ref=f13e1636]: ₪ 2,790,000
+                        - heading [level=2] [ref=f13e1639]:
+                          - generic [ref=f13e1640]: יעקב סלע 6
+                          - generic [ref=f13e1642]: דירה, ניר אביב, תל אביב יפו
+                          - generic [ref=f13e1643]: 5 חדרים • קומה ‎3‏ • 106 מ״ר
+                      - generic [ref=f13e1644]: חניהנוף פתוח לעירבהזדמנות
+                  - button [ref=f13e1647] [cursor=pointer]
+              - listitem [ref=f13e1660]:
+                - generic [ref=f13e1662]:
+                  - link [ref=f13e1663] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/0d24jupt?opened-from=feed&component-type=main_feed&spot=standard&location=21
+                    - generic [ref=f13e1664]:
+                      - generic [ref=f13e1671]:
+                        - generic [ref=f13e1672]: ₪ 5,290,000
+                        - heading [level=2] [ref=f13e1675]:
+                          - generic [ref=f13e1676]: ויסוצקי 8
+                          - generic [ref=f13e1678]: דירה, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e1679]: 4 חדרים • קומה ‎1‏ • 99 מ״ר
+                      - generic [ref=f13e1680]: חניה3 כיווני אווירממ"ד
+                  - button [ref=f13e1683] [cursor=pointer]
+              - listitem [ref=f13e1696]:
+                - heading [level=2] [ref=f13e1697]: נכסים דומים למה שחיפשת
+                - generic [ref=f13e1699]:
+                  - button [ref=f13e1701] [cursor=pointer]
+                  - generic [ref=f13e1705]:
+                    - generic [ref=f13e1708]:
+                      - link [ref=f13e1709] [cursor=pointer]:
+                        - /url: /realestate/item/f2jcxo6x?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=1
+                        - generic [ref=f13e1718]:
+                          - generic [ref=f13e1719]: 1,550,000 ₪
+                          - generic [ref=f13e1721]: טשרניחובסקי 9, לב תל אביב, לב העיר צפון, תל אביב יפו
+                          - generic [ref=f13e1723]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e1725]: 2.5 חדרים • קומת קרקע • 70 מ"ר
+                      - button [ref=f13e1728] [cursor=pointer]
+                    - generic [ref=f13e1749]:
+                      - link [ref=f13e1750] [cursor=pointer]:
+                        - /url: /realestate/item/9vq0r4u1?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=2
+                        - generic [ref=f13e1759]:
+                          - generic [ref=f13e1760]: 2,150,000 ₪
+                          - generic [ref=f13e1762]: יהושע בן נון, הצפון הישן - החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e1764]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e1766]: 2 חדרים • קומה 1 • 46 מ"ר
+                      - button [ref=f13e1769] [cursor=pointer]
+                    - generic [ref=f13e1790]:
+                      - link [ref=f13e1791] [cursor=pointer]:
+                        - /url: /realestate/item/0yjtzmlh?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=3
+                        - generic [ref=f13e1800]:
+                          - generic [ref=f13e1801]: 3,500,000 ₪
+                          - generic [ref=f13e1803]: נחום סוקולוב, הצפון הישן - החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e1805]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e1807]: 3 חדרים • קומה 3 • 87 מ"ר
+                      - button [ref=f13e1810] [cursor=pointer]
+                    - generic [ref=f13e1831]:
+                      - link [ref=f13e1832] [cursor=pointer]:
+                        - /url: /realestate/item/aamu0h4x?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=4
+                        - generic [ref=f13e1841]:
+                          - generic [ref=f13e1842]: 2,300,000 ₪
+                          - generic [ref=f13e1844]: דיזנגוף, הצפון הישן - החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e1846]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e1848]: 2 חדרים • קומה 3 • 45 מ"ר
+                      - button [ref=f13e1851] [cursor=pointer]
+                    - generic [ref=f13e1872]:
+                      - link [ref=f13e1873] [cursor=pointer]:
+                        - /url: /realestate/item/9q6wo5qc?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=5
+                        - generic [ref=f13e1882]:
+                          - generic [ref=f13e1883]: 2,170,000 ₪
+                          - generic [ref=f13e1885]: המליץ, לב תל אביב, לב העיר צפון, תל אביב יפו
+                          - generic [ref=f13e1887]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e1889]: 1 חדרים • קומה 3 • 51 מ"ר
+                      - button [ref=f13e1892] [cursor=pointer]
+                    - generic [ref=f13e1913]:
+                      - link [ref=f13e1914] [cursor=pointer]:
+                        - /url: /realestate/item/5gjiyimq?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=6
+                        - generic [ref=f13e1923]:
+                          - generic [ref=f13e1924]: 3,090,000 ₪
+                          - generic [ref=f13e1926]: יהודה המכבי, הצפון החדש -החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e1928]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e1930]: 3 חדרים • קומה 2 • 72 מ"ר
+                      - button [ref=f13e1933] [cursor=pointer]
+                    - generic [ref=f13e1954]:
+                      - link [ref=f13e1955] [cursor=pointer]:
+                        - /url: /realestate/item/jeclxxyl?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=7
+                        - generic [ref=f13e1964]:
+                          - generic [ref=f13e1965]: 3,490,000 ₪
+                          - generic [ref=f13e1967]: הזוהר 14, תל אביב יפו
+                          - generic [ref=f13e1969]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e1971]: 3 חדרים • קומה 2 • 80 מ"ר
+                      - button [ref=f13e1974] [cursor=pointer]
+                    - generic [ref=f13e1995]:
+                      - link [ref=f13e1996] [cursor=pointer]:
+                        - /url: /realestate/item/eitv94kx?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=8
+                        - generic [ref=f13e2005]:
+                          - generic [ref=f13e2006]: 3,250,000 ₪
+                          - generic [ref=f13e2008]: ז'בוטינסקי 84, הצפון הישן - החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e2010]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2012]: 3 חדרים • קומה 3 • 73 מ"ר
+                      - button [ref=f13e2015] [cursor=pointer]
+                    - generic [ref=f13e2036]:
+                      - link [ref=f13e2037] [cursor=pointer]:
+                        - /url: /realestate/item/x6tanlyp?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=9
+                        - generic [ref=f13e2046]:
+                          - generic [ref=f13e2047]: 3,290,000 ₪
+                          - generic [ref=f13e2049]: הצפון הישן - החלק הדרומי, תל אביב יפו
+                          - generic [ref=f13e2051]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2053]: 3 חדרים • קומה 3 • 82 מ"ר
+                      - button [ref=f13e2056] [cursor=pointer]
+                    - generic [ref=f13e2077]:
+                      - link [ref=f13e2078] [cursor=pointer]:
+                        - /url: /realestate/item/ymenv5pr?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=10
+                        - generic [ref=f13e2087]:
+                          - generic [ref=f13e2088]: 1,750,000 ₪
+                          - generic [ref=f13e2090]: יוחנן הגדי, הצפון החדש -החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e2092]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2094]: 2 חדרים • קומת קרקע • 35 מ"ר
+                      - button [ref=f13e2097] [cursor=pointer]
+                    - generic [ref=f13e2118]:
+                      - link [ref=f13e2119] [cursor=pointer]:
+                        - /url: /realestate/item/rjawrind?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=11
+                        - generic [ref=f13e2128]:
+                          - generic [ref=f13e2129]: 3,080,000 ₪
+                          - generic [ref=f13e2131]: טשרניחובסקי, הצפון הישן - החלק הדרומי, תל אביב יפו
+                          - generic [ref=f13e2133]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2135]: 3 חדרים • קומה 2 • 62 מ"ר
+                      - button [ref=f13e2138] [cursor=pointer]
+                    - generic [ref=f13e2159]:
+                      - link [ref=f13e2160] [cursor=pointer]:
+                        - /url: /realestate/item/pq32k3u8?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=12
+                        - generic [ref=f13e2169]:
+                          - generic [ref=f13e2170]: 2,670,000 ₪
+                          - generic [ref=f13e2172]: ש"ץ, הצפון הישן - החלק הדרומי, תל אביב יפו
+                          - generic [ref=f13e2174]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2176]: 2.5 חדרים • קומה 2 • 53 מ"ר
+                      - button [ref=f13e2179] [cursor=pointer]
+                    - generic [ref=f13e2200]:
+                      - link [ref=f13e2201] [cursor=pointer]:
+                        - /url: /realestate/item/asz0zm53?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=13
+                        - generic [ref=f13e2210]:
+                          - generic [ref=f13e2211]: 4,000,000 ₪
+                          - generic [ref=f13e2213]: תכנית ל', למד, תל אביב יפו
+                          - generic [ref=f13e2215]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2217]: 4 חדרים • קומה 9 • 128 מ"ר
+                      - button [ref=f13e2220] [cursor=pointer]
+                    - generic [ref=f13e2241]:
+                      - link [ref=f13e2242] [cursor=pointer]:
+                        - /url: /realestate/item/ijhm2j9y?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=14
+                        - generic [ref=f13e2251]:
+                          - generic [ref=f13e2252]: 1,580,000 ₪
+                          - generic [ref=f13e2254]: דיזנגוף, הצפון הישן - החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e2256]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2258]: 1 חדרים • קומה 1 • 30 מ"ר
+                      - button [ref=f13e2261] [cursor=pointer]
+                    - generic [ref=f13e2282]:
+                      - link [ref=f13e2283] [cursor=pointer]:
+                        - /url: /realestate/item/3gne5ihl?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=15
+                        - generic [ref=f13e2292]:
+                          - generic [ref=f13e2293]: 1,670,000 ₪
+                          - generic [ref=f13e2295]: אוריאל אקוסטה 1, פלורנטין, תל אביב יפו
+                          - generic [ref=f13e2297]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2299]: 2 חדרים • קומה 2 • 28 מ"ר
+                      - button [ref=f13e2302] [cursor=pointer]
+                    - generic [ref=f13e2323]:
+                      - link [ref=f13e2324] [cursor=pointer]:
+                        - /url: /realestate/item/213mvdvy?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=16
+                        - generic [ref=f13e2333]:
+                          - generic [ref=f13e2334]: 4,000,000 ₪
+                          - generic [ref=f13e2336]: המשתלה, תל אביב יפו
+                          - generic [ref=f13e2338]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2340]: 5 חדרים • קומה 3 • 170 מ"ר
+                      - button [ref=f13e2343] [cursor=pointer]
+                    - generic [ref=f13e2364]:
+                      - link [ref=f13e2365] [cursor=pointer]:
+                        - /url: /realestate/item/5a8imwh9?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=17
+                        - generic [ref=f13e2374]:
+                          - generic [ref=f13e2375]: 900,000 ₪
+                          - generic [ref=f13e2377]: דיזנגוף, הצפון הישן - החלק הדרומי, תל אביב יפו
+                          - generic [ref=f13e2379]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2381]: 1 חדרים • קומת קרקע • 24 מ"ר
+                      - button [ref=f13e2384] [cursor=pointer]
+                    - generic [ref=f13e2405]:
+                      - link [ref=f13e2406] [cursor=pointer]:
+                        - /url: /realestate/item/pjqt5phi?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=18
+                        - generic [ref=f13e2415]:
+                          - generic [ref=f13e2416]: 1,650,000 ₪
+                          - generic [ref=f13e2418]: דיזנגוף 271, תל אביב יפו
+                          - generic [ref=f13e2420]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2422]: 2 חדרים • קומה 1 • 45 מ"ר
+                      - button [ref=f13e2425] [cursor=pointer]
+                    - generic [ref=f13e2446]:
+                      - link [ref=f13e2447] [cursor=pointer]:
+                        - /url: /realestate/item/tx8k4csh?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=19
+                        - generic [ref=f13e2456]:
+                          - generic [ref=f13e2457]: 4,390,000 ₪
+                          - generic [ref=f13e2459]: יהודה המכבי, הצפון החדש -החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e2461]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2463]: 4 חדרים • קומה 3 • 140 מ"ר
+                      - button [ref=f13e2466] [cursor=pointer]
+                    - generic [ref=f13e2487]:
+                      - link [ref=f13e2488] [cursor=pointer]:
+                        - /url: /realestate/item/73mi811j?opened-from=feed&component-type=recommendation&component-header=%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%93%D7%95%D7%9E%D7%99%D7%9D_%D7%9C%D7%9E%D7%94_%D7%A9%D7%97%D7%99%D7%A4%D7%A9%D7%AA&spot=standard&location=20
+                        - generic [ref=f13e2497]:
+                          - generic [ref=f13e2498]: 5,100,000 ₪
+                          - generic [ref=f13e2500]: נווה אביבים, תל אביב יפו
+                          - generic [ref=f13e2502]: מחוז תל אביב והסביבה
+                          - generic [ref=f13e2504]: 5 חדרים • קומה 7 • 130 מ"ר
+                      - button [ref=f13e2507] [cursor=pointer]
+              - listitem [ref=f13e2526]:
+                - generic [ref=f13e2528]:
+                  - link [ref=f13e2529] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/vity3ea2?opened-from=feed&component-type=main_feed&spot=standard&location=22
+                    - generic [ref=f13e2530]:
+                      - generic [ref=f13e2531]: ירד ב-700,000 ₪
+                      - generic [ref=f13e2539]:
+                        - generic [ref=f13e2540]: ₪ 5,800,000
+                        - heading [level=2] [ref=f13e2543]:
+                          - generic [ref=f13e2544]: אייזק שטרן 22
+                          - generic [ref=f13e2546]: דירה, תכנית ל', למד, תל אביב יפו
+                          - generic [ref=f13e2547]: 4 חדרים • קומה ‎4‏ • 106 מ״ר
+                      - generic [ref=f13e2548]: חדש מקבלן3 כיווני אווירממ"ד
+                  - button [ref=f13e2551] [cursor=pointer]
+              - listitem [ref=f13e2564]:
+                - generic [ref=f13e2566]:
+                  - link [ref=f13e2567] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/qjoz0co8?opened-from=feed&component-type=main_feed&spot=standard&location=23
+                    - generic [ref=f13e2568]:
+                      - generic [ref=f13e2575]:
+                        - generic [ref=f13e2576]: ₪ 3,753,000
+                        - heading [level=2] [ref=f13e2579]:
+                          - generic [ref=f13e2580]: אליעזר קשאני 11
+                          - generic [ref=f13e2582]: דירה, רמת אביב ג', תל אביב יפו
+                          - generic [ref=f13e2583]: 3 חדרים • קומה ‎3‏ • 62 מ״ר
+                      - generic [ref=f13e2584]: חניהנוף פתוח לעירבהזדמנות
+                  - button [ref=f13e2587] [cursor=pointer]
+              - listitem [ref=f13e2600]:
+                - generic [ref=f13e2602]:
+                  - link [ref=f13e2603] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/qt905wfu?opened-from=feed&component-type=main_feed&spot=standard&location=24
+                    - generic [ref=f13e2604]:
+                      - generic [ref=f13e2611]:
+                        - generic [ref=f13e2612]: ₪ 5,800,000
+                        - heading [level=2] [ref=f13e2615]:
+                          - generic [ref=f13e2616]: הזוהר 5
+                          - generic [ref=f13e2618]: דירה, בבלי, תל אביב יפו
+                          - generic [ref=f13e2619]: 4 חדרים • קומה ‎6‏ • 94 מ״ר
+                      - generic [ref=f13e2620]: ממ"דחניהנכס חדש
+                  - button [ref=f13e2623] [cursor=pointer]
+              - listitem [ref=f13e2636]:
+                - generic [ref=f13e2638]:
+                  - link [ref=f13e2639] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/npb40efc?opened-from=feed&component-type=main_feed&spot=standard&location=25
+                    - generic [ref=f13e2640]:
+                      - generic [ref=f13e2647]:
+                        - generic [ref=f13e2648]: ₪ 5,400,000
+                        - heading [level=2] [ref=f13e2651]:
+                          - generic [ref=f13e2652]: ישראל גלילי 9
+                          - generic [ref=f13e2654]: דירה, כוכב הצפון, תל אביב יפו
+                          - generic [ref=f13e2655]: 5 חדרים • קומה ‎3‏ • 115 מ״ר
+                      - generic [ref=f13e2656]: חניה3 כיווני אוויר2 מרפסות
+                  - button [ref=f13e2659] [cursor=pointer]
+              - listitem [ref=f13e2672]:
+                - iframe [ref=f13e2676]:
+                  - link [ref=f23e3] [cursor=pointer]:
+                    - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuCJVUXT66YjjtO10skOjtaZiBpJUyfXSFGg5tsad8wuHvCKjQDbV3q699DancIRkUsrSnLlaCD9VoT8otaLu_y0YHIvdEq-EwiO4gc-chTeNfS4jZYKamAWRooCqVKq5EezSLzHZSNEF1mmegQXAhGipbdjVBXTTx1L_cLZuCVqXX7yA0IniOC9O6_or7XqtGHOMQ3Npp2_BRWv0Ils0gF8SNjYrcON4V0ZV_jQu5-FexHO_I_c1P9pyktmgfzpdr0djHFoYotUQDoQEF4op29D9Sma0jNK-bxTqycWHGBFLInbNra3Cb726ePHOpoVhXYQi0bQTcN9XvyRXy6i9KS63OMt0x6HvwZziV5VFCqmqiO5kWesEEI_y56JPSkjrKfa-e99LkKmfAm5oTnSaXfGfqYUd6nVc2ZdkGBLk8k7ok&sai=AMfl-YRk4kR2d2xctswwsCXWxWM6IrzC7z_RvlJdpDW44w-dZlIREuG7_ZfaV2i9M8H7ULMl5z8sb-JH6g_qEXEQ3qUAZBiQOP3895Y6fGpQIfnxxL04LOq-DVg5sU84Jv1C0d1r8Hsn348yUR0yEeeknAaYgHtc7FMn5h83KKSwD1lhDH9KvrpU6F12-J1GnYQQdfJBnHJfIVlFkC1QpRObnruxXwaqR1mySdR84PugH8i1_qJWWP1h4HttrVpHjBU02ZcBdrdnWTT_-xrT8eLINFwSIR31kNeY0QSDhRyOcGQjfI4sR9KlJNwq553NIYqEhV3cVCYAVECTyjIlCDFywdKH83FOjwLvC_RNXrSmQPgLL-gnaNRs1yM&sig=Cg0ArKJSzHi3F6JmMCFxEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://www.yad2.co.il/yad1/project/13671%3Fsite%3D_inres_x1_b_230_s_nad_Commercial_Inner_Ad__tel_aviv_north_project_BNEI-EFRAIM-236-240
+                    - main [ref=f23e4]:
+                      - generic [ref=f23e5]:
+                        - generic [ref=f23e8]:
+                          - generic [ref=f23e9]: בני אפרים 236-240
+                          - generic [ref=f23e10]: החל מ- 42,000 ₪ למ"ר
+                          - generic [ref=f23e11]: לחצו לפרטים
+                        - generic [ref=f23e12]: פרסומת
+              - listitem [ref=f13e2677]:
+                - generic [ref=f13e2679]:
+                  - link [ref=f13e2680] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/o53icoi5?opened-from=feed&component-type=main_feed&spot=standard&location=26
+                    - generic [ref=f13e2681]:
+                      - generic [ref=f13e2688]:
+                        - generic [ref=f13e2689]: ₪ 7,890,000
+                        - heading [level=2] [ref=f13e2692]:
+                          - generic [ref=f13e2693]: הקונגרס 11
+                          - generic [ref=f13e2695]: גג/ פנטהאוז, נווה שאנן, תל אביב יפו
+                          - generic [ref=f13e2696]: 3.5 חדרים • קומה ‎5‏ • 200 מ״ר
+                      - generic [ref=f13e2697]: חדש מקבלן4 כיווני אווירחניה
+                  - button [ref=f13e2700] [cursor=pointer]
+              - listitem [ref=f13e2713]:
+                - generic [ref=f13e2715]:
+                  - link [ref=f13e2716] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/x6505toy?opened-from=feed&component-type=main_feed&spot=standard&location=27
+                    - generic [ref=f13e2717]:
+                      - generic [ref=f13e2724]:
+                        - generic [ref=f13e2725]: ₪ 7,750,000
+                        - heading [level=2] [ref=f13e2728]:
+                          - generic [ref=f13e2729]: פרופ' יובל נאמן 3
+                          - generic [ref=f13e2731]: דירה, הגוש הגדול, רמת אביב החדשה, נופי ים, תל אביב יפו
+                          - generic [ref=f13e2732]: 4 חדרים • קומה ‎9‏ • 170 מ״ר
+                      - generic [ref=f13e2733]: חניה3 כיווני אווירממ"ד
+                  - button [ref=f13e2736] [cursor=pointer]
+              - listitem [ref=f13e2749]:
+                - generic [ref=f13e2751]:
+                  - link [ref=f13e2752] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/rtng2ugj?opened-from=feed&component-type=main_feed&spot=standard&location=28
+                    - generic [ref=f13e2753]:
+                      - generic [ref=f13e2760]:
+                        - generic [ref=f13e2761]: ₪ 5,600,000
+                        - heading [level=2] [ref=f13e2764]:
+                          - generic [ref=f13e2765]: שדרות לוי אשכול 118
+                          - generic [ref=f13e2767]: דירה, הגוש הגדול, רמת אביב החדשה, נופי ים, תל אביב יפו
+                          - generic [ref=f13e2768]: 4 חדרים • קומה ‎6‏ • 108 מ״ר
+                      - generic [ref=f13e2769]: חניהממ"דקו ראשון לים
+                  - button [ref=f13e2772] [cursor=pointer]
+              - listitem [ref=f13e2785]:
+                - generic [ref=f13e2787]:
+                  - link [ref=f13e2788] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/9508/apartment/1002882?wat=1_0_0_0_22_0_0_29_0_1_60_0_0_77&isRegion=true&matchPrecision=full&isAbTest=true&site=_inres_x1_l_ListingPremium_s_14129_1002882
+                    - generic [ref=f13e2789]:
+                      - generic [ref=f13e2790]: פרויקט במבצע
+                      - generic [ref=f13e2800]:
+                        - heading [level=2] [ref=f13e2801]:
+                          - generic [ref=f13e2802]: שביל פראנקל 2-6
+                          - generic [ref=f13e2803]: גג/פנטהאוז, רמת אביב, תל אביב יפו
+                          - generic [ref=f13e2804]: 5 חדרים • קומה קרקע-6 • 136 מ״ר
+                        - paragraph [ref=f13e2806]:
+                          - text: שימו את המשכנתה על שקט ‏1.99% ריבית קבועה ללא הצמדה! דירות ‏2-4 חדרים ופנטהאוזים בפרויקט שביל פראנקל מבית שלום את נתן.
+                          - generic [ref=f13e2807]: ... קרא עוד
+                      - generic [ref=f13e2812]:
+                        - generic [ref=f13e2813]: החל מ-
+                        - generic [ref=f13e2814]: 13,000,000 ₪
+                  - button [ref=f13e2817] [cursor=pointer]
+              - listitem [ref=f13e2830]:
+                - generic [ref=f13e2832]:
+                  - link [ref=f13e2833] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/16161/apartment/1013265?wat=1_0_0_0_22_0_0_30_0_1_60_0_0_77&isRegion=true&matchPrecision=full&isAbTest=true&site=_inres_x1_l_ListingPremium_s_14130_1013265
+                    - generic [ref=f13e2834]:
+                      - generic [ref=f13e2835]: פרויקט במבצע
+                      - generic [ref=f13e2845]:
+                        - heading [level=2] [ref=f13e2846]:
+                          - generic [ref=f13e2847]: איינשטיין 15 תל אביב
+                          - generic [ref=f13e2848]: דירה, הגוש הגדול, רמת אביב החדשה, נופי ים, תל אביב יפו
+                          - generic [ref=f13e2849]: 5 חדרים • 135 מ״ר
+                        - paragraph [ref=f13e2851]:
+                          - text: פרויקט איינשטיין ‏15, יצירת המופת של חן ואיתי גינדי וקבוצת שבירו בסמוך לרובע שדה דב (בין נופי ים ול' החדשה), תל אביב.
+                          - generic [ref=f13e2852]: ... קרא עוד
+                      - generic [ref=f13e2853]: למידע נוסף
+                  - button [ref=f13e2859] [cursor=pointer]
+              - listitem [ref=f13e2872]:
+                - generic [ref=f13e2874]:
+                  - link [ref=f13e2875] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/39hw31vs?opened-from=feed&component-type=main_feed&spot=booster&location=31
+                    - generic [ref=f13e2876]:
+                      - generic [ref=f13e2886]:
+                        - generic [ref=f13e2887]: 5,200,000 ₪
+                        - heading [level=2] [ref=f13e2889]:
+                          - generic [ref=f13e2890]: יוניצמן 6
+                          - generic [ref=f13e2892]: דירה, גלילות, תל אביב יפו
+                          - generic [ref=f13e2893]: 3.5 חדרים • קומה ‎2‏ • 140 מ״ר
+                        - generic [ref=f13e2894]: הומלנד -בית ממכר נכסים
+                      - generic [ref=f13e2898]: נכס חדשחניהממ"ד
+                  - button [ref=f13e2901] [cursor=pointer]
+              - listitem [ref=f13e2914]:
+                - generic [ref=f13e2916]:
+                  - link [ref=f13e2917] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/uc2l9gco?opened-from=feed&component-type=main_feed&spot=standard&location=32
+                    - generic [ref=f13e2918]:
+                      - generic [ref=f13e2919]: בלעדי
+                      - generic [ref=f13e2928]:
+                        - generic [ref=f13e2930]:
+                          - generic [ref=f13e2931]: דיפלורה נכסים
+                          - generic [ref=f13e2932]: ₪ 6,450,000
+                        - heading [level=2] [ref=f13e2933]:
+                          - generic [ref=f13e2934]: עמיחי פאגלין
+                          - generic [ref=f13e2936]: דירה, אזורי חן, גימל החדשה, תל אביב יפו
+                          - generic [ref=f13e2937]: 5 חדרים • קומה ‎2‏ • 140 מ״ר
+                      - generic [ref=f13e2938]: חניהממ"דבהזדמנות
+                  - button [ref=f13e2941] [cursor=pointer]
+              - listitem [ref=f13e2954]:
+                - generic [ref=f13e2956]:
+                  - link [ref=f13e2957] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/f978t00g?opened-from=feed&component-type=main_feed&spot=standard&location=33
+                    - generic [ref=f13e2958]:
+                      - generic [ref=f13e2959]: ירד ב-400,000 ₪
+                      - generic [ref=f13e2967]:
+                        - generic [ref=f13e2969]:
+                          - generic [ref=f13e2970]: עד המפתח - תיווך ושיווק נדל"ן
+                          - generic [ref=f13e2971]: ₪ 4,490,000
+                        - heading [level=2] [ref=f13e2972]:
+                          - generic [ref=f13e2973]: פרי מגדים
+                          - generic [ref=f13e2975]: גג/ פנטהאוז, נחלת יצחק, תל אביב יפו
+                          - generic [ref=f13e2976]: 5 חדרים • קומה ‎4‏ • 170 מ״ר
+                      - generic [ref=f13e2977]: חניה2 מרפסותבהזדמנות
+                  - button [ref=f13e2980] [cursor=pointer]
+              - listitem [ref=f13e2993]:
+                - generic [ref=f13e2995]:
+                  - link [ref=f13e2996] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/485dnl25?opened-from=feed&component-type=main_feed&spot=standard&location=34
+                    - generic [ref=f13e2997]:
+                      - generic [ref=f13e3004]:
+                        - generic [ref=f13e3006]:
+                          - generic [ref=f13e3007]: TUSON REAL ESTATE
+                          - generic [ref=f13e3008]: ₪ 15,500,000
+                        - heading [level=2] [ref=f13e3009]:
+                          - generic [ref=f13e3010]: פנקס
+                          - generic [ref=f13e3012]: דירה, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e3013]: 4.5 חדרים • קומה ‎10‏ • 181 מ״ר
+                      - generic [ref=f13e3014]: חניהממ"דבהזדמנות
+                  - button [ref=f13e3017] [cursor=pointer]
+              - listitem [ref=f13e3030]:
+                - generic [ref=f13e3032]:
+                  - link [ref=f13e3033] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/vuxb5pds?opened-from=feed&component-type=main_feed&spot=standard&location=35
+                    - generic [ref=f13e3034]:
+                      - generic [ref=f13e3041]:
+                        - generic [ref=f13e3043]:
+                          - generic [ref=f13e3044]: שפירא נכסים
+                          - generic [ref=f13e3045]: ₪ 3,350,000
+                        - heading [level=2] [ref=f13e3046]:
+                          - generic [ref=f13e3047]: מסילת וולפסון
+                          - generic [ref=f13e3049]: דירה, פלורנטין, תל אביב יפו
+                          - generic [ref=f13e3050]: 3 חדרים • קומה ‎2‏ • 72 מ״ר
+                      - generic [ref=f13e3051]: נכס חדשמטבח גדולבהזדמנות
+                  - button [ref=f13e3054] [cursor=pointer]
+              - listitem [ref=f13e3067]:
+                - generic [ref=f13e3068]:
+                  - generic [ref=f13e3069]:
+                    - heading [level=3] [ref=f13e3070]: משרדי תיווך בתל אביב יפו
+                    - link [ref=f13e3071] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agencies/?area=1&city=5000&slug=tel-aviv-area
+                      - text: הצג הכל
+                  - generic [ref=f13e3073]:
+                    - link [ref=f13e3075] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/5944050/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=agentinarea
+                      - generic [ref=f13e3076]: קונקורד נכסים
+                    - link [ref=f13e3080] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/1375726/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=agentinarea
+                      - generic [ref=f13e3081]: טל נכסים -מבית קלר וויליאמס צפון מערב ת"א
+                    - link [ref=f13e3085] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/5312589/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=agentinarea
+                      - generic [ref=f13e3086]: ONE REAL ESTATE
+                    - link [ref=f13e3090] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/7969260/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=agentinarea
+                      - generic [ref=f13e3091]: Home - Place
+                    - link [ref=f13e3095] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/1232266/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=agentinarea
+                      - generic [ref=f13e3096]: עזרא-נכסים
+                    - link [ref=f13e3100] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/3188911/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=agentinarea
+                      - generic [ref=f13e3101]: אייל ארליך Tel Aviv Realty
+              - listitem [ref=f13e3104]:
+                - generic [ref=f13e3106]:
+                  - link [ref=f13e3107] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/00q2xll8?opened-from=feed&component-type=main_feed&spot=standard&location=36
+                    - generic [ref=f13e3108]:
+                      - generic [ref=f13e3115]:
+                        - generic [ref=f13e3117]:
+                          - generic [ref=f13e3118]: תיווך נינווה
+                          - generic [ref=f13e3119]: ₪ 13,000,000
+                        - heading [level=2] [ref=f13e3120]:
+                          - generic [ref=f13e3121]: רמת אביב ג'
+                          - generic [ref=f13e3123]: בית פרטי/ קוטג', רמת אביב ג', תל אביב יפו
+                          - generic [ref=f13e3124]: 7 חדרים • קומה ‎קרקע‏ • 283 מ״ר
+                      - generic [ref=f13e3125]: חניהממ"דבהזדמנות
+                  - button [ref=f13e3128] [cursor=pointer]
+              - listitem [ref=f13e3141]:
+                - generic [ref=f13e3143]:
+                  - link [ref=f13e3144] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/jov2nkyz?opened-from=feed&component-type=main_feed&spot=standard&location=37
+                    - generic [ref=f13e3145]:
+                      - generic [ref=f13e3152]:
+                        - generic [ref=f13e3154]:
+                          - generic [ref=f13e3155]: א.ג.ש נכסים
+                          - generic [ref=f13e3156]: ₪ 4,570,000
+                        - heading [level=2] [ref=f13e3157]:
+                          - generic [ref=f13e3158]: חנה אורלוף 4
+                          - generic [ref=f13e3160]: דירה, המשתלה, תל אביב יפו
+                          - generic [ref=f13e3161]: 4 חדרים • קומה ‎4‏ • 108 מ״ר
+                      - generic [ref=f13e3162]: נכס חדשחניהממ"ד
+                  - button [ref=f13e3165] [cursor=pointer]
+              - listitem [ref=f13e3178]:
+                - generic [ref=f13e3180]:
+                  - link [ref=f13e3181] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/57dl0saw?opened-from=feed&component-type=main_feed&spot=standard&location=38
+                    - generic [ref=f13e3182]:
+                      - generic [ref=f13e3189]:
+                        - generic [ref=f13e3191]:
+                          - generic [ref=f13e3192]: עזרא-נכסים
+                          - generic [ref=f13e3193]: ₪ 3,970,000
+                        - heading [level=2] [ref=f13e3194]:
+                          - generic [ref=f13e3195]: אליעזר קפלן
+                          - generic [ref=f13e3197]: דירה, גני שרונה, קרית הממשלה, תל אביב יפו
+                          - generic [ref=f13e3198]: 4 חדרים • קומה ‎3‏ • 104 מ״ר
+                      - generic [ref=f13e3199]: חניהבהזדמנותחבל לפספס
+                  - button [ref=f13e3202] [cursor=pointer]
+              - listitem [ref=f13e3215]:
+                - generic [ref=f13e3217]:
+                  - link [ref=f13e3218] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/zubu9aya?opened-from=feed&component-type=main_feed&spot=standard&location=39
+                    - generic [ref=f13e3219]:
+                      - generic [ref=f13e3220]: ירד ב-210,000 ₪
+                      - generic [ref=f13e3228]:
+                        - generic [ref=f13e3230]:
+                          - generic [ref=f13e3231]: י.ג קפיטל
+                          - generic [ref=f13e3232]: ₪ 3,790,000
+                        - heading [level=2] [ref=f13e3233]:
+                          - generic [ref=f13e3234]: יהודה מרגוזה
+                          - generic [ref=f13e3236]: דירה, תל אביב יפו
+                          - generic [ref=f13e3237]: 3 חדרים • קומה ‎2‏ • 89 מ״ר
+                      - generic [ref=f13e3238]: נכס חדשממ"ד2 מרפסות
+                  - button [ref=f13e3241] [cursor=pointer]
+              - listitem [ref=f13e3254]:
+                - iframe [ref=f13e3258]:
+                  - link [ref=f24e3] [cursor=pointer]:
+                    - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvvJO8oRFKe4abGqtR86UcJTOmmG9K8ASXDqt12P6VdT_-ThrsFSwOLeqL6uqw8Ca6JPdEw5biL35C_84Y0l57tkbSavDG2Cba-XcUhhc32DOe2QFjDfuTzF47OkwGnncEsrXE6YCLTUxefkeNBWTHYd9Z-7o9Dh7tKewTKLjbYH5zV8i6oHiGk78lTRUVr1bwHxKWHSVCoFGHSaubzYJaTjNqe4sC74s8qyhDFyvcVIvhA-zzfZw3IXtWFcX7Mjt7T7_HkGzjHiINUsyZnaRAcetjZCVKIRcaWFogr2n7IwjCPHSmkmDaYkJZoixH6SVZzhLNM2nf27_djIEjs-oSpNdyr4FsopwTe_A2N57eOaQYUs1DpL6rFT3MkcjVzliFnU5EGPBvAvD4Q9YhODSkXI_GleYvB3S9tZZvM1rMUPMI&sai=AMfl-YSynRuLXUE2vNJPWUJGaSw_hw2gx_yudp7Led-VzuuyM-w-O53KhGCyEMQXxNLBaYYlZQh_X0zDTdOhDHzwviBDn050BWPo-ZwdJgQo5ViXYxfJf7Dxu1NymY5_6FYkLBWqpVMQHrlpwN2X6_xPVj0yOIU4g3yZISDnCvqkQwTziz6bdbi2t1ZiyTmAzFokTkuidLHq_oHuilacby-pIitR90Arj1IZGL_SvoCrPhwEYDs-r0MJeY4Gf_VX0zDJedZjHZ4ccr2QCdkxH6W-nx5wRUhH03U9hXMyAoObHvN8ip_GVjcZ53SHxxqWxfmzBU_mmzQ-WEqlGMY3GxqVo8cGpFPSBsXSQGP9n-OrgVJRI6KcJUVqAIY&sig=Cg0ArKJSzKnQHqBk80CNEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://www.yad2.co.il/yad1/project/13684%3Fsite%3D_inres_x1_b_230_s_nad_Commercial_Inner_Ad__tel_aviv_north_project_KITZIS
+                    - main [ref=f24e4]:
+                      - generic [ref=f24e5]:
+                        - generic [ref=f24e8]:
+                          - generic [ref=f24e9]: קיציס תל אביב
+                          - generic [ref=f24e10]: בניין בוטיק בן 9 קומות עם דירות 4-5 חד' החל מ-39,000 ש"ח למ"ר
+                          - generic [ref=f24e11]: לחצו לפרטים
+                        - generic [ref=f24e12]: פרסומת
+              - listitem [ref=f13e3259]:
+                - generic [ref=f13e3261]:
+                  - link [ref=f13e3262] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/viftudog?opened-from=feed&component-type=main_feed&spot=standard&location=40
+                    - generic [ref=f13e3263]:
+                      - generic [ref=f13e3264]: בלעדי
+                      - generic [ref=f13e3273]:
+                        - generic [ref=f13e3275]:
+                          - generic [ref=f13e3276]: רינה לדין השקעות נדל"ן
+                          - generic [ref=f13e3277]: ₪ 4,800,000
+                        - heading [level=2] [ref=f13e3278]:
+                          - generic [ref=f13e3279]: אחד העם 92
+                          - generic [ref=f13e3281]: דירה, לב תל אביב, לב העיר צפון, תל אביב יפו
+                          - generic [ref=f13e3282]: 3 חדרים • קומה ‎1‏ • 78 מ״ר
+                      - generic [ref=f13e3283]: 2 מרפסותבניין משופץייחודי
+                  - button [ref=f13e3286] [cursor=pointer]
+              - listitem [ref=f13e3299]:
+                - generic [ref=f13e3301]:
+                  - link [ref=f13e3302] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/0b7efb1f?opened-from=feed&component-type=main_feed&spot=standard&location=41
+                    - generic [ref=f13e3303]:
+                      - generic [ref=f13e3304]: בלעדי
+                      - generic [ref=f13e3313]:
+                        - generic [ref=f13e3315]:
+                          - generic [ref=f13e3316]: LIZ NADLAN
+                          - generic [ref=f13e3317]: ₪ 4,950,000
+                        - heading [level=2] [ref=f13e3318]:
+                          - generic [ref=f13e3319]: רוממה
+                          - generic [ref=f13e3321]: דירת גן, נאות אפקה ב', תל אביב יפו
+                          - generic [ref=f13e3322]: 4 חדרים • קומה ‎קרקע‏ • 210 מ״ר
+                      - generic [ref=f13e3323]: בהזדמנותחבל לפספסייחודי
+                  - button [ref=f13e3326] [cursor=pointer]
+              - listitem [ref=f13e3339]:
+                - generic [ref=f13e3341]:
+                  - link [ref=f13e3342] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/flrukfp1?opened-from=feed&component-type=main_feed&spot=standard&location=42
+                    - generic [ref=f13e3343]:
+                      - generic [ref=f13e3350]:
+                        - generic [ref=f13e3352]:
+                          - generic [ref=f13e3353]: אקו נכסים
+                          - generic [ref=f13e3354]: ₪ 4,975,000
+                        - heading [level=2] [ref=f13e3355]:
+                          - generic [ref=f13e3356]: בני דן
+                          - generic [ref=f13e3358]: דירת גן, הצפון החדש -החלק הצפוני, תל אביב יפו
+                          - generic [ref=f13e3359]: 2 חדרים • קומה ‎קרקע‏ • 95 מ״ר
+                      - generic [ref=f13e3360]: נכס חדשחניהממ"ד
+                  - button [ref=f13e3363] [cursor=pointer]
+              - listitem [ref=f13e3376]:
+                - generic [ref=f13e3378]:
+                  - link [ref=f13e3379] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/iufrsej5?opened-from=feed&component-type=main_feed&spot=standard&location=43
+                    - generic [ref=f13e3380]:
+                      - generic [ref=f13e3387]:
+                        - generic [ref=f13e3389]:
+                          - generic [ref=f13e3390]: רפי קלינה-Rafi Kalina המומחה לבתי יוקרה בישראל
+                          - generic [ref=f13e3391]: ₪ 12,900,000
+                        - heading [level=2] [ref=f13e3392]:
+                          - generic [ref=f13e3393]: צהלה
+                          - generic [ref=f13e3395]: בית פרטי/ קוטג', צהלה, תל אביב יפו
+                          - generic [ref=f13e3396]: 8 חדרים • קומה ‎קרקע‏ • 400 מ״ר
+                      - generic [ref=f13e3397]: נכס חדשחניה3 מרפסות
+                  - button [ref=f13e3400] [cursor=pointer]
+              - listitem [ref=f13e3413]:
+                - list [ref=f13e3414]:
+                  - listitem [ref=f13e3415]:
+                    - link [ref=f13e3416] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/6333804/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=Promotionstrio
+                      - generic [ref=f13e3417]:
+                        - strong [ref=f13e3420]: Home Market
+                        - generic [ref=f13e3421]: 70 נכסים מתאימים לך
+                  - listitem [ref=f13e3422]:
+                    - link [ref=f13e3423] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/5728045/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=Promotionstrio
+                      - generic [ref=f13e3424]:
+                        - strong [ref=f13e3427]: רפי קלינה-Rafi Kalina המומחה לבתי יוקרה בישראל
+                        - generic [ref=f13e3428]: 89 נכסים מתאימים לך
+                  - listitem [ref=f13e3429]:
+                    - link [ref=f13e3430] [cursor=pointer]:
+                      - /url: https://www.yad2.co.il/realestate/agency/3484910/forsale?area=1&city=5000&slug=tel-aviv-area&yad2_source=Promotionstrio
+                      - generic [ref=f13e3431]:
+                        - strong [ref=f13e3434]: גרדנס סיטי נכסים
+                        - generic [ref=f13e3435]: 63 נכסים מתאימים לך
+              - listitem [ref=f13e3436]:
+                - generic [ref=f13e3438]:
+                  - link [ref=f13e3439] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/53wxw7sg?opened-from=feed&component-type=main_feed&spot=standard&location=44
+                    - generic [ref=f13e3447]:
+                      - generic [ref=f13e3449]:
+                        - generic [ref=f13e3450]: מור ודור נדל"ן שיווק נכסי יוקרה
+                        - generic [ref=f13e3451]: ₪ 5,720,000
+                      - heading [level=2] [ref=f13e3452]:
+                        - generic [ref=f13e3453]: רמת החייל
+                        - generic [ref=f13e3455]: דירה, רמת החייל, תל אביב יפו
+                        - generic [ref=f13e3456]: 5 חדרים • קומה ‎2‏ • 147 מ״ר
+                  - button [ref=f13e3459] [cursor=pointer]
+              - listitem [ref=f13e3472]:
+                - generic [ref=f13e3474]:
+                  - link [ref=f13e3475] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/6p8r2hd9?opened-from=feed&component-type=main_feed&spot=standard&location=45
+                    - generic [ref=f13e3476]:
+                      - generic [ref=f13e3483]:
+                        - generic [ref=f13e3485]:
+                          - generic [ref=f13e3486]: אודל נכסים
+                          - generic [ref=f13e3487]: ₪ 9,990,000
+                        - heading [level=2] [ref=f13e3488]:
+                          - generic [ref=f13e3489]: הירקון
+                          - generic [ref=f13e3491]: דירה, כרם התימנים, תל אביב יפו
+                          - generic [ref=f13e3492]: 3 חדרים • קומה ‎4‏ • 100 מ״ר
+                      - generic [ref=f13e3493]: נכס חדשחניהממ"ד
+                  - button [ref=f13e3496] [cursor=pointer]
+              - listitem [ref=f13e3509]:
+                - generic [ref=f13e3511]:
+                  - link [ref=f13e3512] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/qw8ni6mg?opened-from=feed&component-type=main_feed&spot=standard&location=46
+                    - generic [ref=f13e3513]:
+                      - generic [ref=f13e3514]: בלעדי
+                      - generic [ref=f13e3523]:
+                        - generic [ref=f13e3525]:
+                          - generic [ref=f13e3526]: רפי קלינה-Rafi Kalina המומחה לבתי יוקרה בישראל
+                          - generic [ref=f13e3527]: ₪ 3,400,000
+                        - heading [level=2] [ref=f13e3528]:
+                          - generic [ref=f13e3529]: מרדכי זעירא
+                          - generic [ref=f13e3531]: דירה, המשתלה, תל אביב יפו
+                          - generic [ref=f13e3532]: 3 חדרים • קומה ‎1‏ • 86 מ״ר
+                      - generic [ref=f13e3533]: חניהממ"דיחידת הורים
+                  - button [ref=f13e3536] [cursor=pointer]
+              - listitem [ref=f13e3549]:
+                - generic [ref=f13e3551]:
+                  - link [ref=f13e3552] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/vhaxyqkq?opened-from=feed&component-type=main_feed&spot=standard&location=47
+                    - generic [ref=f13e3553]:
+                      - generic [ref=f13e3560]:
+                        - generic [ref=f13e3562]:
+                          - generic [ref=f13e3563]: נדלן TO GO
+                          - generic [ref=f13e3564]: ₪ 11,000,000
+                        - heading [level=2] [ref=f13e3565]:
+                          - generic [ref=f13e3566]: המשתלה
+                          - generic [ref=f13e3568]: דירת גן, המשתלה, תל אביב יפו
+                          - generic [ref=f13e3569]: 5 חדרים • קומה ‎קרקע‏ • 200 מ״ר
+                      - generic [ref=f13e3570]: נכס חדשחניהממ"ד
+                  - button [ref=f13e3573] [cursor=pointer]
+              - listitem [ref=f13e3586]:
+                - iframe [ref=f13e3590]:
+                  - link [ref=f25e3] [cursor=pointer]:
+                    - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsteSQRA_V1rIFVvgA_93hLr9YOaQGEHMAI-RMwpQ9z2RdybuRaUHQgNWA4U_vxjHeFHPuihnyRkSHnhdh3tnG3TXIBJU4yDY8Kxz8w1SEt3ULOYJOdPEzzNGsKZz3dr4NZyOjpt9WHafbIQrtHCUEXfeO94IXQ-7yvB_zfYPsH5K-AFJxqxJYVUoh1K3t8Albw17p93OJJcjNB9794_Jnnf1rpn4DzVpOp9Pq4I-ccqBfY0qS6ENrCtjKebSEuGdY2D9h8czla8qh5OEaHYz3febQnwIMu_Z-e6p8YBLjG31aUwKOaGD-hHT782yl_u8MJvpmypTP86kZc8lJ6FYSZGTpjb6P0CYyz-aKxlBWyOrO71okzibamO41iAWd46t-uTjY37QUpRgYYiqLKJH9zVBwXJUX3QEfD6mwjLDIQFjgo&sai=AMfl-YSPuZYe1G5KSkmsW_rclSj40YArxGqwWU_-eLto8UU6vN0KMhqiITn_OVKu-6bADsU3Ay6ruI-kKNcBodO0VFthh0bku24IyIDNVUHjOTKF8QjY6rsk5CvLeTdqIBRcU5jbhmqwWP_IKBntZjxRAvedy5Px4WX6uvXmWH6ZL0hmK_C9TR2Ik_AQJsstuNWMKbY_DgGcMyat610BJfyUZb1vGrgx-RrmGs7oLS4ZBN_oH_0_yxlqCy3qm9JzKpNxXcFnheRUNp3c0HTWySbw8yqk4v3wP005icXD-82tiKkEa3tpK6yO5Ruxh720ZCmN9Cfiu2r6h6HuD4aV0OgtM7rYKZh13eKqW1YHEFliAaor2X2aNNH3cPg&sig=Cg0ArKJSzEOxtVXcfbehEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://www.yad2.co.il/yad1/project/17622%3Fsite%3D_inres_x1_b_230_s_nad_Commercial_Inner_Ad__tel_aviv_south_project_TEL-AVIVA
+                    - main [ref=f25e4]:
+                      - generic [ref=f25e5]:
+                        - generic [ref=f25e8]:
+                          - generic [ref=f25e9]: פריסייל ב-TELAVIVA
+                          - generic [ref=f25e10]: דירות 3 חדרים החל מ-2,585,000 ₪ במרחק נגיעה מהים ומהרכבת הקלה
+                          - generic [ref=f25e11]: לחצו לפרטים
+                        - generic [ref=f25e12]: פרסומת
+              - listitem [ref=f13e3591]:
+                - generic [ref=f13e3593]:
+                  - link [ref=f13e3594] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/66p421rh?opened-from=feed&component-type=main_feed&spot=standard&location=48
+                    - generic [ref=f13e3595]:
+                      - generic [ref=f13e3602]:
+                        - generic [ref=f13e3604]:
+                          - generic [ref=f13e3605]: אייל ארליך Tel Aviv Realty
+                          - generic [ref=f13e3606]: ₪ 4,800,000
+                        - heading [level=2] [ref=f13e3607]:
+                          - generic [ref=f13e3608]: אורי צבי גרינברג 4
+                          - generic [ref=f13e3610]: דירה, אזורי חן, גימל החדשה, תל אביב יפו
+                          - generic [ref=f13e3611]: 4 חדרים • קומה ‎4‏ • 120 מ״ר
+                      - generic [ref=f13e3612]: נכס חדשחניהממ"ד
+                  - button [ref=f13e3615] [cursor=pointer]
+              - listitem [ref=f13e3628]:
+                - generic [ref=f13e3630]:
+                  - link [ref=f13e3631] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/k3kioc0f?opened-from=feed&component-type=main_feed&spot=standard&location=49
+                    - generic [ref=f13e3632]:
+                      - generic [ref=f13e3633]: ירד ב-60,000 ₪
+                      - generic [ref=f13e3641]:
+                        - generic [ref=f13e3643]:
+                          - generic [ref=f13e3644]: PRO HOUSE
+                          - generic [ref=f13e3645]: ₪ 3,690,000
+                        - heading [level=2] [ref=f13e3646]:
+                          - generic [ref=f13e3647]: בארי
+                          - generic [ref=f13e3649]: דירה, הצפון החדש - החלק הדרומי, תל אביב יפו
+                          - generic [ref=f13e3650]: 3 חדרים • קומה ‎קרקע‏ • 68 מ״ר
+                      - generic [ref=f13e3651]: בהזדמנותחבל לפספסייחודי
+                  - button [ref=f13e3654] [cursor=pointer]
+              - listitem [ref=f13e3667]:
+                - generic [ref=f13e3669]:
+                  - link [ref=f13e3670] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/g55dhien?opened-from=feed&component-type=main_feed&spot=standard&location=50
+                    - generic [ref=f13e3671]:
+                      - generic [ref=f13e3678]:
+                        - generic [ref=f13e3680]:
+                          - generic [ref=f13e3681]: VERED
+                          - generic [ref=f13e3682]: ₪ 1,790,000
+                        - heading [level=2] [ref=f13e3683]:
+                          - generic [ref=f13e3684]: עג'מי, גבעת העליה
+                          - generic [ref=f13e3686]: דירה, עג'מי, גבעת העליה, תל אביב יפו
+                          - generic [ref=f13e3687]: 2 חדרים • קומה ‎1‏ • 50 מ״ר
+                      - generic [ref=f13e3688]: בהזדמנותחבל לפספסייחודי
+                  - button [ref=f13e3691] [cursor=pointer]
+              - listitem [ref=f13e3704]:
+                - generic [ref=f13e3706]:
+                  - link [ref=f13e3707] [cursor=pointer]:
+                    - /url: /realestate/item/tel-aviv-area/0sfcny8t?opened-from=feed&component-type=main_feed&spot=standard&location=51
+                    - generic [ref=f13e3708]:
+                      - generic [ref=f13e3715]:
+                        - generic [ref=f13e3717]:
+                          - generic [ref=f13e3718]: Italy Israel איטליה ישראל
+                          - generic [ref=f13e3719]: ₪ 11,250,000
+                        - heading [level=2] [ref=f13e3720]:
+                          - generic [ref=f13e3721]: בן סרוק
+                          - generic [ref=f13e3723]: גג/ פנטהאוז, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e3724]: 4.5 חדרים • קומה ‎8‏ • 214 מ״ר
+                      - generic [ref=f13e3725]: חניהממ"ד2 מרפסות
+                  - button [ref=f13e3728] [cursor=pointer]
+              - listitem [ref=f13e3741]:
+                - generic [ref=f13e3743]:
+                  - link [ref=f13e3744] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/16183/apartment/1013179?wat=1_0_0_0_22_0_0_52_0_1_60_0_0_77&isRegion=true&site=_inres_x1_l_ListingPremium_s_14152_1013179
+                    - generic [ref=f13e3745]:
+                      - generic [ref=f13e3746]: פרויקט חדש
+                      - generic [ref=f13e3756]:
+                        - heading [level=2] [ref=f13e3757]:
+                          - generic [ref=f13e3758]: MASTERPIECE בבלי
+                          - generic [ref=f13e3759]: דירה, בבלי, תל אביב יפו
+                          - generic [ref=f13e3760]: 9 חדרים • קומה 46 • 500.4 מ״ר
+                        - paragraph [ref=f13e3762]:
+                          - text: קבוצת חג'ג' משיקה את קולקציית הפרימיום של פרוייקט מאסטרפיס בבלי. מגדל מגורים מעל פארק ירוק בלב בבלי, המציע מעטפת שירותים ברמה מלונאית אמיתית.
+                          - generic [ref=f13e3763]: ... קרא עוד
+                      - generic [ref=f13e3764]: למידע נוסף
+                  - button [ref=f13e3770] [cursor=pointer]
+              - listitem [ref=f13e3783]:
+                - generic [ref=f13e3785]:
+                  - link [ref=f13e3786] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/18540/apartment/1005727?wat=1_0_0_0_22_0_0_53_0_1_60_0_0_77&isRegion=true&site=_inres_x1_l_ListingPremium_s_14153_1005727
+                    - generic [ref=f13e3787]:
+                      - generic [ref=f13e3788]: פרויקט במבצע
+                      - generic [ref=f13e3798]:
+                        - heading [level=2] [ref=f13e3799]:
+                          - generic [ref=f13e3800]: מעבר לכיכר - תל אביב
+                          - generic [ref=f13e3801]: דירה, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e3802]: 2.5 חדרים • קומה 4 • 60 מ״ר
+                        - paragraph [ref=f13e3804]:
+                          - text: העתיד שלכם בתל אביב מתחיל כאן! ‏10% בחתימה והיתרה לקראת האכלוס* כולל פטור מהצמדה למדד לכל התקופה! מגוון דירות ‏2-5 חד', דירות גן ופנטהאוזים לבחירה, חניות תת קרקעיות רגילות ומחסנים
+                          - generic [ref=f13e3805]: ... קרא עוד
+                      - generic [ref=f13e3810]:
+                        - generic [ref=f13e3811]: החל מ-
+                        - generic [ref=f13e3812]: 4,600,000 ₪
+                  - button [ref=f13e3815] [cursor=pointer]
+              - listitem [ref=f13e3828]:
+                - generic [ref=f13e3830]:
+                  - link [ref=f13e3831] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/11491/apartment/1013989?wat=1_0_0_0_22_0_0_54_0_1_55_0_0_77&isRegion=true&site=_inres_x1_l_ListingPro_s_15154_1013989
+                    - generic [ref=f13e3832]:
+                      - generic [ref=f13e3833]: פרויקט חדש
+                      - generic [ref=f13e3840]:
+                        - heading [level=2] [ref=f13e3841]:
+                          - generic [ref=f13e3842]: הלסינקי 24
+                          - generic [ref=f13e3843]: דירה, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e3844]: 2 חדרים • קומה 1-5 • 49 מ״ר
+                        - generic [ref=f13e3846]:
+                          - generic [ref=f13e3847]: החל מ-
+                          - generic [ref=f13e3848]: 3,200,000 ₪
+                      - generic [ref=f13e3849]: דירות בצפון החדש של ת"א
+                  - button [ref=f13e3852] [cursor=pointer]
+              - listitem [ref=f13e3865]:
+                - generic [ref=f13e3867]:
+                  - link [ref=f13e3868] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/15809/apartment/1002010?wat=1_0_0_0_22_0_0_55_0_1_55_0_0_77&isRegion=true&site=_inres_x1_l_ListingPro_s_15155_1002010
+                    - generic [ref=f13e3869]:
+                      - generic [ref=f13e3870]: פרויקט במבצע
+                      - generic [ref=f13e3877]:
+                        - heading [level=2] [ref=f13e3878]:
+                          - generic [ref=f13e3879]: ויצמן 49
+                          - generic [ref=f13e3880]: דירה, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e3881]: 5 חדרים • קומה 6 • 120 מ״ר
+                        - generic [ref=f13e3882]: למידע נוסף
+                  - button [ref=f13e3885] [cursor=pointer]
+              - listitem [ref=f13e3898]:
+                - generic [ref=f13e3900]:
+                  - link [ref=f13e3901] [cursor=pointer]:
+                    - /url: https://www.yad2.co.il/yad1/project/tel-aviv-area/19419/apartment/1013756?wat=1_0_0_0_22_0_0_56_0_1_55_0_0_77&isRegion=true&site=_inres_x1_l_ListingPro_s_15156_1013756
+                    - generic [ref=f13e3902]:
+                      - generic [ref=f13e3903]: פרויקט חדש
+                      - generic [ref=f13e3910]:
+                        - heading [level=2] [ref=f13e3911]:
+                          - generic [ref=f13e3912]: ליפסקי 10, תל אביב
+                          - generic [ref=f13e3913]: דירה, הצפון החדש - כיכר המדינה, תל אביב יפו
+                          - generic [ref=f13e3914]: 2 חדרים • קומה 2-5 • 40.5 מ״ר
+                        - generic [ref=f13e3915]: למידע נוסף
+                      - generic [ref=f13e3916]: רחוב שקט בסובב כיכר המדינה
+                  - button [ref=f13e3919] [cursor=pointer]
+            - navigation [ref=f13e3933]:
+              - link [disabled]:
+                - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=0
+              - list [ref=f13e3934]:
+                - listitem [ref=f13e3935]:
+                  - link [disabled]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000
+                    - text: "1"
+                - listitem [ref=f13e3936]:
+                  - link [ref=f13e3937] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=2
+                    - text: "2"
+                - listitem [ref=f13e3938]:
+                  - link [ref=f13e3939] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=3
+                    - text: "3"
+                - listitem [ref=f13e3940]:
+                  - link [ref=f13e3941] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=4
+                    - text: "4"
+                - listitem [ref=f13e3942]:
+                  - link [ref=f13e3943] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=5
+                    - text: "5"
+                - listitem [ref=f13e3944]:
+                  - link [ref=f13e3945] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=6
+                    - text: "6"
+                - listitem [ref=f13e3946]:
+                  - link [ref=f13e3947] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=7
+                    - text: "7"
+                - listitem [ref=f13e3948]:
+                  - link [ref=f13e3949] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=8
+                    - text: "8"
+                - listitem [ref=f13e3950]:
+                  - text: ...
+                  - link [ref=f13e3951] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=483
+                    - text: "483"
+              - link [ref=f13e3952] [cursor=pointer]:
+                - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&page=2
+            - list [ref=f13e3956]:
+              - listitem [ref=f13e3957]:
+                - link [ref=f13e3958] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il
+                  - text: ראשי
+                - text: /
+              - listitem [ref=f13e3959]:
+                - link [ref=f13e3960] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/realestate/forsale
+                  - text: נדל״ן למכירה
+                - text: /
+              - listitem [ref=f13e3961]:
+                - link [ref=f13e3962] [cursor=pointer]:
+                  - /url: /realestate/forsale/tel-aviv-area
+                  - text: תל אביב והסביבה
+                - text: /
+              - listitem [ref=f13e3963]:
+                - link [ref=f13e3964] [cursor=pointer]:
+                  - /url: /realestate/forsale/tel-aviv-area?area=1
+                  - text: אזור תל אביב יפו
+                - text: /
+              - listitem [ref=f13e3965]: תל אביב יפו
+            - iframe [ref=f13e3969]:
+              - link [ref=f26e2] [cursor=pointer]:
+                - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjssF417tF8fHGCoOzA62i6YWUDTZs-uF7OKVjhvUquYPmWU0gvZz7qY7Dlp7TrrGOqrnQhNYNz12M6BQOAsGDna6bCWDvDj-3i-9Dvk-lNfb_xLTNubuCQhDjtCK_LhAvVCDSzFdOWiY3cMVCy5n7vPMHdwYkEJKEfayXrwlqVt-5C5vYkFu80IfSTNehatkjrVMLWruiemo7caf-Zt7soDpOaHxcRzgMKoRDICFN2kcT3M-6zC2nLSASTy4isXHZN1naTS-kXhfwpxeFEz9uvvZIgQHWJE62bXuYHpHpLMYc7nsYiLafUfgKz-RcHMpyo_m7Uy_HV-JGKl-VLF0yRjWDCmkgyApkuvllxoo94MKoBb1jQ_x9anDk8j_PUqV9jMXbeQixKosAmA2POouznk4NVcz2wBIqKVYWi_HE__i_g&sai=AMfl-YQO3sjuJcojQSQtwL_yzg-KusLUC-cbjzdx4SSf78S6XmkFGC6c0f-N2ahwNuBXtHXUSBExgNfm8MYM133goW3Et6jHwA3hvGCY0ZtVuDJ1tcmW3m-bi8BgY97iV6Io3w_pYY9YlZFEEnpmV0X4wt0z62Rqx71McXAMOmALkWFjyIRKgqVks6d-bRo74o3nqbva1QRY-xBhFABwh-p42GS2F7dNE0DNjxul_cQH_oKCrx9ttF5wC_W84aJuLGIqb737gvseS_O082BpHGprkybgXDV_Y5nc71cHPjkz6qA8zEkuEi-ZKwSbG6LzJA758Z-1FRP6xsD56U4m7fTHbrjAfja7_8GxHOfoL3NHE-d0eR8ZllDD_iQ&sig=Cg0ArKJSzI3TNpy_4RRA&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://www.yad2.co.il/yad1/project/19426%3Fsite%3D_inres_x1_b_265_s_nad_martef__tel_aviv_project_REMEZ-36-TEL-AVIV
+            - generic [ref=f13e3972]:
+              - link [ref=f13e3975] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1/project/18042?wat=6_0_0_0_22_0_0_1_0_1_52_0_0_77&site=_inres_x2_py2_BottomGallery_s_7101_18042
+                - generic [ref=f13e3978]:
+                  - generic [ref=f13e3979]:
+                    - button [ref=f13e3985]
+                    - generic [ref=f13e4004]: פרויקט במבצע
+                    - generic: PRESALE
+                  - generic [ref=f13e4006]:
+                    - generic [ref=f13e4007]:
+                      - generic [ref=f13e4008]: נחלת יצחק 17-19
+                      - generic [ref=f13e4009]: תל אביב יפו
+                    - generic [ref=f13e4010]:
+                      - generic [ref=f13e4011]: החל מ-
+                      - generic [ref=f13e4012]: ‏3,680,000 ‏₪
+              - link [ref=f13e4015] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1/project/13671?wat=6_0_0_0_22_0_0_2_0_1_52_0_0_77&site=_inres_x2_py2_BottomGallery_s_7102_13671
+                - generic [ref=f13e4018]:
+                  - generic [ref=f13e4019]:
+                    - button [ref=f13e4025]
+                    - generic [ref=f13e4044]: פרויקט חדש
+                    - generic: החל מ-42,000 ₪ למ"ר
+                  - generic [ref=f13e4046]:
+                    - generic [ref=f13e4047]:
+                      - generic [ref=f13e4048]: בני אפרים 236-240
+                      - generic [ref=f13e4049]: תל אביב יפו
+                    - generic [ref=f13e4050]:
+                      - generic [ref=f13e4051]: החל מ-
+                      - generic [ref=f13e4052]: ‏4,650,000 ‏₪
+              - link [ref=f13e4055] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1/project/17622?wat=6_0_0_0_22_0_0_3_0_1_52_0_0_77&site=_inres_x2_py2_BottomGallery_s_7103_17622
+                - generic [ref=f13e4058]:
+                  - generic [ref=f13e4059]:
+                    - button [ref=f13e4065]
+                    - generic [ref=f13e4084]: פרויקט במבצע
+                    - generic: מגוון הטבות מיוחדות!
+                  - generic [ref=f13e4086]:
+                    - generic [ref=f13e4087]:
+                      - generic [ref=f13e4088]: תל אביבה TEL AVIVA
+                      - generic [ref=f13e4089]: תל אביב יפו
+                    - generic [ref=f13e4090]:
+                      - generic [ref=f13e4091]: החל מ-
+                      - generic [ref=f13e4092]: ‏2,585,000 ‏₪
+            - complementary [ref=f13e4093]:
+              - heading [level=3] [ref=f13e4094]: עמודי מודעות דומות
+              - list [ref=f13e4095]:
+                - listitem [ref=f13e4096]:
+                  - link [ref=f13e4097] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1
+                    - text: נדל״ן למכירה באזור תל אביב יפו|
+                - listitem [ref=f13e4098]:
+                  - link [ref=f13e4099] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000
+                    - text: נדל״ן למכירה בתל אביב יפו|
+                - listitem [ref=f13e4100]:
+                  - link [ref=f13e4101] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&propertyGroup=apartments
+                    - text: דירות למכירה באזור תל אביב יפו|
+                - listitem [ref=f13e4102]:
+                  - link [ref=f13e4103] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&propertyGroup=apartments
+                    - text: דירות למכירה בתל אביב יפו|
+                - listitem [ref=f13e4104]:
+                  - link [ref=f13e4105] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&property=1&propertyGroup=apartments
+                    - text: דירות למכירה באזור תל אביב יפו|
+                - listitem [ref=f13e4106]:
+                  - link [ref=f13e4107] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&property=1&propertyGroup=apartments
+                    - text: דירות למכירה בתל אביב יפו|
+                - listitem [ref=f13e4108]:
+                  - link [ref=f13e4109] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&minRooms=4&maxRooms=4
+                    - text: נדל״ן 4 חדרים למכירה באזור תל אביב יפו|
+                - listitem [ref=f13e4110]:
+                  - link [ref=f13e4111] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&minRooms=4&maxRooms=4
+                    - text: נדל״ן 4 חדרים למכירה בתל אביב יפו|
+                - listitem [ref=f13e4112]:
+                  - link [ref=f13e4113] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&city=5000&propertyGroup=apartments&minRooms=4&maxRooms=4
+                    - text: דירות 4 חדרים למכירה בתל אביב יפו|
+                - listitem [ref=f13e4114]:
+                  - link [ref=f13e4115] [cursor=pointer]:
+                    - /url: /realestate/forsale/tel-aviv-area?area=1&propertyGroup=apartments&minRooms=4&maxRooms=4
+                    - text: דירות 4 חדרים למכירה באזור תל אביב יפו
+          - generic [ref=f13e4117]:
+            - paragraph [ref=f13e4118]: מחפשים דירות למכירה? ביד2 - דירות למכירה תמצאו דירה בקלות ובמהירות. מאגר הנכסים למכירה הענק והעדכני שלנו עומד לרשותכם - כל שעליכם לעשות הוא להקליד את פרטי הנכס שמעניין אתכם (מחוז, אזור, ישוב, סוג נכס, מספר חדרים וכו') ומנוע החיפוש שלנו יסנן עבורכם את המודעות הרלוונטיות ביותר. מחפשים דירה למכירה באזור ספציפי? לחצו על "הצג על גבי מפה" ובחרו באזור הגיאוגרפי שבו אתם מעוניינים למצוא דירה למכירה. המערכת תסמן עבורכם את מיקומי הדירות הזמינות, ותוכלו להקליק על כל סימון כדי לצפות במודעה ובפרטי ההתקשרות עם בעלי הדירה.
+            - navigation [ref=f13e4119]:
+              - list [ref=f13e4120]:
+                - listitem [ref=f13e4121]:
+                  - button [expanded]:
+                    - heading [level=6]: נדל"ן
+                  - list [ref=f13e4122]:
+                    - listitem [ref=f13e4123]:
+                      - generic [ref=f13e4124] [cursor=pointer]: מכירה
+                    - listitem [ref=f13e4128]:
+                      - generic [ref=f13e4129] [cursor=pointer]: השכרה
+                    - listitem [ref=f13e4133]:
+                      - generic [ref=f13e4134] [cursor=pointer]: מסחרי
+                    - listitem [ref=f13e4138]:
+                      - generic [ref=f13e4139] [cursor=pointer]: דירות חדשות
+                    - listitem [ref=f13e4143]:
+                      - link [ref=f13e4145] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/yzer
+                        - text: Yzer - בונים החלטות חכמות
+                    - listitem [ref=f13e4146]:
+                      - link [ref=f13e4148] [cursor=pointer]:
+                        - /url: https://yadata.yad2.co.il/?yad2_source=Footer
+                        - text: Yadata - הערכת שווי נכס
+                - listitem [ref=f13e4149]:
+                  - button [expanded]:
+                    - heading [level=6]: רכב
+                  - list [ref=f13e4150]:
+                    - listitem [ref=f13e4151]:
+                      - link [ref=f13e4153] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/vehicles/cars
+                        - text: פרטיים ומסחריים
+                    - listitem [ref=f13e4154]:
+                      - link [ref=f13e4156] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/vehicles/trucks
+                        - text: משאיות
+                    - listitem [ref=f13e4157]:
+                      - link [ref=f13e4159] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/vehicles/motorcycles
+                        - text: אופנועים
+                    - listitem [ref=f13e4160]:
+                      - link [ref=f13e4162] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/vehicles/scooters
+                        - text: קטנועים
+                    - listitem [ref=f13e4163]:
+                      - link [ref=f13e4165] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/vehicles/watercraft
+                        - text: כלי שייט
+                    - listitem [ref=f13e4166]:
+                      - link [ref=f13e4168] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/vehicles/other
+                        - text: מיוחדים
+                    - listitem [ref=f13e4169]:
+                      - link [ref=f13e4171] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/vehicles/car-accessories
+                        - text: אביזרים
+                    - listitem [ref=f13e4172]:
+                      - link [ref=f13e4174] [cursor=pointer]:
+                        - /url: https://konesy2.co.il/cars
+                        - text: רכבים במכירה פומבית
+                    - listitem [ref=f13e4175]:
+                      - link [ref=f13e4177] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/price-list
+                        - text: מחירון רכב
+                    - listitem [ref=f13e4178]:
+                      - link [ref=f13e4180] [cursor=pointer]:
+                        - /url: https://land.5555.co.il/yad2?utm_source=YAD2&utm_medium=Native&utm_campaign=Direct-Mimun-Yashir_AWO-LP_Leads_BOF_footer
+                        - text: מימון רכב
+                - listitem [ref=f13e4181]:
+                  - button [expanded]:
+                    - heading [level=6]: מוצרים
+                  - list [ref=f13e4182]:
+                    - listitem [ref=f13e4183]:
+                      - link [ref=f13e4185] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/furniture
+                        - text: ריהוט
+                    - listitem [ref=f13e4186]:
+                      - link [ref=f13e4188] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/electronics
+                        - text: אלקטרוניקה
+                    - listitem [ref=f13e4189]:
+                      - link [ref=f13e4191] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/mobile-devices_mobile-devices
+                        - text: מכשירים סלולריים
+                    - listitem [ref=f13e4192]:
+                      - link [ref=f13e4194] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/sports-and-leisure
+                        - text: ספורט ופנאי
+                    - listitem [ref=f13e4195]:
+                      - link [ref=f13e4197] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/clothing-cosmetics-and-accessories_clothing
+                        - text: ביגוד
+                    - listitem [ref=f13e4198]:
+                      - link [ref=f13e4200] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/baby-parent
+                        - text: ילדים ותינוקות
+                    - listitem [ref=f13e4201]:
+                      - link [ref=f13e4203] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/collectibles-vintage_furniture
+                        - text: אספנות וינטאג
+                    - listitem [ref=f13e4204]:
+                      - link [ref=f13e4206] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/home-lifestyle
+                        - text: בית ולייף סטייל
+                    - listitem [ref=f13e4207]:
+                      - link [ref=f13e4209] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/lawn-garden
+                        - text: גינון וחוץ
+                    - listitem [ref=f13e4210]:
+                      - link [ref=f13e4212] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/market/collections/office_furniture
+                        - text: משרד וריהוט
+                - listitem [ref=f13e4213]:
+                  - button [expanded]:
+                    - heading [level=6]: דרושים
+                  - list [ref=f13e4214]:
+                    - listitem [ref=f13e4215]:
+                      - link [ref=f13e4217] [cursor=pointer]:
+                        - /url: https://www.drushim.co.il/categories.aspx
+                        - text: כל הקטגוריות
+                    - listitem [ref=f13e4218]:
+                      - link [ref=f13e4220] [cursor=pointer]:
+                        - /url: https://www.drushim.co.il/companies.aspx
+                        - text: חברות מובילות
+                    - listitem [ref=f13e4221]:
+                      - link [ref=f13e4223] [cursor=pointer]:
+                        - /url: https://www.drushim.co.il/דרושים-הייטק
+                        - text: דרושים הייטק
+                    - listitem [ref=f13e4224]:
+                      - link [ref=f13e4226] [cursor=pointer]:
+                        - /url: https://www.drushim.co.il/קורות-חיים
+                        - text: קורות חיים
+                    - listitem [ref=f13e4227]:
+                      - link [ref=f13e4229] [cursor=pointer]:
+                        - /url: https://www.drushim.co.il/articles
+                        - text: מגזין קריירה
+                    - listitem [ref=f13e4230]:
+                      - link [ref=f13e4232] [cursor=pointer]:
+                        - /url: https://www.drushim.co.il/smartalerts.aspx
+                        - text: סוכן חכם
+                - listitem [ref=f13e4233]:
+                  - button [expanded]:
+                    - heading [level=6]: עוד באתר
+                  - list [ref=f13e4234]:
+                    - listitem [ref=f13e4235]:
+                      - link [ref=f13e4237] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/pets/sale
+                        - text: חיות מחמד
+                    - listitem [ref=f13e4238]:
+                      - link [ref=f13e4240] [cursor=pointer]:
+                        - /url: https://www.yad2.co.il/b144
+                        - text: בעלי מקצוע
+                    - listitem [ref=f13e4241]:
+                      - link [ref=f13e4243] [cursor=pointer]:
+                        - /url: https://magazine.yad2.co.il
+                        - text: מגזין יד2
+            - generic [ref=f13e4244]:
+              - generic [ref=f13e4249]:
+                - heading [level=2] [ref=f13e4250]: יד2 אתכם בכל מקום
+                - paragraph [ref=f13e4251]: הורידו את האפליקציה וקבלו עדכונים בזמן אמת
+              - generic [ref=f13e4252]:
+                - link [ref=f13e4253] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.goldtouch.ct.yad2&hl=he
+                - link [ref=f13e4255] [cursor=pointer]:
+                  - /url: https://apps.apple.com/us/app/%D7%99%D7%932-yad2/id406318295
+            - list [ref=f13e4257]:
+              - listitem [ref=f13e4258]:
+                - link [ref=f13e4259] [cursor=pointer]:
+                  - /url: https://itunes.apple.com/us/app/yad2-%D7%99%D7%932/id406318295?mt=8
+              - listitem [ref=f13e4262]:
+                - link [ref=f13e4263] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.goldtouch.ct.yad2
+              - listitem [ref=f13e4269]:
+                - link [ref=f13e4270] [cursor=pointer]:
+                  - /url: https://www.facebook.com/yad2page
+              - listitem [ref=f13e4273]:
+                - link [ref=f13e4274] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/MeYad2
+            - paragraph [ref=f13e4277]: "כל הזכויות שמורות לחברת קורל תל מפעילת יד2 - מודעות: דרושים, דירות להשכרה, דירות למכירה, בתים להשכרה, העברת בתים, הובלות, לימודים, קניות, בעלי מקצוע, אצבע, תיירות ועוד. אין לעשות שימוש בכל התכנים המופיעים באתר יד2."
+            - separator [ref=f13e4278]
+            - list [ref=f13e4279]:
+              - listitem [ref=f13e4280]:
+                - link [ref=f13e4281] [cursor=pointer]:
+                  - /url: https://www.2.yad2.co.il/eula
+                  - text: תקנון
+              - listitem [ref=f13e4282]:
+                - link [ref=f13e4283] [cursor=pointer]:
+                  - /url: https://www.2.yad2.co.il/accessibility
+                  - text: הצהרת נגישות
+              - listitem [ref=f13e4284]:
+                - link [ref=f13e4285] [cursor=pointer]:
+                  - /url: https://www.2.yad2.co.il/privacy
+                  - text: מדיניות פרטיות
+              - listitem [ref=f13e4286]:
+                - link [ref=f13e4287] [cursor=pointer]:
+                  - /url: https://www.2.yad2.co.il/privacy-data-security-agreement
+                  - text: הסכם אבטחת מידע
+              - listitem [ref=f13e4288]:
+                - link [ref=f13e4289] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/sitemap
+                  - text: מפת האתר
+              - listitem [ref=f13e4290]:
+                - link [ref=f13e4291] [cursor=pointer]:
+                  - /url: https://service.yad2.co.il
+                  - text: צור קשר
+              - listitem [ref=f13e4292]:
+                - link [ref=f13e4293] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/general-pages/transaction-cancellation
+                  - text: ביטול עסקה
+              - listitem [ref=f13e4294]:
+                - link [ref=f13e4295] [cursor=pointer]:
+                  - /url: https://www.career.yad2.co.il
+                  - text: קריירה ביד2
+              - listitem [ref=f13e4296]:
+                - link [ref=f13e4297] [cursor=pointer]:
+                  - /url: https://www.yad2.co.il/yad1
+                  - text: דירות חדשות
+            - generic [ref=f13e4298]: גרסה:prod
+        - generic [ref=f13e4301]:
+          - generic [ref=f13e4303]:
+            - region [ref=f13e4304]
+            - img [ref=f13e4305]:
+              - link [ref=f13e4306] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1/project/13671?wat=2_0_0_0_22_0_0_999_0_1_52_8_0_73&site=_inres_x2_py2_2400_s_MapLogoLowZoom
+            - img [ref=f13e4310]:
+              - link [ref=f13e4311] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1/project/13899?wat=2_0_0_0_22_0_0_999_0_1_52_8_0_73&site=_inres_x2_py2_2400_s_MapLogoLowZoom
+            - img [ref=f13e4315]:
+              - link [ref=f13e4316] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1/project/18042?wat=2_0_0_0_22_0_0_999_0_1_52_8_0_73&site=_inres_x2_py2_2400_s_MapLogoLowZoom
+            - img [ref=f13e4320]:
+              - link [ref=f13e4321] [cursor=pointer]:
+                - /url: https://www.yad2.co.il/yad1/project/17622?wat=2_0_0_0_22_0_0_999_0_1_52_8_0_73&site=_inres_x2_py2_2400_s_MapLogoLowZoom
+            - generic:
+              - generic [ref=f13e4325]:
+                - button [ref=f13e4326] [cursor=pointer]
+                - button [ref=f13e4328] [cursor=pointer]
+              - button [ref=f13e4331] [cursor=pointer]
+            - link [ref=f13e4334] [cursor=pointer]:
+              - /url: https://www.mapbox.com/
+            - button [ref=f13e4336] [cursor=pointer]: שכבות מידע
+          - iframe [ref=f13e4344]:
+            - generic [ref=f21e3]:
+              - button "✕" [ref=f21e4] [cursor=pointer]
+              - link [ref=f21e5] [cursor=pointer]:
+                - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjstiYld9Eq7ohpdscyKe_X7oXlp7Q1Mdqq556gfs7GfWJ0bOQHuAYQ9Uyziu9J8zdFRd4nQdg4A0Z4b8P0M32OM80XrHP_HxXwYrzkpuEEaqR-QyL-bNE8eMFTSPaafV6IjQtM0FHkCAYwwc9rgkn-fk5U1eoBPnplpOjOn4rwUBqskizfDhtpsuRd9oiLK8k9STlqvvQmfEpUcMcoT7RvMoVqtlh0m4-_twSTsLMIFLWufsx-S0T_0mbL7SogBDoQvnaEVg52KBJs_A3MUg78n5Y-2X3x6a2qoMJHpHwh0rqQ4hhfZaRu8PSYgWylRUvI6aTNC4wRK3nB1jnrMSiogLzh4jKNDFoqGR5yrQL2-BJetBK3mURtgfNsrAoaPfzVBiYaCyrQ7mAr_2m53NAqO7rsa_Am-JzAhBAuX6shI&sai=AMfl-YTyAkNURcUhISAev0_cQWi_67OSQUJrRpKfJka5waMReN4CKHLAceX3H5-24xlGoZn2aXJgBjSuTCRBYAoqcVbOzkskuV1aHZsndR5dE39qhSDZ_LdprjqsVR3UDsBZfUmcidyiQaSPd7VCgamooChjlqPwKo8qI6sfrE9gznT5fJS2NdpwLsHB80r92lwsQxWR_3JDHmr8yakOAokF6Y9wj3t8OKqmp_QCYAr7-mIozQscKfcj4CSF6qeWF6ble1icAmaPJ5v6znY0Gt6gVpF9ehElsHNHFz5q6i8yxHw_fqtPsChriqUCRE2d2rSutHzPyIhNDAmyiZ0YsdIKmZrqHSooZt1jyMfGshBr-8SApUNcqy1ARU4&sig=Cg0ArKJSzN512-6xA7bcEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://www.yad2.co.il/yad1/project/13671%3Fsite%3D_inres_x1_b_284_s_nad_takeover__tel_aviv_north_project_BNEI-EFRAIM-236-240
+  - dialog [active] [ref=f13e4345]:
+    - button "סגירה" [ref=f13e4346] [cursor=pointer]
+    - generic [ref=f13e4349]:
+      - heading [level=2] [ref=f13e4350]:
+        - img "תמונה של עוגיות" [ref=f13e4351]
+        - text: אוהבים עוגיות? גם אנחנו
+      - paragraph [ref=f13e4352]:
+        - generic [ref=f13e4353]: אנחנו משתמשים בעוגיות (cookies) לשיפור חוויית הגלישה שלך, הצגת הצעות מותאמות ועוד.
+        - text: כמפורט
+        - link "במדיניות הפרטיות" [ref=f13e4354] [cursor=pointer]:
+          - /url: https://www.2.yad2.co.il/privacy
+        - text: שלנו.
+      - button "הבנתי" [ref=f13e4356] [cursor=pointer]
+  - alert [ref=f13e4357]
+  - text: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+  - button "פתח תפריט נגישות" [ref=f13e4358] [cursor=pointer]:
+    - paragraph [ref=f13e4364]: כפתור נגישות
+  - insertion
