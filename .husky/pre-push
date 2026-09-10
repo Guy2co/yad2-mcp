@@ -1,5 +1,0 @@
-COMMIT_MSG=$(git log -1 --pretty=%B)
-if echo "$COMMIT_MSG" | grep -q "^chore: bump version"; then
-  exit 0
-fi
-npm version patch -m "$COMMIT_MSG"
