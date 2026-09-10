@@ -56,14 +56,40 @@ const Yad2PaginationSchema = z.looseObject({
   totalPages: z.number().optional(),
 });
 
-export const Yad2FeedSchema = z.looseObject({
-  private: z.array(Yad2ApiItemSchema).optional(),
-  agency: z.array(Yad2ApiItemSchema).optional(),
-  yad1: z.array(Yad2ApiItemSchema).optional(),
-  platinum: z.array(Yad2ApiItemSchema).optional(),
-  kingOfTheHar: z.array(Yad2ApiItemSchema).optional(),
-  trio: z.array(Yad2ApiItemSchema).optional(),
-  booster: z.array(Yad2ApiItemSchema).optional(),
-  leadingBroker: z.array(Yad2ApiItemSchema).optional(),
-  pagination: Yad2PaginationSchema.optional(),
-});
+/**
+ * Every bucket Yad2 is known to return listings in. Used by the `.refine()` below:
+ * because every field is optional on a loose object, a payload where Yad2 has renamed
+ * the buckets (e.g. `private` -> `privateFeed`) would otherwise validate cleanly and
+ * the parser would silently yield zero listings.
+ */
+export const REALESTATE_FEED_BUCKETS = [
+  'private',
+  'agency',
+  'yad1',
+  'platinum',
+  'kingOfTheHar',
+  'trio',
+  'booster',
+  'leadingBroker',
+] as const;
+
+function hasKnownBucket(feed: object): boolean {
+  const record = feed as Record<string, unknown>;
+  return REALESTATE_FEED_BUCKETS.some((key) => Array.isArray(record[key]));
+}
+
+export const Yad2FeedSchema = z
+  .looseObject({
+    private: z.array(Yad2ApiItemSchema).optional(),
+    agency: z.array(Yad2ApiItemSchema).optional(),
+    yad1: z.array(Yad2ApiItemSchema).optional(),
+    platinum: z.array(Yad2ApiItemSchema).optional(),
+    kingOfTheHar: z.array(Yad2ApiItemSchema).optional(),
+    trio: z.array(Yad2ApiItemSchema).optional(),
+    booster: z.array(Yad2ApiItemSchema).optional(),
+    leadingBroker: z.array(Yad2ApiItemSchema).optional(),
+    pagination: Yad2PaginationSchema.optional(),
+  })
+  .refine(hasKnownBucket, {
+    message: `no known listing bucket present (expected one of: ${REALESTATE_FEED_BUCKETS.join(', ')}) — Yad2 may have renamed the feed keys`,
+  });

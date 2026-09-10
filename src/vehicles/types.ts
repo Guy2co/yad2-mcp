@@ -1,13 +1,13 @@
 export interface VehicleSearchParams {
-  manufacturer?: string; // manufacturer ID
-  model?: string; // model ID
-  year?: string; // e.g. "2018-2023", "2020"
-  priceMin?: number;
-  priceMax?: number;
-  kmMax?: number; // max kilometers
-  hand?: number; // e.g. 1 for first hand
-  page?: number;
-  pageSize?: number;
+  manufacturer?: string | undefined; // manufacturer ID
+  model?: string | undefined; // model ID
+  year?: string | undefined; // e.g. "2018-2023", "2020"
+  priceMin?: number | undefined;
+  priceMax?: number | undefined;
+  kmMax?: number | undefined; // max kilometers
+  hand?: number | undefined; // e.g. 1 for first hand
+  page?: number | undefined;
+  pageSize?: number | undefined;
 }
 
 export interface VehicleListing {

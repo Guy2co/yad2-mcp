@@ -24,30 +24,12 @@ npx vitest run src/__tests__/parsers.test.ts
 
 ## Architecture
 
-This is an MCP server exposing 4 tools (`search_rentals`, `search_for_sale`, `get_listing`, `list_city_codes`) that search yad2.co.il using a headless Playwright browser to bypass bot protection (PerimeterX/ShieldSquare).
+This is an MCP server exposing 8 tools — `search_rentals`, `search_for_sale`, `get_listing`,
+`list_city_codes`, `search_cars`, `list_manufacturers`, `list_property_types`, `which_tool` —
+that search yad2.co.il using a headless Playwright browser to bypass bot protection
+(Radware/ShieldSquare).
 
 **Data flow:**
-```
-MCP tool call → handlers.ts → Yad2Client → browser.ts (Playwright) → yad2.co.il
-                                         ← parser.ts (parse __NEXT_DATA__)
-                            ← formatters.ts (markdown output)
-```
-
-**Key design points:**
-- `browser.ts` launches headless Chromium via **patchright** (a CDP-leak-patched Playwright fork — stock Playwright + stealth is now detected by Yad2's Radware bot manager). It navigates, waits for the Radware challenge to clear (the real `__NEXT_DATA__` tag appears via a client-side redirect a few seconds after `load`), then extracts listing data from the `__NEXT_DATA__` JSON script tag embedded by Next.js SSR. The dehydrated React Query state (`pageProps.dehydratedState.queries`) contains the feed. The context UA must NOT contain "HeadlessChrome" or Radware escalates to an hCaptcha wall.
-- `parser.ts` and `formatters.ts` are pure functions — no side effects, fully unit-testable without a browser.
-- `query-builder.ts` maps `SearchParams` to yad2 URL query parameters.
-- `handlers.ts` is thin: it wires Zod-validated tool inputs to `Yad2Client` and formatters.
-- `tools.ts` contains only Zod schemas (the MCP API surface); no logic.
-- The e2e tests spawn `dist/index.js` as a subprocess and speak JSON-RPC over stdio.
-
-## Architecture (updated)
-
-The CLAUDE.md header description is stale — the server now exposes **8 tools**:
-`search_rentals`, `search_for_sale`, `get_listing`, `list_city_codes`,
-`search_cars`, `list_manufacturers`, `list_property_types`, `which_tool`.
-
-Full data flow:
 ```
 MCP tool call → mcp/handlers.ts → {realestate,vehicles}/yad2-*-client.ts
                                 → infra/browser.ts (Playwright) → yad2.co.il
@@ -55,6 +37,14 @@ MCP tool call → mcp/handlers.ts → {realestate,vehicles}/yad2-*-client.ts
                                 ← {realestate,vehicles}/api-schema.ts (Zod validation)
                                 ← {realestate,vehicles}/formatters.ts (markdown output)
 ```
+
+**Key design points:**
+- `browser.ts` launches headless Chromium via **patchright** (a CDP-leak-patched Playwright fork — stock Playwright + stealth is now detected by Yad2's Radware bot manager). It navigates, waits for the Radware challenge to clear (the real `__NEXT_DATA__` tag appears via a client-side redirect a few seconds after `load`), then extracts listing data from the `__NEXT_DATA__` JSON script tag embedded by Next.js SSR. The dehydrated React Query state (`pageProps.dehydratedState.queries`) contains the feed. The context UA must NOT contain "HeadlessChrome" or Radware escalates to an hCaptcha wall.
+- `parser.ts` and `formatters.ts` are pure functions — no side effects, fully unit-testable without a browser.
+- `query-builder.ts` maps `SearchParams` / `VehicleSearchParams` to yad2 URL query parameters.
+- `handlers.ts` is thin: it wires Zod-validated tool inputs to the category clients and formatters.
+- `tools.ts` contains only Zod schemas (the MCP API surface); no logic.
+- The e2e tests spawn `dist/index.js` as a subprocess and speak JSON-RPC over stdio.
 
 ## Extending
 
@@ -79,7 +69,7 @@ MCP tool call → mcp/handlers.ts → {realestate,vehicles}/yad2-*-client.ts
 - **All functions ≤ 15 lines** (blank lines and comments excluded). Extract helpers rather than making functions longer.
 - **No `any`** — use `unknown` + Zod `.safeParse()` when you need runtime flexibility.
 - **Zod schemas in `tools.ts` define the MCP API surface** — changing them is a breaking change for every client using the server.
-- **`api-schema.ts` Zod schemas validate external API responses** — keep them in sync when the Yad2 API payload changes. Use `.passthrough()` so extra fields never throw.
+- **`api-schema.ts` Zod schemas validate external API responses** — keep them in sync when the Yad2 API payload changes. Use `z.looseObject()` (Zod v4) so extra fields never throw. Validation is warn-only: parsers `safeParse` and log drift to stderr rather than failing the tool call.
 - **Test fixtures live in `src/__tests__/fixtures/index.ts`** — new tests should import from there, not redeclare mock data inline.
 
 ## Before committing / pushing

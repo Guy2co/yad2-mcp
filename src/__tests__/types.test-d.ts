@@ -3,7 +3,8 @@
  *
  * These tests have zero runtime cost — they only check that function signatures
  * haven't drifted. If a refactor silently changes a return type, this file fails
- * at compile time (and therefore at `npm test` time via Vitest's type-checking).
+ * at compile time. Enforced by `npm test` via `typecheck.enabled` in vitest.config.ts;
+ * the `.test-d.ts` suffix is what makes Vitest treat it as a type-only suite.
  *
  * Add a test here whenever you expose a new public function from a parser,
  * formatter, or query-builder.
