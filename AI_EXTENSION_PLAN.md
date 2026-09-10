@@ -7,6 +7,31 @@ actual data shapes. Every item below targets one of those failure modes.
 
 ---
 
+## Status (verified 2026-09-10)
+
+All 8 items are implemented. Audited against the code and closed the gaps found:
+
+| # | Item | Status |
+|---|------|--------|
+| 1 | Stricter TypeScript | ✅ all four flags on; `SearchParams`/`VehicleSearchParams` optional props widened to `?: T \| undefined` for `exactOptionalPropertyTypes` |
+| 2 | Zod API schemas | ✅ wired in warn-only; `.refine()` rejects a feed with no known listing bucket, warnings include the issue path |
+| 3 | Test fixtures | ✅ raw API-item *and* normalized `Listing`/`VehicleListing` fixtures; all unit tests import them |
+| 4 | Coverage thresholds | ✅ enforced in CI via `test:coverage`; scope widened to all of `src` (minus `index.ts`); branches raised to 75% |
+| 5 | Type-level tests | ✅ `types.test-d.ts` run by `npm test` via `typecheck.enabled`; `dist/` no longer ships test code |
+| 6 | CLAUDE.md how-to-extend | ✅ single architecture section, 8 tools, `z.looseObject()` invariant corrected |
+| 7 | JSDoc on public fns | ✅ all four high-priority targets documented |
+| 8 | ESLint AI-risky rules | ✅ all four rules plus `eqeqeq` |
+
+Known residual gaps, deliberately left:
+
+- `index.ts` is excluded from coverage — it is the MCP bootstrap, covered by the e2e suite instead.
+- The feed `.refine()` catches a *wholesale* bucket rename. If Yad2 renames only one bucket
+  while others remain, validation still passes and that bucket's listings are silently dropped.
+- `src/vehicles/yad2-vehicles-client.ts` is at 14% branch coverage; the two matcher predicates
+  are only exercised through the e2e suite.
+- `vitest.config.ts` still aliases `../yad2-client.js`, a file that no longer exists. Dead config,
+  left alone as out of scope.
+
 ## 1. Stricter TypeScript
 
 **Why:** AI-generated code often produces subtle bugs around optional chaining, index access,

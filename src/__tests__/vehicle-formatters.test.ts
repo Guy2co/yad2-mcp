@@ -5,24 +5,9 @@ import {
   formatVehicleSearchResults,
   formatVehicleListing,
 } from '../vehicles/formatters.js';
+import { FAKE_VEHICLE_LISTING } from './fixtures/index.js';
 
-const BASE: VehicleListing = {
-  token: 'car123',
-  price: 85000,
-  manufacturer: 'Toyota',
-  model: 'Corolla',
-  subModel: 'Executive',
-  year: 2021,
-  engineType: 'Petrol',
-  hand: 1,
-  km: 45000,
-  gear: 'Automatic',
-  color: 'White',
-  images: ['https://img.yad2.co.il/car.jpg'],
-  url: 'https://www.yad2.co.il/vehicles/item/car123',
-};
-
-const L = (o: Partial<VehicleListing> = {}): VehicleListing => ({ ...BASE, ...o });
+const L = (o: Partial<VehicleListing> = {}): VehicleListing => ({ ...FAKE_VEHICLE_LISTING, ...o });
 const R = (o: Partial<VehicleSearchResult> = {}): VehicleSearchResult => ({
   listings: [],
   total: 0,

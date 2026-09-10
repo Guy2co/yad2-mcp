@@ -43,11 +43,23 @@ const Yad2VehiclePaginationSchema = z.looseObject({
   perPage: z.number().optional(),
 });
 
-export const Yad2VehicleFeedSchema = z.looseObject({
-  private: z.array(Yad2VehicleApiItemSchema).optional(),
-  commercial: z.array(Yad2VehicleApiItemSchema).optional(),
-  solo: z.array(Yad2VehicleApiItemSchema).optional(),
-  platinum: z.array(Yad2VehicleApiItemSchema).optional(),
-  boost: z.array(Yad2VehicleApiItemSchema).optional(),
-  pagination: Yad2VehiclePaginationSchema.optional(),
-});
+/** See `REALESTATE_FEED_BUCKETS` — same rationale, vehicles bucket names. */
+export const VEHICLE_FEED_BUCKETS = ['private', 'commercial', 'solo', 'platinum', 'boost'] as const;
+
+function hasKnownVehicleBucket(feed: object): boolean {
+  const record = feed as Record<string, unknown>;
+  return VEHICLE_FEED_BUCKETS.some((key) => Array.isArray(record[key]));
+}
+
+export const Yad2VehicleFeedSchema = z
+  .looseObject({
+    private: z.array(Yad2VehicleApiItemSchema).optional(),
+    commercial: z.array(Yad2VehicleApiItemSchema).optional(),
+    solo: z.array(Yad2VehicleApiItemSchema).optional(),
+    platinum: z.array(Yad2VehicleApiItemSchema).optional(),
+    boost: z.array(Yad2VehicleApiItemSchema).optional(),
+    pagination: Yad2VehiclePaginationSchema.optional(),
+  })
+  .refine(hasKnownVehicleBucket, {
+    message: `no known listing bucket present (expected one of: ${VEHICLE_FEED_BUCKETS.join(', ')}) — Yad2 may have renamed the feed keys`,
+  });

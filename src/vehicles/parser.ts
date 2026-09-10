@@ -64,9 +64,14 @@ function collectVehicleFeedItems(feed: Yad2VehicleFeedData): Yad2VehicleApiItem[
 function warnIfVehicleFeedInvalid(data: Record<string, unknown>): void {
   const validation = Yad2VehicleFeedSchema.safeParse(data);
   if (!validation.success) {
+    const issue = validation.error.issues[0];
+    const path =
+      issue !== undefined && issue.path.length > 0 ? issue.path.map(String).join('.') : '(root)';
     console.error(
       '[yad2] vehicle feed schema mismatch — API may have changed:',
-      validation.error.issues[0]?.message,
+      path,
+      '—',
+      issue?.message,
     );
   }
 }

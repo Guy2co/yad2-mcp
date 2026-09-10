@@ -114,10 +114,10 @@ function collectFeedItems(feed: Yad2FeedData): Yad2ApiItem[] {
 function warnIfFeedInvalid(data: Record<string, unknown>): void {
   const validation = Yad2FeedSchema.safeParse(data);
   if (!validation.success) {
-    console.error(
-      '[yad2] feed schema mismatch — API may have changed:',
-      validation.error.issues[0]?.message,
-    );
+    const issue = validation.error.issues[0];
+    const path =
+      issue !== undefined && issue.path.length > 0 ? issue.path.map(String).join('.') : '(root)';
+    console.error('[yad2] feed schema mismatch — API may have changed:', path, '—', issue?.message);
   }
 }
 

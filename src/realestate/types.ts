@@ -1,25 +1,25 @@
 export interface SearchParams {
-  city?: string; // city code (e.g. "5000" for Tel Aviv)
-  cityName?: string; // used for display
-  rooms?: string; // e.g. "2-4", "3", "1.5-3"
-  priceMin?: number;
-  priceMax?: number;
-  sizeMin?: number; // sqm
-  sizeMax?: number;
-  floor?: string; // e.g. "1-5", "0" for ground
-  propertyType?: string; // apartment, garden_apartment, studio_loft, penthouse, duplex, triplex, unit, vacation, cottage, agricultural, land, general, building, storage, basement, purchase_group, parking, protected_housing
-  shelter?: boolean;
-  elevator?: boolean;
-  parking?: boolean;
-  balcony?: boolean;
-  airConditioner?: boolean;
-  warehouse?: boolean;
-  accessibility?: boolean;
-  furniture?: boolean;
-  renovated?: boolean;
-  bars?: boolean;
-  page?: number;
-  pageSize?: number;
+  city?: string | undefined; // city code (e.g. "5000" for Tel Aviv)
+  cityName?: string | undefined; // used for display
+  rooms?: string | undefined; // e.g. "2-4", "3", "1.5-3"
+  priceMin?: number | undefined;
+  priceMax?: number | undefined;
+  sizeMin?: number | undefined; // sqm
+  sizeMax?: number | undefined;
+  floor?: string | undefined; // e.g. "1-5", "0" for ground
+  propertyType?: string | undefined; // apartment, garden_apartment, studio_loft, penthouse, duplex, triplex, unit, vacation, cottage, agricultural, land, general, building, storage, basement, purchase_group, parking, protected_housing
+  shelter?: boolean | undefined;
+  elevator?: boolean | undefined;
+  parking?: boolean | undefined;
+  balcony?: boolean | undefined;
+  airConditioner?: boolean | undefined;
+  warehouse?: boolean | undefined;
+  accessibility?: boolean | undefined;
+  furniture?: boolean | undefined;
+  renovated?: boolean | undefined;
+  bars?: boolean | undefined;
+  page?: number | undefined;
+  pageSize?: number | undefined;
 }
 
 export interface Listing {

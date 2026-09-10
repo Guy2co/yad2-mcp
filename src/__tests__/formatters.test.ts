@@ -10,30 +10,10 @@ import {
   filterCities,
   filterPropertyTypes,
 } from '../realestate/formatters.js';
-
-const BASE_LISTING: Listing = {
-  id: 'tok1',
-  token: 'tok1',
-  title: 'Test Listing',
-  price: 5000,
-  currency: 'ILS',
-  rooms: 3,
-  floor: 2,
-  size: 80,
-  address: 'הלל 5, תל אביב',
-  city: 'תל אביב',
-  neighborhood: 'פלורנטין',
-  description: 'Nice apartment',
-  images: ['https://img.yad2.co.il/a.jpg'],
-  url: 'https://www.yad2.co.il/realestate/item/tok1',
-  date: '2024-01-15',
-  contactName: 'דוד',
-  contactPhone: '052-0000000',
-  coordinates: { lat: 32.06, lng: 34.77 },
-};
+import { FAKE_LISTING } from './fixtures/index.js';
 
 function makeListing(overrides: Partial<Listing> = {}): Listing {
-  return { ...BASE_LISTING, ...overrides };
+  return { ...FAKE_LISTING, ...overrides };
 }
 
 function makeResult(overrides: Partial<SearchResult> = {}): SearchResult {

@@ -10,8 +10,12 @@
  *   Yad2FeedSchema.parse(FAKE_FEED_DATA);
  */
 
-import type { Yad2ApiItem, Yad2FeedData } from '../../realestate/types.js';
-import type { Yad2VehicleApiItem, Yad2VehicleFeedData } from '../../vehicles/types.js';
+import type { Listing, Yad2ApiItem, Yad2FeedData } from '../../realestate/types.js';
+import type {
+  VehicleListing,
+  Yad2VehicleApiItem,
+  Yad2VehicleFeedData,
+} from '../../vehicles/types.js';
 
 export const FAKE_REALESTATE_ITEM: Yad2ApiItem = {
   token: 'abc123',
@@ -65,4 +69,45 @@ export const FAKE_VEHICLE_FEED_DATA: Yad2VehicleFeedData = {
   commercial: [],
   solo: [],
   pagination: { total: 10, pages: 1 },
+};
+
+/**
+ * Normalized shapes — what the parsers emit and the formatters consume.
+ * Raw `Yad2*ApiItem` fixtures above are parser *input*; these are formatter *input*.
+ */
+export const FAKE_LISTING: Listing = {
+  id: 'tok1',
+  token: 'tok1',
+  title: 'Test Listing',
+  price: 5000,
+  currency: 'ILS',
+  rooms: 3,
+  floor: 2,
+  size: 80,
+  address: 'הלל 5, תל אביב',
+  city: 'תל אביב',
+  neighborhood: 'פלורנטין',
+  description: 'Nice apartment',
+  images: ['https://img.yad2.co.il/a.jpg'],
+  url: 'https://www.yad2.co.il/realestate/item/tok1',
+  date: '2024-01-15',
+  contactName: 'דוד',
+  contactPhone: '052-0000000',
+  coordinates: { lat: 32.06, lng: 34.77 },
+};
+
+export const FAKE_VEHICLE_LISTING: VehicleListing = {
+  token: 'car123',
+  price: 85000,
+  manufacturer: 'Toyota',
+  model: 'Corolla',
+  subModel: 'Executive',
+  year: 2021,
+  engineType: 'Petrol',
+  hand: 1,
+  km: 45000,
+  gear: 'Automatic',
+  color: 'White',
+  images: ['https://img.yad2.co.il/car.jpg'],
+  url: 'https://www.yad2.co.il/vehicles/item/car123',
 };
