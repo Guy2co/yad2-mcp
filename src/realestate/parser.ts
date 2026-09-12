@@ -69,9 +69,21 @@ function buildContact(item: Yad2ApiItem): Pick<Listing, 'contactName' | 'contact
   };
 }
 
+/**
+ * Yad2 dropped `searchText` from feed responses — the full description now only
+ * exists on the item page. Fall back to the searchable text the feed still ships:
+ * the property type plus the feature tags (חניה, ממ"ד, מעלית...).
+ */
+function buildDescription(item: Yad2ApiItem): string {
+  if (item.searchText !== undefined) return item.searchText;
+  const type = item.additionalDetails?.property?.text;
+  const tags = (item.tags ?? []).map((t) => t?.name).filter(Boolean);
+  return [type, ...tags].filter(Boolean).join(' · ');
+}
+
 function buildItemScalars(item: Yad2ApiItem, token: string): ItemScalars {
   return {
-    description: item.searchText ?? '',
+    description: buildDescription(item),
     images: buildImages(item),
     url: token !== '' ? `${ITEM_BASE}/${token}` : '',
     date: String(item.dateAdded ?? ''),

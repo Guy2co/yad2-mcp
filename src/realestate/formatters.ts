@@ -1,30 +1,32 @@
 import type { Listing, SearchParams, SearchResult } from './types.js';
 import propertyTypes from './property-types.json';
 
+// Codes verified against yad2's own address autocomplete
+// (gw.yad2.co.il/address-autocomplete/realestate/v2).
 const CITY_CODES = [
-  { code: '5000', area: '1', name: 'תל אביב-יפו', nameEn: 'Tel Aviv-Yafo' },
-  { code: '3000', area: '3', name: 'חיפה', nameEn: 'Haifa' },
-  { code: '70', area: '11', name: 'ירושלים', nameEn: 'Jerusalem' },
-  { code: '8600', area: '5', name: 'באר שבע', nameEn: 'Beer Sheva' },
-  { code: '6300', area: '18', name: 'נתניה', nameEn: 'Netanya' },
-  { code: '7900', area: '19', name: 'פתח תקווה', nameEn: 'Petah Tikva' },
-  { code: '9000', area: '9', name: 'ראשון לציון', nameEn: 'Rishon LeZion' },
-  { code: '6900', area: '19', name: 'בני ברק', nameEn: 'Bnei Brak' },
-  { code: '6200', area: '19', name: 'רמת גן', nameEn: 'Ramat Gan' },
-  { code: '6100', area: '19', name: 'גבעתיים', nameEn: 'Givatayim' },
-  { code: '1200', area: '6', name: 'אשדוד', nameEn: 'Ashdod' },
-  { code: '2650', area: '18', name: 'רמת השרון', nameEn: 'Ramat HaSharon' },
-  { code: '6400', area: '18', name: 'הרצליה', nameEn: 'Herzliya' },
-  { code: '4000', area: '9', name: 'חולון', nameEn: 'Holon' },
-  { code: '9100', area: '9', name: 'רחובות', nameEn: 'Rehovot' },
-  { code: '7400', area: '9', name: 'בת ים', nameEn: 'Bat Yam' },
-  { code: '8700', area: '22', name: 'אילת', nameEn: 'Eilat' },
-  { code: '3100', area: '2', name: 'נצרת', nameEn: 'Nazareth' },
-  { code: '1300', area: '19', name: 'אור יהודה', nameEn: 'Or Yehuda' },
-  { code: '1064', area: '18', name: 'רעננה', nameEn: 'Raanana' },
-  { code: '2800', area: '18', name: 'כפר סבא', nameEn: 'Kfar Saba' },
-  { code: '1400', area: '6', name: 'אשקלון', nameEn: 'Ashkelon' },
-  { code: '7200', area: '20', name: 'מודיעין', nameEn: "Modi'in" },
+  { code: '5000', name: 'תל אביב יפו', nameEn: 'Tel Aviv-Yafo' },
+  { code: '4000', name: 'חיפה', nameEn: 'Haifa' },
+  { code: '3000', name: 'ירושלים', nameEn: 'Jerusalem' },
+  { code: '9000', name: 'באר שבע', nameEn: 'Beer Sheva' },
+  { code: '7400', name: 'נתניה', nameEn: 'Netanya' },
+  { code: '7900', name: 'פתח תקווה', nameEn: 'Petah Tikva' },
+  { code: '8300', name: 'ראשון לציון', nameEn: 'Rishon LeZion' },
+  { code: '6100', name: 'בני ברק', nameEn: 'Bnei Brak' },
+  { code: '8600', name: 'רמת גן', nameEn: 'Ramat Gan' },
+  { code: '6300', name: 'גבעתיים', nameEn: 'Givatayim' },
+  { code: '0070', name: 'אשדוד', nameEn: 'Ashdod' },
+  { code: '2650', name: 'רמת השרון', nameEn: 'Ramat HaSharon' },
+  { code: '6400', name: 'הרצליה', nameEn: 'Herzliya' },
+  { code: '6600', name: 'חולון', nameEn: 'Holon' },
+  { code: '8400', name: 'רחובות', nameEn: 'Rehovot' },
+  { code: '6200', name: 'בת ים', nameEn: 'Bat Yam' },
+  { code: '2600', name: 'אילת', nameEn: 'Eilat' },
+  { code: '7300', name: 'נצרת', nameEn: 'Nazareth' },
+  { code: '2400', name: 'אור יהודה', nameEn: 'Or Yehuda' },
+  { code: '8700', name: 'רעננה', nameEn: 'Raanana' },
+  { code: '6900', name: 'כפר סבא', nameEn: 'Kfar Saba' },
+  { code: '7100', name: 'אשקלון', nameEn: 'Ashkelon' },
+  { code: '1200', name: 'מודיעין מכבים רעות', nameEn: "Modi'in" },
 ];
 
 function extractSearchParamsStrings(
@@ -89,15 +91,11 @@ export function extractSearchParams(params: Record<string, unknown>): SearchPara
 
 export function filterCities(
   filter: string | undefined,
-): Array<{ code: string; area: string; name: string; nameEn: string }> {
+): Array<{ code: string; name: string; nameEn: string }> {
   if (filter === undefined) return CITY_CODES;
   return CITY_CODES.filter(
     (c) => c.name.toLowerCase().includes(filter) || c.nameEn.toLowerCase().includes(filter),
   );
-}
-
-export function lookupCityArea(cityCode: string): string | undefined {
-  return CITY_CODES.find((c) => c.code === cityCode)?.area;
 }
 
 export function filterPropertyTypes(

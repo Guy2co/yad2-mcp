@@ -78,6 +78,7 @@ export interface Yad2ApiItem {
   address?: Yad2ApiAddress;
   additionalDetails?: Yad2ApiAdditionalDetails;
   metaData?: Yad2ApiMetaData;
+  tags?: Array<{ name?: string }>;
   searchText?: string;
   dateAdded?: string;
   contactName?: string;

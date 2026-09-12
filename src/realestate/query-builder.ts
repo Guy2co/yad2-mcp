@@ -1,6 +1,5 @@
 import type { SearchParams } from './types.js';
 import propertyTypes from './property-types.json';
-import { lookupCityArea } from './formatters.js';
 
 function toYad2PropertyId(id: string): string {
   return propertyTypes.find((t) => t.id === id)?.yad2Id ?? id;
@@ -40,8 +39,6 @@ function applyFeatureFilters(params: SearchParams, q: Record<string, string>): v
 function applyCityAndArea(params: SearchParams, q: Record<string, string>): void {
   if (params.city === undefined) return;
   q['city'] = params.city;
-  const area = lookupCityArea(params.city);
-  if (area !== undefined) q['area'] = area;
 }
 
 function applyOptionalParams(
@@ -65,7 +62,6 @@ function applyOptionalParams(
  *
  * Notable quirks:
  * - Price key differs by type: `priceOnly` for rent, `price` for forsale.
- * - City lookup also injects an `area` param (yad2 requires both city + area).
  * - `propertyType` is a semantic ID (e.g. `"cottage"`) mapped to yad2's numeric ID(s)
  *   via `property-types.json`. Multi-value types (cottage) are comma-separated strings.
  * - Feature filters (shelter, elevator, etc.) map to `"1"` when enabled; omitted when false.
